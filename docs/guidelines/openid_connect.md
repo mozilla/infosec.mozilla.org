@@ -6,7 +6,7 @@ layout: default
 All Mozilla sites and deployment should follow the recommendations below.
 The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
 
-**Just looking for code?** Reference configuration and code for implementing OIDC as described below [is also available](https://github.com/mozilla-iam/testrp.security.allizom.org)
+**Just looking for code?** Reference configuration and code for implementing OIDC as described below [is also available](https://github.com/mozilla-iam/testrp.security.allizom.org).
 Additionally, Mozilla provides OIDC single sign on support for Mozilla properties and [access can be requested by following documentation here](https://mana.mozilla.org/wiki/display/SECURITY/SSO+Request+Form)
 
 # Common abbreviations & definitions
@@ -24,7 +24,6 @@ Additionally, Mozilla provides OIDC single sign on support for Mozilla propertie
 | JWT            | JSON Web Tokens, *id token*                             | Base64 encoded, optionally signed, small and self-contained JSON documents that represent a possibly signed JSON message. The JSON message contains the issuer of the token, the subject (usually owner/user of the token), how the user authenticated, and for whom the token is intended to (audience).                             |
 | Tokens         | API keys, *access token*, *refresh token*               | An opaque, unique secret string that is used to access protected resources.                                                                                                                                                                                                                                                           |
 | SCIM           | System for Cross-domain Identity Management             | A standardized schema and API for querying and managing user identities (attributes, etc.)                                                                                                                                                                                                                                            |
-||
 
 # OIDC in a nutshell
 
@@ -34,7 +33,7 @@ The communication with the OpenID Connect Provider (OP) is done using tokens. An
 
 Other tokens can be used, though these do not pertain directly to authentication. These are also often called OAuth2 tokens. This is because OIDC is based on OAuth2 and thus also provides full OAuth2 support. These two types of OAuth2 tokens (Access Token and Refresh Tokens) enable their bearer to access information from other websites and resources (including additional user attributes that may not be passed by the ID token) - but are not required to perform user authentication.
 
-![OIDC Diagram]({{ site.url }}/assets/pages/OIDC_diagram.png)
+![OIDC Diagram]({{ site.url }}assets/pages/OIDC_diagram.png)
 
 ## OIDC tokens reference table
 
@@ -43,13 +42,12 @@ Other tokens can be used, though these do not pertain directly to authentication
 | **Access token**  | A string containing a unique secret token (like an API key). | The Access token has specific permissions and is used to get data from an API. It expires quickly, typically within 24 hours.                                                                                                                       |
 | **Refresh token** | A string containing a unique secret token (like an API key). | The Refresh token enables it's bearer to request and obtain new Access tokens. These newly obtained access tokens have a subset of the permissions that the Refresh token has. The Refresh token never expires.                                     |
 | **ID token**      | Base64-encoded JSON document ([JWT](https://jwt.io/))        | ID tokens are created and signed by OpenID Connect Providers (OP) and consumed, verified by web applications authenticating users (RPs). The ID token contains information about how and when the user authenticated along with various attributes. |
-||
 
 ## Detailed OIDC authentication flow
 
 This sequence diagram is useful if you want to understand how OIDC works, or need to modify an OIDC library.
 
-![OIDC Sequence Diagram]({{ site.url }}/assets/pages/OIDC_sequence_diagram.png)
+![OIDC Sequence Diagram]({{ site.url }}assets/pages/OIDC_sequence_diagram.png)
 
 
 # Implement authentication with OpenID Connect (OIDC) securely in my web applications (RP)
@@ -70,24 +68,24 @@ For that reason, it is important that the web application (RP) respects the foll
 
 ## Other important security considerations
 
-###ID Token
+### ID Token
 
 -   **Always** verify the id token signature.
 -   **Always** invalidate the user session when the associated ID token expires.
 -   **Should** update the contents of the id token by querying the OP regularly, before the ID token expires.
 
-###Authorization Code Grant
+### Authorization Code Grant
 
 -   **Always** use authorization code grant.
 -   **Never** use implicit grants for websites. Authorization code grant ensures that the relying party is getting the access tokens, and that these cannot be intercepted within the user's browser.
 
-###State parameter
+### State parameter
 
 When requesting authentication from the OpenID Connect provider (OP), **always** provide the state parameter.
 
 This is a defense against [CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks as an attacker would need to know the state code/contents (similar to the [CSRF synchronizer token](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention) used on websites)
 
-###Refresh token
+### Refresh token
 
 Avoid using or storing refresh tokens. This is especially important for relying parties (RP) which are websites (as opposed to mobile apps for example, which may not always have network access). Refresh tokens never expire and thus are very powerful. These are usually not needed for an authentication flow, though they may be needed for specific authorization flows.
 
