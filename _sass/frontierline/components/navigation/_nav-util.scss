@@ -1,0 +1,139 @@
+// Utility navigation below the header.
+// Features toggles for the sidebar and category drawer and a search form.
+
+#nav-util {
+    background: #000;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    line-height: 1;
+
+    .content {
+        @include flexbox;
+        padding: .5em 20px;
+    }
+
+    li {
+        display: inline-block;
+        width: 50%;
+        padding: .25em 0;
+
+        &.nav-util-sidebar {
+            text-align: left;
+        }
+
+        &.nav-util-categories {
+            display: none; // hidden on mobile
+            text-align: center;
+        }
+
+        &.nav-util-search {
+            padding: 0;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        &.has-categories li {
+            width: 33%;
+
+            &.nav-util-categories {
+                display: inline-block;
+            }
+        }
+    }
+
+    a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: 25px;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:before {
+            @include background-size(25px 200px);
+            background-image: url('../images/icon-sprite.svg');
+            background-repeat: no-repeat;
+            bottom: 0;
+            content: '';
+            display: inline-block;
+            height: 18px;
+            left: 0;
+            position: absolute;
+            width: 20px;
+        }
+    }
+
+    .nav-util-sidebar a:before {
+        background-position: 0 0;
+    }
+
+    .nav-util-sidebar a.close:before {
+        background-position: 0 -20px;
+    }
+
+    .nav-util-categories a:before {
+        background-position: 0 -40px;
+    }
+
+    .nav-util-categories a.close:before {
+        background-position: 0 -60px;
+    }
+
+    &.is-sticky {
+        position: fixed;
+        width: 100%;
+        top: 2.2em;
+        left: 0;
+    }
+}
+
+.nav-util-search .fm-search {
+    float: right;
+    text-align: right;
+
+    p {
+        margin: 0;
+    }
+
+    label {
+        @include visually-hidden;
+    }
+
+    input {
+        @include font-size(12px);
+        background-color: #000;
+        border-color: #fff;
+        color: #fff;
+        max-width: 75%;
+    }
+
+    .button {
+        @include image-replaced;
+        background-color: #000;
+        border: 0;
+        color: #fff;
+        height: 1.65em;
+        padding: 0;
+        position: relative;
+        vertical-align: bottom;
+        width: 30px;
+
+        &:before {
+            background: transparent url('../images/icon-sprite.svg') center -80px no-repeat;
+            @include background-size(25px 200px);
+            content: '';
+            display: block;
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: .15em;
+            width: 100%;
+        }
+    }
+}

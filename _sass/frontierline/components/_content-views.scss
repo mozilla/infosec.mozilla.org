@@ -1,0 +1,140 @@
+// A few different ways to display blog content
+
+@import
+    'content-views/content-full',
+    'content-views/content-summary',
+    'content-views/content-mini';
+
+
+// Styles common to all views
+
+.entry-link:link,
+.entry-link:visited {
+    color: $color-text-primary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-link;
+        text-decoration: underline;
+    }
+}
+
+.entry-info {
+    @include font-size(14px);
+    color: $color-text-secondary;
+    margin-bottom: 20px;
+
+    .vcard {
+        border-right: 1px solid #ccc;
+        display: inline-block;
+        font-style: normal;
+        margin-right: 10px;
+        padding-right: 10px;
+
+        a {
+            color: $color-text-secondary;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-link;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .date {
+        display: inline-block;
+    }
+}
+
+.entry-content {
+    @include clearfix;
+
+    ul {
+        list-style: disc;
+        margin-left: 30px;
+
+        ul {
+            list-style: circle;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        margin-left: 30px;
+
+        ol {
+            list-style: lower-alpha;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto 1.5em;
+}
+
+.wp-caption {
+    margin-bottom: .75em;
+    max-width: 100%;
+}
+
+.wp-caption.aligncenter {
+    clear: both;
+    margin: 0 auto 1.5em;
+}
+
+.wp-caption img {
+    display: block;
+}
+
+.wp-caption.aligncenter img {
+    margin: 0 auto;
+}
+
+.wp-caption .wp-caption-text {
+    font-style: italic;
+    margin: .75em 10px 0;
+    text-align: center;
+}
+
+// Content summaries in a grid view.
+.posts-grid {
+    @include clearfix;
+
+    @media #{$mq-tablet} {
+        @include flexbox;
+        flex-wrap: wrap;
+
+        .post-summary {
+            @include span(6);
+        }
+    }
+
+    @media #{$mq-desktop} {
+        .post-summary {
+            @include span(4);
+        }
+    }
+}

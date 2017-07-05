@@ -1,0 +1,21 @@
+// Links
+
+a {
+    @include transition(color 80ms ease-out);
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited:hover,
+    &:visited:focus,
+    &:visited:active {
+        color: darken($color-link, 10%);
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: lighten(desaturate($color-link, 30%), 10%);
+    }
+}

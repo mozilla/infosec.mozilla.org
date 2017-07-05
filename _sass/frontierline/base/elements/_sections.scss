@@ -1,0 +1,34 @@
+// Basic content blocks
+
+.section,
+.content {
+    @include clearfix;
+    position: relative;
+}
+
+.section {
+    width: 100%;
+}
+
+.content {
+    @include border-box;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: $width-phone;
+
+    @media #{$mq-phone-wide} {
+        width: $width-phone-wide;
+    }
+
+    @media #{$mq-tablet} {
+        width: $width-tablet;
+    }
+
+    @media #{$mq-desktop} {
+        width: $width-desktop;
+    }
+
+    @media #{$mq-desktop-wide} {
+        width: $width-desktop-wide;
+    }
+}

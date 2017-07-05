@@ -1,0 +1,55 @@
+// Local navigation bar at the top of the content.
+// This is a custom menu configurable in WordPress.
+
+.nav-local {
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    color: $color-text-primary;
+    text-align: center;
+
+    .content {
+        padding: 0 20px;
+    }
+
+    li {
+        padding: 0 5px;
+        display: inline-block;
+    }
+
+    a {
+        color: $color-text-primary;
+        display: block;
+        padding: .5em 10px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-text-primary;
+            text-decoration: underline;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        @include font-size(18px);
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            @include transition(padding-bottom 150ms ease-in-out, border-bottom-width 150ms ease-in-out 5ms);
+            border-bottom: 1px solid transparent;
+            padding: 15px 10px;
+
+            &:hover,
+            &:focus {
+                border-bottom-color: darken($color-link, 10%);
+                border-bottom-width: 5px;
+                color: $color-text-primary;
+                padding-bottom: 10px;
+                text-decoration: none;
+            }
+        }
+    }
+}

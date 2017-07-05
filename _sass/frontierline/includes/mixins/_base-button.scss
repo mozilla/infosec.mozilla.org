@@ -1,0 +1,36 @@
+// The basis for all buttons
+
+@mixin base-button {
+    @include font-size(18px);
+    @include transition(background-color 100ms ease-in-out);
+    background: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    display: inline-block;
+    padding: .5em 36px;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    text-decoration: none;
+
+    @media #{$mq-tablet} {
+        @include font-size(20px);
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &.button-minor {
+        @include font-size(14px);
+        padding: .25em 10px;
+    }
+}

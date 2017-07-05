@@ -1,0 +1,34 @@
+.custom-sidebar {
+  border: 5px solid #000;
+  box-sizing: border-box;
+  padding: 20px;
+
+  @media #{$mq-tablet} {
+    float: left;
+    margin-left: 5%;
+    width: 35%;
+  }
+
+  h4 {
+    border-bottom: 2px solid;
+    margin: 0 0 .75em;
+    padding: 0 0 .25em;
+  }
+
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+
+  li a {
+    @include transition(background-color 80ms ease-out);
+    display: block;
+    padding: .25em 4px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+// Global navigation bar at the top of the page.
+// Features Mozilla logo and links to other Mozilla sites.
+
+.nav-global {
+    @include clearfix;
+    @include transition(height 250ms ease-in-out, padding 250ms ease-in-out);
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    color: $color-text-primary;
+    left: 0;
+    height: 1.2em;
+    padding: .5em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 90;
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .logo {
+        @include font-size(16px);
+        @include transition(width 250ms ease-in-out, height 250ms ease-in-out);
+        float: right;
+        height: 20px;
+        line-height: 1;
+        width: 63px;
+
+        a {
+            @include background-size(cover);
+            @include image-replaced;
+            @include transition(background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out);
+            background-image: url('../images/mozilla-wordmark-black.svg');
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media #{$mq-tablet} {
+            float: left;
+        }
+    }
+
+    .page-top {
+        @include transition(margin-top 250ms ease-in-out);
+        color: $color-text-primary;
+        float: right;
+        margin-right: 30px;
+        margin-top: -4em;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        @media #{$mq-tablet} {
+            margin-right: 0;
+        }
+
+        &:before {
+            @include background-size(25px 200px);
+            background-image: url('../images/icon-sprite.svg');
+            background-position: center -180px;
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin: 0 5px -.35em -30px;
+            width: 25px;
+        }
+    }
+
+    &.is-minified .page-top {
+        @include transition-delay(150ms);
+        margin-top: -.25em;
+    }
+}
+
+.nav-mozilla {
+    left: 0;
+    position: absolute;
+    top: -.5em;
+    z-index: 98;
+
+    .toggle {
+        @include image-replaced;
+        background: #000 url('../images/icon-menu-white.svg') center center no-repeat;
+        @include background-size(22px auto);
+        cursor: pointer;
+        display: block;
+        height: 2.2em;
+        overflow: hidden;
+        position: relative;
+        width: 2.2em;
+    }
+}
+
+.nav-mozilla-menu {
+    background-color: #fff;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    left: -300px;
+    line-height: 1.1;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    text-transform: lowercase;
+    top: 2.2em;
+    width: 200px;
+    z-index: 99;
+
+    li {
+        border-bottom: 1px solid #ccc;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    a {
+        @include transition(background-color 150ms ease, border-width 150ms ease, padding 150ms ease);
+        background: #fff;
+        color: $color-text-primary;
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background-color: #f5f5f5;
+            border-right: 6px solid #000;
+            text-decoration: underline;
+        }
+    }
+
+    .nav-global-donate a,
+    .nav-global-firefox a {
+        padding-left: 30px;
+
+        &:before {
+            @include background-size(25px 200px);
+            background-image: url('../images/icon-sprite.svg');
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin: 0 5px -.35em -30px;
+            width: 25px;
+        }
+    }
+
+    .nav-global-donate a {
+        &:before {
+            background-position: 0 -100px;
+        }
+
+        &:hover:before,
+        &:focus:before {
+            background-position: 0 -120px;
+        }
+    }
+
+    .nav-global-firefox a {
+        &:before {
+            background-position: 0 -140px;
+        }
+
+        &:hover:before,
+        &:focus:before {
+            background-position: 0 -160px;
+        }
+    }
+}
+
+.nav-mozilla:hover .nav-mozilla-menu,
+.nav-mozilla-menu:target {
+    left: auto;
+}
+
+.js .nav-mozilla-menu {
+    left: auto;
+    display: none;
+}
+
+@media #{$mq-tablet} {
+    .nav-global {
+        height: 2.5em;
+        padding: 1em 0;
+
+        .logo {
+            height: 40px;
+            width: 126px;
+        }
+
+        &.is-minified {
+            height: 1.2em;
+            padding: .5em 0;
+
+            .logo {
+                height: 20px;
+                width: 63px;
+            }
+
+            .nav-mozilla {
+                margin-top: -4em;
+
+                a:focus {
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
+
+    .nav-mozilla {
+        @include transition(margin-top 250ms ease-in);
+        float: right;
+        max-width: 75%;
+        position: relative;
+
+        .toggle {
+            @include hidden;
+        }
+    }
+
+    .nav-mozilla-menu {
+        background: transparent;
+        box-shadow: none;
+        margin-top: .25em;
+        padding: 1em 0;
+        position: static;
+        width: auto;
+
+        li {
+            display: inline;
+            border: 0;
+            padding: 0 10px;
+        }
+
+        a {
+            background: transparent;
+            display: inline-block;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border: 0;
+            }
+        }
+    }
+
+    .js .nav-mozilla-menu {
+        display: block;
+    }
+}
+
+@media #{$mq-desktop} {
+    .nav-mozilla-menu li {
+            padding: 0 20px;
+    }
+}
+
+// flexbox layout for savvy browsers to push nav items to the right
+@supports (display: flex) {
+    @media #{$mq-tablet} {
+        .nav-mozilla-menu,
+        .js .nav-mozilla-menu {
+            @include flexbox;
+            @include justify-content(flex-end);
+        }
+    }
+}

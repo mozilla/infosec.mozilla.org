@@ -1,0 +1,144 @@
+// The branded masthead.
+
+#masthead {
+    @include background-size(cover);
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-top: 2.5em;
+    overflow: hidden;
+
+    .site-id {
+        @include background-size(100% auto);
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-top: -2.5em;
+        overflow: hidden;
+        padding: 2.5em 20px 0;
+        position: relative;
+
+        &:after {
+            @include transform(rotate(30deg));
+            content: '';
+            display: block;
+            height: 250%;
+            left: 70%;
+            position: absolute;
+            top: -25%;
+            width: 50%;
+        }
+    }
+
+    .site-title-wrap {
+        color: $color-text-primary;
+        position: relative;
+        z-index: 10;
+
+        a:link,
+        a:visited {
+            color: $color-text-primary;
+            text-decoration: none;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        padding-top: 5.5em;
+
+        .site-id {
+            margin-top: -5.5em;
+            padding: 6.5em 20px 2em;
+        }
+    }
+}
+
+// Big header in big windows, but only on the front page
+@media #{$mq-desktop} and #{$mq-tall} {
+    .home #masthead {
+        padding-top: 8.5em;
+
+        .site-id {
+            margin-top: -7.5em;
+            padding: 9.5em 20px 5em;
+        }
+    }
+}
+
+
+// Header pattens
+.pattern-tradewinds {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-tradewinds.png');
+    }
+}
+
+.pattern-slashbracket {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-slashbracket.png');
+    }
+}
+
+.pattern-confetti {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-confetti.png');
+    }
+}
+
+.pattern-emoticons {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-emoticons.png');
+    }
+}
+
+.pattern-arrows {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-arrows.png');
+    }
+}
+
+.pattern-basketweave {
+    #masthead .site-id {
+        background-image: url('img/headers/pattern-basketweave.png');
+    }
+}
+
+
+#site-title {
+    @include font-size-level2;
+    font-weight: normal;
+    margin: 0 0 .25em;
+
+    span {
+        @include box-decoration-break(clone);
+        background: #000;
+        color: #fff;
+        padding: 0 10px;
+    }
+
+    @media #{$mq-tablet} {
+        @include font-size-level1;
+    }
+}
+
+#site-description {
+    @include font-size-level4;
+    line-height: 1.1;
+    margin: 0;
+
+    span {
+        @include box-decoration-break(clone);
+        background: #000;
+        color: #fff;
+        padding: 0 10px;
+    }
+
+    @media #{$mq-tablet} {
+        @include font-size-level3;
+    }
+}
+
+// An optional introduction at the top of the front page.
+.site-intro .content {
+    max-width: $width-tablet;
+    padding-bottom: 0;
+    text-align: center;
+}

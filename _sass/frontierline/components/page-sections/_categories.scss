@@ -1,0 +1,98 @@
+// The Category Drawer - Shows top categories and recent posts in each.
+
+#categories {
+    position: static;
+
+    .module-title {
+        @include font-size-level2;
+    }
+
+    .cat-list {
+        @include hidden;
+        text-align: center;
+
+        li {
+            display: inline;
+        }
+
+        a {
+            @include category-link;
+
+            &.on {
+                background: #ccc;
+            }
+        }
+    }
+
+    .category {
+        @include clearfix;
+    }
+
+    .category-title {
+        @include font-size-level3;
+        color: $color-text-primary;
+        margin: 1em 0;
+        padding-top: 1em;
+        border-top: 1px solid #000;
+    }
+
+    .category-post {
+        margin: 0 0 1em;
+    }
+
+    .post-image {
+        display: none;
+    }
+
+    &.is-active {
+        background: #fff;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
+        left: 0;
+        min-height: 100px;
+        padding-top: 40px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 8;
+
+        &.is-sticky {
+            position: fixed;
+            top: 30px;
+        }
+
+        .cat-list {
+            display: block;
+        }
+
+        .module-title,
+        .category-title {
+            @include visually-hidden;
+        }
+
+        .category-posts {
+            @include flexbox;
+            flex-wrap: wrap;
+            margin: 0 auto 20px;
+            max-width: $width-desktop-wide;
+        }
+
+        .category-post {
+            @include border-box;
+            margin-bottom: 20px;
+
+            @media #{$mq-tablet} {
+                @include span(4);
+                max-width: 300px;
+            }
+
+            @media #{$mq-desktop} {
+                @include span(2.4);
+            }
+        }
+
+        .post-image {
+            display: block;
+            margin: 0 auto 10px;
+        }
+    }
+}

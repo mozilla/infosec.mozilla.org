@@ -1,0 +1,307 @@
+/* !important used for forceful overrides */
+/* stylelint-disable declaration-no-important  */
+
+@import 'includes/lib';
+
+// Styling for the editor
+
+@import 'includes/fonts/zillaslab';
+
+html {
+    font-size: 100%;
+}
+
+body.wp-autoresize.mceContentBody {
+    @include border-box;
+    background: #fff;
+    color: $color-text-primary;
+    font-family: $base-font-stack;
+    font-size: 100%;
+    line-height: $base-line-height;
+    margin: 0 auto;
+    max-width: $width-desktop - 40px;
+    padding: 20px !important;
+
+    @media #{$mq-phone-wide} {
+        padding: 30px 20px !important;
+    }
+
+    @media #{$mq-tablet} {
+        padding: 30px 60px !important;
+    }
+
+    // General reset
+    h1, h2, h3, h4, h5, h6, hr,
+    p, pre, blockquote, figure, figcaption,
+    table, ul, ol, li, dl, dt, dd {
+        margin: 0;
+        padding: 0;
+    }
+
+    // Fancy first paragraph
+    > p:first-child {
+        @include font-size(20px);
+        min-height: 70px;
+
+        &:first-line {
+            @include font-size(24px);
+        }
+
+        &::first-letter {
+            @include font-size(72px);
+            background: #000;
+            color: #fff;
+            float: left;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: .075em;
+            line-height: .8;
+            margin-right: 4px;
+            padding: .125em 0 .125em 5px;
+            vertical-align: bottom;
+        }
+    }
+
+    a {
+        @include transition(color 80ms ease-out);
+        color: $color-link;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited:hover,
+        &:visited:focus,
+        &:visited:active {
+            color: darken($color-link, 10%);
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: lighten(desaturate($color-link, 30%), 10%);
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, legend {
+        font-weight: bold;
+        line-height: 1.1;
+        margin: 0 0 .25em;
+    }
+
+    // Type scale defined in includes/mixins/_typography.scss
+    h1 {
+        @include font-size-level1;
+    }
+
+    h2 {
+        @include font-size-level3;
+    }
+
+    h3 {
+        @include font-size-level4;
+    }
+
+    h4, h5, h6 {
+        @include font-size(16px);
+    }
+
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    table,
+    blockquote {
+        margin-bottom: 1.25em;
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 30px;
+        padding: 0;
+
+        ul {
+            list-style: circle;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        margin-left: 30px;
+        padding: 0;
+
+        ol {
+            list-style: lower-alpha;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        caption {
+            text-align: left;
+            padding-bottom: 1px; // fix to get it to look nice in many browsers
+            margin-bottom: -1px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            padding: .5em 10px;
+            text-align: left;
+        }
+
+        thead th,
+        thead td {
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    dt {
+        font-style: italic;
+    }
+
+    dd {
+        padding-left: 30px;
+    }
+
+    blockquote {
+        border-left: 2px solid #000;
+        color: $color-text-secondary;
+        padding: .25em 30px;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    pre {
+      @include font-size(14px);
+      overflow: auto;
+    }
+
+    code {
+      @include font-size(14px);
+    }
+
+    hr {
+      background: transparent;
+      border-top: 1px solid #ccc;
+      clear: both;
+      color: transparent;
+      margin: 30px auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+
+    .alignright {
+        float: right;
+        margin: 0 0 .5em 30px;
+
+        &.size-large,
+        &.size-medium
+        &.size-extra-large {
+            float: none;
+            display: block;
+            margin: 0 0 1.5em;
+        }
+    }
+
+    @media #{$mq-phone-wide} {
+        .alignleft.size-medium {
+            float: left;
+            margin: 0 30px .5em -20px;
+        }
+
+        .alignright.size-medium {
+            float: right;
+            margin: 0 -20px .5em 30px;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        .alignleft {
+            margin-left: -60px;
+
+            &.size-medium {
+                margin-left: -60px;
+            }
+        }
+
+        .alignright {
+            margin-right: -60px;
+
+            &.size-medium {
+                margin-right: -60px;
+            }
+        }
+    }
+
+    @media #{$mq-desktop} {
+        .alignleft.size-large {
+            float: left;
+            margin: 0 30px .5em -60px;
+        }
+
+        .alignright.size-large {
+            float: right;
+            margin: 0 -60px .5em 30px;
+        }
+    }
+
+    .aligncenter {
+        clear: both;
+        display: block;
+        margin: 0 auto 1.5em;
+    }
+
+    .wp-caption {
+        margin-bottom: .75em;
+        max-width: 100%;
+    }
+
+    .wp-caption.aligncenter {
+        clear: both;
+        margin: 0 auto 1.5em;
+    }
+
+    .wp-caption img {
+        display: block;
+    }
+
+    .wp-caption.aligncenter img {
+        margin: 0 auto;
+    }
+
+    .wp-caption .wp-caption-dd {
+        font-style: italic;
+        margin: .75em 10px 0;
+        text-align: center;
+    }
+}

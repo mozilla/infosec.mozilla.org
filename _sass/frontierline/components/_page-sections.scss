@@ -1,0 +1,21 @@
+// Major sections of the page
+
+@import
+    'page-sections/comments',
+    'page-sections/masthead',
+    'page-sections/related-posts',
+    'page-sections/categories',
+    'page-sections/sidebar',
+    'page-sections/footer',
+    'page-sections/sidebar-custom';
+
+
+// Content wrappers
+.site-wrap {
+    position: relative;
+}
+
+#content {
+    padding-top: 20px;
+    min-height: 50vh;
+}

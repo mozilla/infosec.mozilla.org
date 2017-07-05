@@ -1,0 +1,110 @@
+// Link to previous and next posts
+
+.nav-paging {
+    @include clearfix;
+    @include flexbox;
+    text-align: center;
+    margin: 40px 0 30px;
+    background: #eee;
+
+    .label {
+        @include font-size(14px);
+        text-transform: lowercase;
+    }
+
+    .entry-title {
+        @include font-size(18px);
+        display: block;
+        font-weight: bold;
+        margin: 10px 20% 0;
+    }
+
+    .date {
+        @include font-size(14px);
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        height: 100%;
+
+        .entry-title {
+            color: $color-text-primary;
+        }
+
+        .label,
+        .date {
+            color: $color-text-secondary;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            .entry-title {
+                color: $color-link;
+                text-decoration: underline;
+            }
+
+            .arrow-left {
+                left: 0;
+            }
+
+            .arrow-right {
+                right: 0;
+            }
+        }
+    }
+
+    .arrow-left,
+    .arrow-right {
+        width: 30px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        @include transition(left 250ms $pebbles-timing-snap, right 250ms $pebbles-timing-snap);
+
+        .cls-1 {
+            stroke: #000;
+        }
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+}
+
+
+@media #{$mq-phone-wide} {
+    .nav-paging-prev,
+    .nav-paging-next {
+        height: 100%;
+        margin-bottom: 0;
+        position: relative;
+        width: 50%;
+    }
+
+    .nav-paging-prev {
+        border-right: 1px solid #ccc;
+        float: left;
+        margin-right: -1px;
+    }
+
+    .nav-paging-next {
+        float: right;
+    }
+
+    [dir='rtl'] {
+        .nav-paging-prev {
+            float: right;
+        }
+
+        .nav-paging-next {
+            float: left;
+        }
+    }
+}

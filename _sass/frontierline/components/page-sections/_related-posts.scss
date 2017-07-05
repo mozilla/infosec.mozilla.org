@@ -1,0 +1,58 @@
+// Links to other related posts.
+// Recent posts in the same category or most popular posts.
+
+#related-posts {
+    .content {
+        @include border-box;
+        max-width: $width-desktop;
+        padding: 20px 40px;
+        margin: 0 auto;
+    }
+
+    @media #{$mq-tablet} {
+        .in-category,
+        .popular {
+            @include span(6);
+        }
+    }
+
+    .module-title {
+        @include font-size-level3;
+        border-bottom: 2px solid;
+        margin: 0 0 .75em;
+        padding: 0 0 .25em;
+    }
+
+    li {
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+        margin-bottom: .75em;
+        padding-bottom: .75em;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .date {
+        @include font-size(14px);
+        color: $color-text-secondary;
+    }
+
+    .wpp-post-title {
+        font-weight: bold;
+        display: block;
+    }
+
+    a:link,
+    a:visited {
+        color: $color-text-primary;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: $color-link;
+        text-decoration: underline;
+    }
+}
