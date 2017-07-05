@@ -12,6 +12,14 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 - we respond to security investigations and incidents
 - we provide baseline practices and assist teams in defining their security standards
 
+## Documentation
+
+- [Guidelines](/guidelines/) ***Guides to help you setup services securily***
+ - [Key Management](/guidelines/key_management/) ***Find out which algorithms are recommended, when to expire keys, etc.***
+- [Fundamentals](/fundamentals/) ***Fundamental security principles***
+ - [Rationales](/fundamentals/rationales) ***Explains and justifies the use of specific controls, principles***
+ - [Security Principles](/fundamentals/security_principles) ***Most important security principles to follow - the baseline***
+
 ## Contact
 Email us: infosec [at] mozilla.com. For confidential information, encrypt your email using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
 
