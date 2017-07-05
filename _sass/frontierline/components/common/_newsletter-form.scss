@@ -1,0 +1,180 @@
+@import
+    '../../includes/animations',
+    '../../includes/lib';
+
+
+// The newsletter signup form.
+
+#newsletter-subscribe {
+    background-color: brand-color(cyan);
+    color: #000;
+
+    // container for <h3> and <h4>
+    .form-title {
+        background: url('img/mozorg-newsletter.svg') center top no-repeat;
+        @include background-size(100px 100px);
+        padding: 120px 0 20px;
+        text-align: center;
+    }
+
+    // newsletter title and "Thanks!" after submission
+    h3 {
+        @include font-size(32px);
+        margin: 0 0 0.2em;
+        text-align: center;
+    }
+
+    // newsletter subtitle
+    h4 {
+        @include font-size(20px);
+        font-weight: normal;
+
+        @media #{$mq-desktop} {
+            @include font-size(24px);
+            line-height: 1.1;
+        }
+    }
+
+    .field {
+        margin-bottom: 10px;
+
+        label {
+            display: block;
+            margin-bottom: 0.25em;
+        }
+    }
+
+    // html/text radio buttons
+    .field-format label {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    // privacy checkbox
+    .field-privacy {
+        @include font-size(12px);
+
+        input {
+            float: left;
+        }
+
+        .title {
+            display: block;
+            padding-left: 25px;
+        }
+    }
+
+    a {
+        color: #000;
+    }
+
+    input[type='email'] {
+        @include border-box;
+        @include font-size(16px);
+        @include transition(all 100ms linear);
+        background-color: #000;
+        border: 0;
+        color: #fff;
+        line-height: 1.1;
+        padding: 0.75em 20px;
+        width: 100%;
+    }
+
+    select {
+        @include font-size(14px);
+        font-family: inherit;
+        line-height: 1.5;
+        max-width: 80%;
+    }
+
+    .form-submit .form-button {
+        width: 100%;
+    }
+
+    // copy underneath "Sign Up Now" button
+    .promise {
+        line-height: 1.1;
+        margin-top: .5em;
+        text-align: center;
+    }
+
+    // wrapper for thank you elements
+    .thanks {
+        display: none;
+        padding-top: 10px;
+
+        p {
+            @include animation(pebbles-fade-in 150ms ease-in 800ms 1 normal both);
+            margin-top: 20px;
+        }
+    }
+
+    .newsletter_errors > ul {
+        background: #fff;
+        color: $color-mozred;
+        padding: 10px 20px;
+    }
+
+    @media #{$mq-tablet} {
+        .form-title {
+            @include span(6);
+            @include background-size(120px 120px);
+            background-position: left 10px;
+            float: left;
+            padding: 10px 10px 20px 140px;
+            text-align: left;
+        }
+
+        .form-contents,
+        .thanks {
+            @include span(6);
+        }
+
+        h3 {
+            text-align: left;
+        }
+    }
+
+    @media #{$mq-desktop} {
+        .form-title {
+            @include background-size(150px 150px);
+            background-position: left top;
+            min-height: 120px;
+            padding: 10px 10px 20px 180px;
+        }
+
+        h3 {
+            @include font-size-level2;
+        }
+
+        h4 {
+            @include font-size-level4;
+        }
+    }
+
+    @media #{$mq-desktop-wide} {
+        .content {
+            width: $width-desktop;
+        }
+    }
+}
+
+.js {
+    #newsletter-subscribe {
+        // hide details for JS users
+        // (displayed when email field is focused)
+        .form-details,
+        #form-details {
+            display: none;
+        }
+
+        // spinner circa the web 2 point oh
+        #newsletter-spinner {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

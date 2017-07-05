@@ -1,0 +1,13 @@
+// Just the small thumbnail, title, and date
+
+.post-mini {
+    .entry-title {
+        padding: 0 10px;
+    }
+
+    .date {
+        @include font-size(14px);
+        color: $color-text-secondary;
+        padding: 0 10px;
+    }
+}

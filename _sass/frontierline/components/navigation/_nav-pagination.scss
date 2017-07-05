@@ -1,0 +1,42 @@
+// Pagination links
+
+.pagination {
+    @include font-size(22px);
+    margin: 40px 0;
+    text-align: center;
+
+    li {
+        display: inline;
+
+        .a11y {
+            @include visually-hidden;
+        }
+    }
+
+    a,
+    .current {
+        @include transition(background-color 75ms ease-out);
+        background: #fff;
+        border: 2px solid #000;
+        margin: 0 2px;
+        padding: 5px 15px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background: #e3e3e3;
+        }
+    }
+
+    .current {
+        font-weight: bold;
+    }
+
+    .prev {
+        @include leading-arrow;
+    }
+
+    .next {
+        @include trailing-arrow;
+    }
+}

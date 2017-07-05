@@ -1,0 +1,36 @@
+// Tables
+
+.entry-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    caption {
+        text-align: left;
+        padding-bottom: 1px; /* fix to get it to look nice in many browsers */
+        margin-bottom: -1px;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        padding: .5em 10px;
+        text-align: left;
+    }
+
+    thead th,
+    thead td {
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+
+[dir='rtl'] {
+    .entry-content table {
+        caption,
+        th,
+        td {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+// The global footer.
+
+#site-info {
+    @include font-size(14px);
+    background: #000;
+    color: #fff;
+    line-height: 1.5;
+    padding: 40px 0;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        color: lighten($color-link, 40%);
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+
+    .logo {
+        @include font-size(16px);
+        margin-bottom: .5em;
+
+        a {
+            @include image-replaced;
+            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
+            @include background-size(88px 28px);
+            display: inline-block;
+            height: 28px;
+            width: 88px;
+        }
+    }
+
+    li {
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .row {
+        @include border-box;
+        @include clearfix;
+        margin: 0 auto;
+        padding: 0 20px;
+        min-width: $width-phone;
+
+        @media #{$mq-tablet} {
+            padding: 0 10px;
+            width: $width-tablet;
+        }
+
+        @media #{$mq-desktop} {
+            width: $width-desktop;
+        }
+
+        @media #{$mq-desktop-wide} {
+            width: $width-desktop-wide;
+        }
+    }
+
+    .col {
+        margin-bottom: 20px;
+    }
+
+    @media #{$mq-tablet} {
+        .col {
+            @include span(4);
+            margin-bottom: 0;
+        }
+    }
+
+    .col-2 ul {
+        overflow: hidden;
+
+        &.fx-footer-links {
+            li {
+                float: none;
+            }
+        }
+
+        li {
+            float: left;
+
+            &.wrap:before {
+                content: '\00A0\00B7\00A0'; // &nbsp;&middot;&nbsp;
+            }
+
+            &.clear {
+                clear: both;
+            }
+        }
+    }
+
+    .links-social li {
+        ul {
+            display: inline;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+
+            &:before {
+                content: '\00B7\00A0'; // &middot;&nbsp;
+            }
+
+            &:first-child:before {
+                content: '';
+            }
+
+            span {
+                @include visually-hidden;
+            }
+        }
+    }
+
+    .lang-switcher {
+        margin-top: 20px;
+    }
+}
+
+@media #{$mq-tablet} {
+    [dir='rtl'] #site-info {
+        .col,
+        .col-2 ul li {
+            float: right;
+        }
+    }
+}

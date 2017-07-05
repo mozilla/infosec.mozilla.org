@@ -1,0 +1,39 @@
+@import
+    '../includes/lib',
+    'elements';
+
+
+// This style sheet is served exclusively to Internet Explorer 8 and older.
+// Old versions get this minimal style while IE9 and up recieve more advanced styling.
+
+body {
+    margin: 20px 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+label {
+    display: block;
+}
+
+.masthead .toggle {
+    display: none; /* oldIE never gets a mobile menu. */
+}
+
+#colophon .logo {
+    font-size: 100%;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.hidden {
+    @include hidden;
+}

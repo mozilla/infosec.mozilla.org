@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <nav id="nav-global" class="nav-global can-stick">
+	    <div class="header">
+		    <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
+		    <div class="nav-mozilla">
+			    <ul class="nav-mozilla-menu" id="nav-mozilla-menu" style="">
+				    <li class="nav-global-guidelines"><a href="">Security Guidelines</a></li>
+				    <li class="nav-global-participate"><a href="{{ site.github.repository_url }}">Improve this document</a></li>
+				    <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
+			    </ul>
+		    </div>
+
+		    <a class="page-top" href="#masthead" title="Go to the top of the page">Top</a>
+	    </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        {{ content }}
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        {% if site.github.is_project_page %}
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>

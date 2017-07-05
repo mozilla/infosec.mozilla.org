@@ -1,0 +1,34 @@
+/*
+Theme Name: Frontierline
+Theme URI: https://github.com/craigcook/frontierline-theme
+Author: Craig Cook, Michael Ham, and all your friends at Mozilla
+Author URI: https://www.mozilla.org
+Description: A theme for official Mozilla blogs.
+Version: 2.0
+License: GPL GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: frontierline
+Domain Path: /languages/
+*/
+
+/**********
+* This theme uses Sass as a CSS preprocessor. Source files are in
+* the /sass/ folder and should be compiled to style.css in the
+* theme's root folder. To make style edits, modify the source
+* files and recompile.
+*
+* Don't edit style.css directly!
+**********/
+
+@import
+    // Fonts
+    'includes/fonts/zillaslab',
+
+    // Base elements - general HTML elements
+    'base/elements',
+
+    // Components - specific purpose blocks with sub-elements and modifiers
+    'components/page-sections',
+    'components/content-views',
+    'components/common',
+    'components/navigation';

@@ -1,0 +1,123 @@
+// The global sidebar (blog menu)
+
+.js #sidebar {
+    @include hidden;
+}
+
+#sidebar {
+    @include border-box;
+    flex-wrap: wrap;
+    background: #eee;
+    padding: 20px;
+
+    &.is-active {
+        @include transition(transform 600ms cubic-bezier(.3, -0.5, .6, 1.1));
+        background: #fff;
+        box-shadow: 3px 0 1px rgba(0, 0, 0, .2);
+        left: 0;
+        max-width: 600px;
+        height: 100%;
+        min-width: 260px;
+        position: absolute;
+        top: 40px;
+        transform: translateX(-101%); // Extra 1% to hide the shadow
+        width: 33%;
+        z-index: 9;
+        padding: 0;
+
+        &.is-open {
+            display: block;
+            transform: none;
+        }
+
+        &.is-sticky {
+            position: fixed;
+            top: 70px;
+            overflow-y: auto;
+        }
+
+        .content {
+            display: block;
+            flex-wrap: nowrap;
+            min-width: 0;
+            padding: 40px;
+            width: auto;
+        }
+
+        .widget {
+            margin-bottom: 40px;
+            padding: 0;
+            width: auto;
+            float: none;
+        }
+    }
+
+    .content {
+        @include flexbox;
+        flex-wrap: wrap;
+    }
+
+    .widget {
+        @include span(4);
+    }
+
+    .widget-title {
+        @include font-size-level3;
+        border-bottom: 2px solid;
+        margin: 0 0 .75em;
+        padding: 0 0 .25em;
+    }
+
+    .widget_nav_menu,
+    .widget_categories,
+    .widget_recent_entries,
+    .widget_recent_comments,
+    .widget_pages,
+    .widget_icl_lang_sel_widget {
+        ul {
+            border-top: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+            margin: 0;
+        }
+
+        a {
+            @include transition(background-color 80ms ease-out);
+            display: block;
+            padding: .25em 4px;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba(0, 0, 0, .02);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .widget_tag_cloud .tagcloud {
+        line-height: 1.2;
+        text-align: center;
+
+        a {
+            vertical-align: middle;
+        }
+    }
+
+    .wpml-ls-legacy-list-vertical {
+        display: block;
+
+        a {
+            border: 0;
+            line-height: inherit;
+
+            span {
+                vertical-align: inherit;
+            }
+        }
+    }
+
+}

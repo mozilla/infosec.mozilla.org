@@ -1,0 +1,32 @@
+// Convert pixel units to rems, assuming a 16px base size
+// Usage: remify(24px)
+@function remify($pixels) {
+    $rems: $pixels / 16px;
+    @return #{$rems}rem;
+}
+
+
+// Replace `$search` with `$replace` in `$string`
+// @author Hugo Giraudel
+// Usage: str-replace($string, ' ', '-')
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+
+// Retrieve brand colors from a map, defined in includes/_variables.scss
+// Usage: brand-color(cyan);
+@function brand-color($color) {
+  @if map-has-key($brand-color, $color) {
+    @return map-get($brand-color, $color);
+  }
+
+  @warn "Unknown `#{$color}` in $brand-color.";
+  @return null;
+}

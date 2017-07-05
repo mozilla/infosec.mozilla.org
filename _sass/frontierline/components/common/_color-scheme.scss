@@ -1,0 +1,213 @@
+// Elements that inherit a global color scheme from a body class.
+
+// No color scheme (default)
+.color-scheme-none {
+    #masthead .site-id:after {
+        display: none;
+    }
+}
+
+// Cyan
+.color-scheme-cyan {
+    #masthead {
+        background-color: transparentize(brand-color(cyan), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(cyan), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(cyan);
+    }
+}
+
+// Coral
+.color-scheme-coral {
+    #masthead {
+        background-color: transparentize(brand-color(coral), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(coral), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(coral);
+    }
+}
+
+// Yellow
+.color-scheme-yellow {
+    #masthead {
+        background-color: transparentize(brand-color(yellow), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(yellow), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(yellow);
+    }
+}
+
+// Lilac
+.color-scheme-lilac {
+    #masthead {
+        background-color: transparentize(brand-color(lilac), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(lilac), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(lilac);
+    }
+}
+
+// Orange
+.color-scheme-orange {
+    #masthead {
+        background-color: transparentize(brand-color(orange), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(orange), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(orange);
+    }
+}
+
+// Lime
+.color-scheme-lime {
+    #masthead {
+        background-color: transparentize(brand-color(lime), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(lime), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(lime);
+    }
+}
+
+// Neon blue
+.color-scheme-neonblue {
+    #masthead {
+        background-color: transparentize(brand-color(neonblue), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(neonblue), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(neonblue);
+    }
+}
+
+// Neon pink
+.color-scheme-neonpink {
+    #masthead {
+        background-color: transparentize(brand-color(neonpink), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(neonpink), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(neonpink);
+    }
+}
+
+// Neon green
+.color-scheme-neongreen {
+    #masthead {
+        background-color: transparentize(brand-color(neongreen), .75);
+
+        .site-id:after {
+            background-color: transparentize(brand-color(neongreen), .5);
+        }
+    }
+
+    .nav-local a:hover,
+    .nav-local a:focus,
+    #related-posts .module-title,
+    #sidebar .widget-title {
+        border-color: brand-color(neongreen);
+    }
+}
+
+// Randomized backgrounds for fallback thumbnails.
+.post-mini,
+.post-summary {
+    .image-fallback.color-1 {
+        background-color: brand-color(cyan);
+    }
+}
+
+.post-mini,
+.post-summary {
+    .image-fallback.color-2 {
+        background-color: brand-color(coral);
+    }
+}
+
+.post-mini,
+.post-summary {
+    .image-fallback.color-3 {
+        background-color: brand-color(yellow);
+    }
+}
+
+.post-mini,
+.post-summary {
+    .image-fallback.color-4 {
+        background-color: brand-color(lilac);
+    }
+}
+
+.post-mini,
+.post-summary {
+    .image-fallback.color-5 {
+        background-color: brand-color(orange);
+    }
+}
+
+.post-mini,
+.post-summary {
+    .image-fallback.color-6 {
+        background-color: brand-color(lime);
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../includes/lib';
+
+
+// The overall document
+
+html {
+    font-size: 100%;
+    background: #fff;
+    height: 100%;
+}
+
+body {
+    font-size: 100%;
+    background: #fff;
+    color: $color-text-primary;
+    font-family: $base-font-stack;
+    line-height: $base-line-height;
+    height: 100%;
+}
+
+// A few places might use a class to hide elements. We should try to avoid that.
+.hidden {
+    @include hidden;
+}

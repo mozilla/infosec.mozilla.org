@@ -1,0 +1,60 @@
+// Post summaries in a grid
+
+.post-image-large {
+    margin-bottom: 20px;
+    max-height: 330px;
+    overflow: hidden;
+    padding-bottom: 56.25%; // 16:9
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    img.wp-post-image {
+        @include transform(translateY(-50%));
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+}
+
+.post-summary {
+    margin-bottom: 40px;
+
+    .entry-title,
+    .entry-info,
+    .entry-summary,
+    .entry-meta {
+        padding: 0 20px;
+    }
+
+    .entry-title {
+        @include font-size(20px);
+    }
+
+    .entry-summary .go {
+        @include font-size(18px);
+        @include trailing-arrow;
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+
+        &:after {
+            @include transition(right 150ms $pebbles-timing-snap);
+            display: inline-block;
+            font-size: 1.15em;
+            position: relative;
+            right: 0;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        &:hover:after,
+        &:focus:after {
+            right: -4px;
+        }
+    }
+}
