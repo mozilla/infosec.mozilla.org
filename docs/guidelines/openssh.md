@@ -317,7 +317,7 @@ Note also that while the attacker can use your key as long as the agent is runni
 
 SSH forwarding allows you to jump between hosts while keeping your private key on your local computer. This is accomplished by telling SSH to forward the authentication requests back to the ssh-agent of your local computer. SSH forwarding works between as many hosts as needed, each host forwarding new authentication request to the previous host, until the ssh-agent that holds the private key is reached.
 
-![SSH Forwarding](assets/pages/Ssh_forwarding.png)
+![SSH Forwarding](assets/images/Ssh_forwarding.png)
 
 On each host, two environment variables are declared for the user enabling ssh-agent:
 
