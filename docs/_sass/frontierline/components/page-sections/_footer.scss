@@ -26,7 +26,7 @@
 
         a {
             @include image-replaced;
-            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
+            background: transparent url('../images/mozilla-wordmark-white.svg') no-repeat;
             @include background-size(88px 28px);
             display: inline-block;
             height: 28px;
