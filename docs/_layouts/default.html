@@ -23,7 +23,7 @@
 		    <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
 		    <div class="nav-mozilla">
 			    <ul class="nav-mozilla-menu" id="nav-mozilla-menu" style="">
-				    <li class="nav-global-guidelines"><a href="">Security Guidelines</a></li>
+				    <li class="nav-global-guidelines"><a href="{{ '/' | relative_url }}">homepage</a></li>
 				    <li class="nav-global-participate"><a href="{{ site.github.repository_url }}">Improve this document</a></li>
 				    <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
 			    </ul>
@@ -41,14 +41,53 @@
     </div>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    <footer id="site-info" class="section">
+      <div class="content">
+        <section class="col col-1">
+          <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
+          <p id="license" class="license">
+          ©2017 by individual contributors. Content available under a <a href="https://www.mozilla.org/foundation/licensing/website-content/" rel="external license">Creative Commons license</a>        </p>
+        </section>
 
+        <section class="col col-2">
+          <ul class="links-join">
+            <li><a href="https://www.mozilla.org/contact/">Contact Us</a></li>
+          </ul>
+
+          <ul class="links-legal">
+            <li><a href="https://www.mozilla.org/privacy/">Privacy</a></li>
+            <li class="wrap"><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+          </ul>
+        </section>
+
+        <section class="col col-3">
+          <ul class="links-social">
+            <li>
+              Enterprise Information Security:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/mozinfosec">Twitter<span> (@mozinfosec)</span></a></li>
+                <li class="wrap"><a href="irc://irc.mozilla.org/infosec">IRC<span> (#infosec)</span></a></li>
+              </ul>
+            </li>
+
+            <li>
+              Mozilla:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/mozilla">Twitter<span> (@mozilla)</span></a></li>
+                <li class="wrap"><a href="https://www.facebook.com/mozilla">Facebook<span> (Mozilla)</span></a></li>
+              </ul>
+            </li>
+            <li>
+              Firefox:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/firefox">Twitter<span> (@firefox)</span></a></li>
+                <li class="wrap"><a href="https://www.facebook.com/Firefox">Facebook<span> (Firefox)</span></a></li>
+                <li class="wrap"><a href="https://www.youtube.com/firefoxchannel">YouTube<span> (firefoxchannel)</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
