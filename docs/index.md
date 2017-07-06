@@ -16,6 +16,11 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 
 - [Guidelines](guidelines/) *Guides to help you setup services securily*
   - [Key Management](guidelines/key_management) *Find out which algorithms are recommended, when to expire keys, etc.*
+  - [OpenID Connect](guidelines/openid_connect) *How to use OpenID Connect securely and make user's session experience better*
+  - [SAML](guidelines/saml) *How to use SAML securely and make user's session experience better*
+  - [Web Security](guidelines/web_security) *What headers, setup, etc. should you follow for your web site?*
+  - [Kubernetes](guidelines/kubernetes) *A high level guide of basic security needs for Kubernetes*
+  - [Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS) *How to configure your HTTPS web server securely and navigate the TLS land*
 - [Fundamentals](fundamentals/) *Fundamental security principles*
   - [Rationales](fundamentals/rationales) *Explains and justifies the use of specific controls, principles*
   - [Security Principles](fundamentals/security_principles) *Most important security principles to follow - the baseline*
