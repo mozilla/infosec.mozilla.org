@@ -28,168 +28,217 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 
 # Web Security Cheat Sheet
 
-<table>
+<table id="sortable" style="width: 100%;">
 <thead>
-<tr class="header">
-<th><p>data-sort-type=“number” | Guideline</p></th>
-<th><p>data-sort-type=“number” | Security<br />
-Benefit</p></th>
-<th><p>data-sort-type=“number” | Implementation<br />
-Difficulty</p></th>
-<th><p>data-sort-type=“number” | Order<sup>†</sup></p></th>
-<th><p>Requirements</p></th>
-<th><p>Notes</p></th>
+<tr style="background-color: #aaaaaa;">
+<th data-sort-type="number"> Guideline</th>
+<th data-sort-type="number"> Security<br>Benefit</th>
+<th data-sort-type="number"> Implementation<br>Difficulty</th>
+<th data-sort-type="number"> Order<sup style="font-size: .8em; position: relative; top: -.4em; vertical-align: baseline;">†</sup></th>
+<th> Requirements</th>
+<th> Notes</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td><p>data-sort-value=“1” | <a href="#HTTPS" title="wikilink"><span style="color: black;">HTTPS</span></a></p></td>
-<td><p>data-sort-value=“4” style=“text-align: center;” | <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>style=“text-align: center;” data-sort-value=“0” |</p></td>
-<td><p>Mandatory</p></td>
-<td><p>Sites should use HTTPS (or other secure protocols) for all communications</p></td>
+<tr>
+<td data-sort-value="1"> <a href="#HTTPS"><span style="color: black;">HTTPS</span></a></td>
+<td data-sort-value="4" style="text-align: center;"> <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></td>
+<td style="text-align: center;" data-sort-value="0"></td>
+<td> Mandatory</td>
+<td> Sites should use HTTPS (or other secure protocols) for all communications</td>
 </tr>
-<tr class="even">
-<td><p>data-sort-value=“2” style=“padding-left: 1.5em;” | <a href="#HTTP_Public_Key_Pinning" title="wikilink"><span style="color: black;">Public Key Pinning</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“4” style=“text-align: center;” | <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></p></td>
-<td><p>style=“text-align: center;” data-sort-value=“99” | --</p></td>
-<td><p>Mandatory for maximum risk sites only</p></td>
-<td><p>Not recommended for most sites</p></td>
+<tr>
+<td data-sort-value="2" style="padding-left: 1.5em;"> <a href="#HTTP_Public_Key_Pinning"><span style="color: black;">Public Key Pinning</span></a></td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></td>
+<td data-sort-value="4" style="text-align: center;"> <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></td>
+<td style="text-align: center;" data-sort-value="99"> --</td>
+<td> Mandatory for maximum risk sites only</td>
+<td> Not recommended for most sites</td>
 </tr>
-<tr class="odd">
-<td><p>data-sort-value=“3” style=“padding-left: 1.5em;” | <a href="#HTTP_Redirections" title="wikilink"><span style="color: black;">Redirections from HTTP</span></a></p></td>
-<td><p>data-sort-value=“4” style=“text-align: center;” | <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>3</p></td>
-<td><p>Mandatory</p></td>
-<td><p>Websites must redirect to HTTPS, API endpoints should disable HTTP entirely</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“4” style=“padding-left: 1.5em;” | <a href="#Resource_Loading" title="wikilink"><span style="color: black;">Resource Loading</span></a></p></td>
-<td><p>data-sort-value=“4” style=“text-align: center;” | <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>2</p></td>
-<td><p>Mandatory for all websites</p></td>
-<td><p>Both passive and active resources should be loaded through protocols using TLS, such as HTTPS</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“5” style=“padding-left: 1.5em;” | <a href="#HTTP_Strict_Transport_Security" title="wikilink"><span style="color: black;">Strict Transport Security</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>4</p></td>
-<td><p>Mandatory for all websites</p></td>
-<td><p>Minimum allowed time period of six months</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“6” style=“padding-left: 1.5em;” | <a href="#HTTPS" title="wikilink"><span style="color: black;">TLS Configuration</span></a></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>1</p></td>
-<td><p>Mandatory</p></td>
-<td><p>Use the most secure Mozilla TLS configuration for your user base, typically <a href="Security/Server_Side_TLS#Intermediate_compatibility_(default)" title="wikilink">Intermediate</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“7” | <a href="#Content_Security_Policy" title="wikilink"><span style="color: black;">Content Security Policy</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” |<span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>10</p></td>
-<td><p>Mandatory for new websites<br />
-Recommended for existing websites</p></td>
-<td><p>Disabling inline script is the greatest concern for CSP implementation</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“8” | <a href="#Cookies" title="wikilink"><span style="color: black;">Cookies</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>7</p></td>
-<td><p>Mandatory for all new websites<br />
-Recommended for existing websites</p></td>
-<td><p>All cookies must be set with the Secure flag, and set as restrictively as possible</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“9” | <a href="#contribute.json" title="wikilink"><span style="color: black;">contribute.json</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>9</p></td>
-<td><p>Mandatory for all new Mozilla websites<br />
-Recommended for existing Mozilla sites</p></td>
-<td><p>Mozilla sites should serve contribute.json and keep contact information up-to-date</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“10” | <a href="#Cross-origin_Resource_Sharing" title="wikilink"><span style="color: black;">Cross-origin Resource Sharing</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>11</p></td>
-<td><p>Mandatory</p></td>
-<td><p>Origin sharing headers and files should not be present, except for specific use cases</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“11” | <a href="#CSRF_Prevention" title="wikilink"><span style="color: black;">Cross-site Request Forgery Tokenization</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“99” style=“text-align: center;” | <span style="background-color: #ffffff; border: solid 1px #aaaaaa; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Unknown</span></p></td>
-<td><p>6</p></td>
-<td><p>Varies</p></td>
-<td><p>Mandatory for websites that allow destructive changes<br />
-Unnecessary for all other websites<br />
-Most application frameworks have built-in CSRF tokenization to ease implementation</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“11” | <a href="#Referrer_Policy" title="wikilink"><span style="color: black;">Referrer Policy</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>12</p></td>
-<td><p>Recommended for all websites</p></td>
-<td><p>Improves privacy for users, prevents the leaking of internal URLs via <code>Referer</code> header</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“12” | <a href="#robots.txt" title="wikilink"><span style="color: black;">robots.txt</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>14</p></td>
-<td><p>Optional</p></td>
-<td><p>Websites that implement robots.txt must use it only for noted purposes</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“13” | <a href="#Subresource_Integrity" title="wikilink"><span style="color: black;">Subresource Integrity</span></a></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>15</p></td>
-<td><p>Recommended<sup>‡</sup></p></td>
-<td><p><sup>‡</sup> Only for websites that load JavaScript or stylesheets from foreign origins</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“14” | <a href="#X-Content-Type-Options" title="wikilink"><span style="color: black;">X-Content-Type-Options</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>8</p></td>
-<td><p>Recommended for all websites</p></td>
-<td><p>Websites should verify that they are setting the proper MIME types for all resources</p></td>
-</tr>
-<tr class="even">
-<td><p>data-sort-value=“15” | <a href="#X-Frame-Options" title="wikilink"><span style="color: black;">X-Frame-Options</span></a></p></td>
-<td><p>data-sort-value=“3” style=“text-align: center;” | <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>5</p></td>
-<td><p>Mandatory for all websites</p></td>
-<td><p>Websites that don't use DENY or SAMEORIGIN must employ clickjacking defenses</p></td>
-</tr>
-<tr class="odd">
-<td><p>data-sort-value=“16” | <a href="#X-XSS-Protection" title="wikilink"><span style="color: black;">X-XSS-Protection</span></a></p></td>
-<td><p>data-sort-value=“1” style=“text-align: center;” | <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></p></td>
-<td><p>data-sort-value=“2” style=“text-align: center;” | <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></p></td>
-<td><p>13</p></td>
-<td><p>Mandatory for all new websites<br />
-Recommended for existing websites</p></td>
-<td><p>Manual testing should be done for existing websites, prior to implementation</p></td>
+<tr>
+<td data-sort-value="3" style="padding-left: 1.5em;"> <a href="#HTTP_Redirections"><span style="color: black;">Redirections from HTTP</span></a>
+</td>
+<td data-sort-value="4" style="text-align: center;"> <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 3
+</td>
+<td> Mandatory
+</td>
+<td> Websites must redirect to HTTPS, API endpoints should disable HTTP entirely
+</td></tr><tr>
+<td data-sort-value="4" style="padding-left: 1.5em;"> <a href="#Resource_Loading"><span style="color: black;">Resource Loading</span></a>
+</td>
+<td data-sort-value="4" style="text-align: center;"> <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Maximum</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 2
+</td>
+<td> Mandatory for all websites
+</td>
+<td> Both passive and active resources should be loaded through protocols using TLS, such as HTTPS
+</td></tr><tr>
+<td data-sort-value="5" style="padding-left: 1.5em;"> <a href="#HTTP_Strict_Transport_Security"><span style="color: black;">Strict Transport Security</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 4
+</td>
+<td> Mandatory for all websites
+</td>
+<td> Minimum allowed time period of six months
+</td></tr><tr>
+<td data-sort-value="6" style="padding-left: 1.5em;"> <a href="#HTTPS"><span style="color: black;">TLS Configuration</span></a>
+</td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span>
+</td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span>
+</td>
+<td style="text-align: center;"> 1
+</td>
+<td> Mandatory
+</td>
+<td> Use the most secure Mozilla TLS configuration for your user base, typically <a href="/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29" title="Security/Server Side TLS">Intermediate</a>
+</td></tr><tr>
+<td data-sort-value="7"> <a href="#Content_Security_Policy"><span style="color: black;">Content Security Policy</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"><span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td style="text-align: center;"> 10
+</td>
+<td> Mandatory for new websites<br>Recommended for existing websites
+</td>
+<td> Disabling inline script is the greatest concern for CSP implementation
+</td></tr><tr>
+<td data-sort-value="8"> <a href="#Cookies"><span style="color: black;">Cookies</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span>
+</td>
+<td style="text-align: center;"> 7
+</td>
+<td> Mandatory for all new websites<br>Recommended for existing websites
+</td>
+<td> All cookies must be set with the Secure flag, and set as restrictively as possible
+</td></tr><tr>
+<td data-sort-value="9"> <a href="#contribute.json"><span style="color: black;">contribute.json</span></a>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 9
+</td>
+<td> Mandatory for all new Mozilla websites<br>Recommended for existing Mozilla sites
+</td>
+<td> Mozilla sites should serve contribute.json and keep contact information up-to-date
+</td></tr><tr>
+<td data-sort-value="10"> <a href="#Cross-origin_Resource_Sharing"><span style="color: black;">Cross-origin Resource Sharing</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 11
+</td>
+<td> Mandatory
+</td>
+<td> Origin sharing headers and files should not be present, except for specific use cases
+</td></tr><tr>
+<td data-sort-value="11"> <a href="#CSRF_Prevention"><span style="color: black;">Cross-site Request Forgery Tokenization</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="99" style="text-align: center;"> <span style="background-color: #ffffff; border: solid 1px #aaaaaa; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Unknown</span>
+</td>
+<td style="text-align: center;"> 6
+</td>
+<td> Varies
+</td>
+<td> Mandatory for websites that allow destructive changes<br>Unnecessary for all other websites<br>Most application frameworks have built-in CSRF tokenization to ease implementation
+</td></tr><tr>
+<td data-sort-value="11"> <a href="#Referrer_Policy"><span style="color: black;">Referrer Policy</span></a>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 12
+</td>
+<td> Recommended for all websites
+</td>
+<td> Improves privacy for users, prevents the leaking of internal URLs via <tt>Referer</tt> header
+</td></tr><tr>
+<td data-sort-value="12"> <a href="#robots.txt"><span style="color: black;">robots.txt</span></a>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 14
+</td>
+<td> Optional
+</td>
+<td> Websites that implement robots.txt must use it only for noted purposes
+</td></tr><tr>
+<td data-sort-value="13"> <a href="#Subresource_Integrity"><span style="color: black;">Subresource Integrity</span></a>
+</td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span>
+</td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span>
+</td>
+<td style="text-align: center;"> 15
+</td>
+<td> Recommended<sup style="font-size: .8em; position: relative; top: -.4em; vertical-align: baseline;">‡</sup>
+</td>
+<td> <sup style="font-size: .8em; position: relative; top: -.4em; vertical-align: baseline;">‡</sup> Only for websites that load JavaScript or stylesheets from foreign origins
+</td></tr><tr>
+<td data-sort-value="14"> <a href="#X-Content-Type-Options"><span style="color: black;">X-Content-Type-Options</span></a>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 8
+</td>
+<td> Recommended for all websites
+</td>
+<td> Websites should verify that they are setting the proper MIME types for all resources
+</td></tr><tr>
+<td data-sort-value="15"> <a href="#X-Frame-Options"><span style="color: black;">X-Frame-Options</span></a>
+</td>
+<td data-sort-value="3" style="text-align: center;"> <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">High</span>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span>
+</td>
+<td style="text-align: center;"> 5
+</td>
+<td> Mandatory for all websites
+</td>
+<td> Websites that don't use DENY or SAMEORIGIN must employ clickjacking defenses
+</td></tr><tr>
+<td data-sort-value="16"> <a href="#X-XSS-Protection"><span style="color: black;">X-XSS-Protection</span></a>
+</td>
+<td data-sort-value="1" style="text-align: center;"> <span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Low</span></td>
+<td data-sort-value="2" style="text-align: center;"> <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Medium</span></td>
+<td style="text-align: center;"> 13</td>
+<td> Mandatory for all new websites<br>Recommended for existing websites</td>
+<td> Manual testing should be done for existing websites, prior to implementation</td>
 </tr>
 </tbody>
+<tfoot></tfoot>
 </table>
 
 <div style="margin-left: 1.5em;">
 <sup>†</sup> Suggested order that administrators implement the web security guidelines. It is based on a combination of the security impact and the ease of implementation from an operational and developmental perspective.
-
 </div>
 
 # Transport Layer Security (TLS/SSL)
@@ -312,7 +361,7 @@ Despite the fact that modern browsers make it evident that websites are loading 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 <!-- Attempts to load over HTTP will be blocked and will generate mixed content warnings -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 <!-- Although passive content won't be blocked, it will still generate mixed content warnings -->
 <img src="http://very.badssl.com/image.jpg">
