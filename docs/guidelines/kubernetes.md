@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: Kubernetes
+description: A high level guide of basic security needs for Kubernetes
 ---
 
 *The goal of this document is to help you understand the basics of how to securely implement [Kubernetes](http://kubernetes.io/docs/) at Mozilla.

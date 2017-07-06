@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: Key Management
+description: Find out which algorithms are recommended, when to expire keys, etc.
 ---
 
 *The goal of this document is to help operational teams with the handling and management of cryptographic material.

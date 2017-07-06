@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: SAML
+description: How to use SAML securely and make user’s session experience better
 ---
 
 *The goal of this document is to help understand the basics of how to securely implement [Security Assertion Markup Language (SAML)](https://en.wikipedia.org/wiki/SAML) when authenticating and authorizing users.

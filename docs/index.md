@@ -14,16 +14,20 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 
 ## Documentation
 
-- [Guidelines](guidelines/) *Guides to help you setup services securily*
-  - [Key Management](guidelines/key_management) *Find out which algorithms are recommended, when to expire keys, etc.*
-  - [OpenID Connect](guidelines/openid_connect) *How to use OpenID Connect securely and make user's session experience better*
-  - [SAML](guidelines/saml) *How to use SAML securely and make user's session experience better*
-  - [Web Security](guidelines/web_security) *What headers, setup, etc. should you follow for your web site?*
-  - [Kubernetes](guidelines/kubernetes) *A high level guide of basic security needs for Kubernetes*
-  - [Server Side TLS](https://wiki.mozilla.org/Security/Server_Side_TLS) *How to configure your HTTPS web server securely and navigate the TLS land*
-- [Fundamentals](fundamentals/) *Fundamental security principles*
-  - [Rationales](fundamentals/rationales) *Explains and justifies the use of specific controls, principles*
-  - [Security Principles](fundamentals/security_principles) *Most important security principles to follow - the baseline*
+{% for cat in site.category-list %}
+### {{ cat }}
+<ul>
+  {% for page in site.pages %}
+    {% if page.resource == true %}
+      {% for pc in page.categories %}
+        {% if pc == cat %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
 
 ## Contact
 Email us: infosec [at] mozilla.com. For confidential information, encrypt your email using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`

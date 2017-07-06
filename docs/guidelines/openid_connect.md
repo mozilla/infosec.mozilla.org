@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: OpenID Connect
+description: How to use OpenID Connect securely and make user’s session experience better
 ---
 
 *The goal of this document is to help you understand the basics of how to securely implement [OpenID Connect (OIDC)](https://en.wikipedia.org/wiki/OpenID_Connect) when authenticating and authorizing users.

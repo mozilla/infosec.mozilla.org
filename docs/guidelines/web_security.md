@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: Web Security
+description: What headers, setup, etc. should you follow for your web site?
 ---
 
 *The goal of this document is to help operational teams with creating secure web applications. All Mozilla sites and deployments are expected to follow the recommendations below. Use of these recommendations by the public is strongly encouraged.

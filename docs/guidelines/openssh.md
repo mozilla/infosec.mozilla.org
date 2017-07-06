@@ -1,5 +1,9 @@
 ---
 layout: default
+resource: true
+categories: [Guidelines]
+title: OpenSSH
+description: How to configure and use OpenSSH server and client securely
 ---
 
 *The goal of this document is to help operational teams with the configuration of OpenSSH server and client.
