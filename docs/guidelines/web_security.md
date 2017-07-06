@@ -395,45 +395,43 @@ Require subkeys include `name`, `description`, `bugs`, `participate` (particular
 
 ```
 {
-
-   “<b>name</b>”: “Bedrock”,
-   “<b>description</b>”: “The app powering www.mozilla.org.”,
-   “repository”: {
-       “url”: "https://github.com/mozilla/bedrock",
-       “license”: “MPL2”,
-       “tests”: "https://travis-ci.org/mozilla/bedrock/"
-   },
-   “<b>participate</b>”: {
-       “home”: "https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org",
-       “docs”: "http://bedrock.readthedocs.org/",
-       “mailing-list”: "https://www.mozilla.org/about/forums/#dev-mozilla-org",
-       “<b>irc</b>”: "irc://irc.mozilla.org/#www",
-       “<b>irc-contacts</b>”: [
-           “someperson1”,
-           “someperson2”,
-           “someperson3”
-       ]
-   },
-   “<b>bugs</b>”: {
-       “list”: "https://bugzilla.mozilla.org/describecomponents.cgi?product=www.mozilla.org",
-       “report”: "https://bugzilla.mozilla.org/enter_bug.cgi?product=www.mozilla.org",
-       “mentored”: "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty
-                       &query_format=advanced&bug_status=NEW&product=www.mozilla.org&list_id=10866041"
-   },
-   “<b>urls</b>”: {
-       “prod”: "https://www.mozilla.org",
-       “stage”: "https://www.allizom.org",
-       “dev”: "https://www-dev.allizom.org",
-       “demo1”: "https://www-demo1.allizom.org",
-   },
-   “keywords”: [
-       “python”,
-       “less-css”,
-       “django”,
-       “html5”,
-       “jquery”
-   ]
-
+  "name": "Bedrock",
+    "description": "The app powering www.mozilla.org.",
+    "repository": {
+      "url": "https://github.com/mozilla/bedrock",
+      "license": "MPL2",
+      "tests": "https://travis-ci.org/mozilla/bedrock/"
+    },
+    "participate": {
+      "home": "https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org",
+      "docs": "http://bedrock.readthedocs.org/",
+      "mailing-list": "https://www.mozilla.org/about/forums/#dev-mozilla-org",
+      "irc": "irc://irc.mozilla.org/#www",
+      "irc-contacts": [
+        "someperson1",
+        "someperson2",
+        "someperson3"
+      ]
+    },
+    "bugs": {
+      "list": "https://bugzilla.mozilla.org/describecomponents.cgi?product=www.mozilla.org",
+      "report": "https://bugzilla.mozilla.org/enter_bug.cgi?product=www.mozilla.org",
+      "mentored": "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty
+                   &query_format=advanced&bug_status=NEW&product=www.mozilla.org&list_id=10866041"
+    },
+    "urls": {
+      "prod": "https://www.mozilla.org",
+      "stage": "https://www.allizom.org",
+      "dev": "https://www-dev.allizom.org",
+      "demo1": "https://www-demo1.allizom.org"
+    },
+    "keywords": [
+      "python",
+      "less-css",
+      "django",
+      "html5",
+      "jquery"
+    ]
 }
 ```
 
@@ -501,7 +499,7 @@ Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
   <allow-http-request-headers-from domain="random-dashboard.mozilla.org" headers="*" secure="true"/>
 </cross-domain-policy>
 
-<!-- The same thing, but for Silverlight-->;
+<!-- The same thing, but for Silverlight-->
 <?xml version="1.0" encoding="utf-8"?>
 <access-policy>
   <cross-domain-access>
