@@ -2,6 +2,48 @@
 ---
 @import "frontierline/style.scss";
 @import "{{ site.theme }}";
-.logo {
-	margin-left: 25px;
+
+body {
+    font-size: 100%;
+}
+
+h1,h2,h3,h4 {
+    font-family: ZillaSlab;
+}
+
+ul.nav-mozilla-menu {
+    padding-left: 0;
+    list-style-type: none;
+    left: -400px;
+}
+
+#main_content_wrap {
+    border-bottom: none;
+}
+
+/* Sticky Footer */
+
+:root {
+    --footer-height: 150px;
+}
+
+.page-wrap {
+    min-height: calc(100% - 80px);
+    margin-bottom: calc(-1 * var(--footer-height));
+    background-color: #f2f2f2;
+}
+
+.page-wrap:after {
+    content: '';
+    display: block;
+}
+
+footer, .page-wrap:after {
+    height: var(--footer-height);
+}
+
+@media all and (max-width: 760px) {
+    :root {
+        --footer-height: 300px;
+    }
 }

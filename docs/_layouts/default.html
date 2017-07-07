@@ -9,7 +9,7 @@
     <script src="{{ '/assets/js/jquery-1.4.4.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/jquery.tablesorter.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/sortable.js' | relative_url }}"></script>
-
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <title>{{ site.title | default: site.github.repository_name }}</title>
@@ -17,29 +17,34 @@
 
   <body>
 
-    <!-- HEADER -->
-    <nav id="nav-global" class="nav-global can-stick">
-      <div class="header">
-        <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
-        <div class="nav-mozilla">
-          <ul class="nav-mozilla-menu" id="nav-mozilla-menu" style="">
-            <li class="nav-global-home"><a href="{{ '/' | relative_url }}">home</a></li>
-            <li class="nav-global-fundamentals"><a href="{{ '/fundamentals/' | relative_url }}">security fundamentals</a></li>
-            <li class="nav-global-guidelines"><a href="{{ '/guidelines/' | relative_url }}">security guidelines</a></li>
-            <li class="nav-global-participate"><a href="{{ site.github.repository_url }}/blob/master/docs/{{ page.path }}">Improve this document</a></li>
-            <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
-          </ul>
+    <div class="page-wrap">
+
+      <!-- HEADER -->
+      <nav id="nav-global" class="nav-global can-stick">
+        <div class="header content">
+          <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
+          <div class="nav-mozilla">
+            <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0">Menu</span>
+            <ul class="nav-mozilla-menu" id="nav-mozilla-menu" style="">
+              <li class="nav-global-home"><a href="{{ '/' | relative_url }}">home</a></li>
+              <li class="nav-global-fundamentals"><a href="{{ '/fundamentals/' | relative_url }}">security fundamentals</a></li>
+              <li class="nav-global-guidelines"><a href="{{ '/guidelines/' | relative_url }}">security guidelines</a></li>
+              <li class="nav-global-participate"><a href="{{ site.github.repository_url }}/blob/master/docs/{{ page.path }}">Improve this document</a></li>
+              <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
+            </ul>
+          </div>
+
+          <a class="page-top" href="#masthead" title="Go to the top of the page">Top</a>
         </div>
+      </nav>
 
-        <a class="page-top" href="#masthead" title="Go to the top of the page">Top</a>
+      <!-- MAIN CONTENT -->
+      <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner content">
+          {{ content }}
+        </section>
       </div>
-    </nav>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
     </div>
 
     <!-- FOOTER  -->
