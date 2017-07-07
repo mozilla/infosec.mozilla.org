@@ -52,5 +52,4 @@ Ordered by date - newest member is last.
 - Andrew Krug [:andrew]
 
 ### Past & honorary members
-- Julien Vehent [:ulfr]
 - Joe Stevensen [:joe]
