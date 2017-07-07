@@ -21,7 +21,7 @@ Infosec assists Mozillians in defining and operating security controls to ensure
     {% if page.resource == true %}
       {% for pc in page.categories %}
         {% if pc == cat %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
+          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
         {% endif %}
       {% endfor %}
     {% endif %}
