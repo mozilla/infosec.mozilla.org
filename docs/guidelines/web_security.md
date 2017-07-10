@@ -10,25 +10,25 @@ description: What headers, setup, etc. should you follow for your web site?
 The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
 
 # Table of Contents
-1. [Cheat Sheet](#Web_Security_Cheat_Sheet)
-2. [Transport Layer Security (TLS/SSL)](#Transport_Layer_Security_(TLS/SSL))
+1. [Cheat Sheet](#Web-Security-Cheat-Sheet)
+2. [Transport Layer Security (TLS/SSL)](#Transport-Layer-Security-(TLS/SSL))
     1. [HTTPS](#HTTPS)
-    2. [HTTP Strict Transport Security](#HTTP_Strict_Transport_Security)
-    3. [HTTP Redirections](#HTTP_Redirections)
-    4. [HTTP Public Key Pinning](#HTTP_Public_Key_Pinning)
-    5. [Resource Loading](#Resource_Loading)
-3. [Content Security Policy](#Content_Security_Policy)
+    2. [HTTP Strict Transport Security](#HTTP-Strict-Transport-Security)
+    3. [HTTP Redirections](#HTTP-Redirections)
+    4. [HTTP Public Key Pinning](#HTTP-Public-Key-Pinning)
+    5. [Resource Loading](#Resource-Loading)
+3. [Content Security Policy](#Content-Security-Policy)
 4. [contribute.json](#contribute.json)
 5. [Cookies](#Cookies)
-6. [Cross-origin Resource Sharing](#Cross-origin_Resource_Sharing)
-7. [CSRF Prevention](#CSRF_Prevention)
-8. [Referrer Policy](#Referrer_Policy)
+6. [Cross-origin Resource Sharing](#Cross-origin-Resource-Sharing)
+7. [CSRF Prevention](#CSRF-Prevention)
+8. [Referrer Policy](#Referrer-Policy)
 9. [robots.txt](#robots.txt)
-10. [Subresource Integrity](#Subresource_Integrity)
+10. [Subresource Integrity](#Subresource-Integrity)
 11. [X-Content-Type-Options](#X-Content-Type-Options)
 12. [X-Frame-Options](#X-Frame-Options)
 13. [X-XSS-Protection](#X-XSS-Protection)
-14. [Version History](#Version_History)
+14. [Version History](#Version-History)
 
 # Web Security Cheat Sheet
 
