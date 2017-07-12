@@ -106,5 +106,6 @@ Avoid using or storing refresh tokens. This is especially important for relying 
 -   <https://auth0.com/docs/protocols> (Auth0 documentation)
 -   <http://developer.okta.com/docs/api/resources/oidc> (Okta documentation)
 -   [Authorization code grant vs Implicit grant](http://stackoverflow.com/questions/7522831/what-is-the-purpose-of-the-implicit-grant-authorization-type-in-oauth-2)
+-   [OAuth2 Implicit Flow thread model](https://tools.ietf.org/html/rfc6819#section-4.4.2.1)
 -   [OIDC vs OpenID vs OAuth2](http://security.stackexchange.com/questions/44611/difference-between-oauth-openid-and-openid-connect-in-very-simple-term)
 -   <http://nordicapis.com/api-security-oauth-openid-connect-depth/>
