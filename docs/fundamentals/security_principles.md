@@ -97,7 +97,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 **Do**
 
 -   Achieve B+ or higher on [Mozilla's Observatory](https://observatory.mozilla.org).
--   Follow the [Web Security Guidelines](../guidelines/web_security).
+-   Follow the [Web Security Guidelines](../guidelines/web_security.md).
 
 ## Encrypt sensitive data
 
