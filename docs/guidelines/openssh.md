@@ -392,7 +392,7 @@ $ scp -oProxyJump=ssh.mozilla.com myhost.private.scl3.mozilla.com:/home/kang/tes
 You can also add these lines to your `~/.ssh/config`
 
 ```
-Host *.mozilla.com
+Host *.mozilla.com !ssh.mozilla.com
 ProxyJump ssh.mozilla.com
 ```
 
