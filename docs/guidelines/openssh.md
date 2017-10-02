@@ -19,7 +19,7 @@ See `man sshd_config`, `man ssh_config` for more information on specific setting
 
 ## Configuration
 
-Different versions of OpenSSH support different options which are not always compatible. This guide show settings for the most commonly deployed OpenSSH versions at Mozilla - however, using the latest version of OpenSSH is recommended.
+Different versions of OpenSSH support different options which are not always compatible. This guide shows settings for the most commonly deployed OpenSSH versions at Mozilla - however, using the latest version of OpenSSH is recommended.
 
 ### **Modern** (OpenSSH 6.7+)
 
