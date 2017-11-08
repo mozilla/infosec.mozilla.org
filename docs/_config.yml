@@ -1,4 +1,6 @@
+# See https://jekyllrb.com/docs/configuration/
 theme: jekyll-theme-slate
+base_url: https://infosec.mozilla.org/
 sass:
     sass_dir: _sass
 category-list: [Guidelines, Fundamentals]
