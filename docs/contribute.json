@@ -3,7 +3,7 @@
     "description": "Infosec assists Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently.",
     "repository": {
         "url": "https://github.com/mozilla/infosec.mozilla.org",
-        "license": "MPL2",
+        "license": "MPL2"
     },
     "participate": {
         "home": "https://infosec.mozilla.org/",
@@ -18,7 +18,7 @@
         "mentored": "https://github.com/mozilla/infosec.mozilla.org/issues?q=is%3Aissue+is%3Aclosed"
     },
     "urls": {
-        "prod": "https://infosec.mozilla.org",
+        "prod": "https://infosec.mozilla.org"
     },
     "keywords": [
         "security"
