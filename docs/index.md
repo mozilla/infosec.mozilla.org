@@ -43,6 +43,7 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
   - Gene Wood [:gene]
   - April King [:April]
   - Andrew Krug [:andrew]
+  - Justin Dow [:jabba]
   - Jonathan Claudius [:claudijd]
   - Caglar Ulucenk [:Cag]
   - Tristan Weir [:weir]
