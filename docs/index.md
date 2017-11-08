@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Enterprise Information Security
-Infosec assists Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently.
+Infosec assists Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently across the organization.
 
 - we help you define the risks around your services and data
 - we help projects design and implement security controls
@@ -37,19 +37,16 @@ For security incidents, file a bug in Bugzilla under the product/component [inve
 Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc://irc.mozilla.org/security) at irc.mozilla.org.
 
 ## Members
-Ordered by date - newest member is last.
 
-- Guillaume Destuynder [:kang]
-- Michal Purzynski [:michal`]
 - Jeff Bryner [:jeff]
+- Guillaume Destuynder [:kang]
 - Gene Wood [:gene]
-- Aaron Meihm [:alm]
-- Jonathan Claudius [:claudijd]
 - April King [:April]
-- Alicia Smith [:phrozyn]
-- Brandon Myers [:pwnbus]
-- Tristan Weir [:weir]
 - Andrew Krug [:andrew]
+- Jonathan Claudius [:claudijd]
+- Caglar Ulucenk [:Cag]
+- Tristan Weir [:weir]
+  - Alicia Smith [:phrozyn]
+  - Brandon Myers [:pwnbus]
+  - Michal Purzynski [:michal`]
 
-### Past & honorary members
-- Joe Stevensen [:joe]
