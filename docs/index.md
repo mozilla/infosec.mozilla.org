@@ -21,7 +21,7 @@ Infosec assists Mozillians in defining and operating security controls to ensure
     {% if page.resource == true %}
       {% for pc in page.categories %}
         {% if pc == cat %}
-          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
+          <li><a href="{{ page.url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
         {% endif %}
       {% endfor %}
     {% endif %}
@@ -39,15 +39,15 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
 ## Members
 
 - Jeff Bryner [:jeff]
-- Guillaume Destuynder [:kang]
-- Gene Wood [:gene]
-- April King [:April]
-- Andrew Krug [:andrew]
-- Justin Dow [:jabba]
-- Jonathan Claudius [:claudijd]
-- Caglar Ulucenk [:Cag]
-- Tristan Weir [:weir]
-  - Alicia Smith [:phrozyn]
-  - Brandon Myers [:pwnbus]
-  - Michal Purzynski [:michal`]
+  - Guillaume Destuynder [:kang]
+  - Gene Wood [:gene]
+  - April King [:April]
+  - Andrew Krug [:andrew]
+  - Justin Dow [:jabba]
+  - Jonathan Claudius [:claudijd]
+  - Caglar Ulucenk [:Cag]
+  - Tristan Weir [:weir]
+    - Alicia Smith [:phrozyn]
+    - Brandon Myers [:pwnbus]
+    - Michal Purzynski [:michal`]
 
