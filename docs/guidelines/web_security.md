@@ -280,13 +280,13 @@ The header consists of one mandatory parameter (`max-age`) and two optional para
 
 - `max-age:` how long user agents will redirect to HTTPS, in seconds
 - `includeSubDomains:` whether user agents should upgrade requests on subdomains
-- `preload:` whether the site should be included in the [HSTS preload list](https://hstspreload.appspot.com/)
+- `preload:` whether the site should be included in the [HSTS preload list](https://hstspreload.org/)
 
 `max-age` must be set to a minimum of six months (15768000), but longer periods such as two years (63072000) are recommended. Note that once this value is set, the site must continue to support HTTPS until the expiry time has been reached.
 
 `includeSubDomains` notifies the browser that all subdomains of the current origin should also be upgraded via HSTS. For example, setting `includeSubDomains` on `domain.mozilla.com` will also set it on `host1.domain.mozilla.com` and `host2.domain.mozilla.com`. Extreme care is needed when setting the `includeSubDomains` flag, as it could disable sites on subdomains that don't yet have HTTPS enabled.
 
-`preload` allows the website to be included in the [HSTS preload list](https://hstspreload.appspot.com/), upon submission. As a result, web browsers will do HTTPS upgrades to the site without ever having to receive the initial HSTS header. This prevents downgrade attacks upon first use and is recommended for all high risk websites. Note that being included in the HSTS preload list requires that `includeSubDomains` also be set.
+`preload` allows the website to be included in the [HSTS preload list](https://hstspreload.org/), upon submission. As a result, web browsers will do HTTPS upgrades to the site without ever having to receive the initial HSTS header. This prevents downgrade attacks upon first use and is recommended for all high risk websites. Note that being included in the HSTS preload list requires that `includeSubDomains` also be set.
 
 ### Examples
 
@@ -506,11 +506,11 @@ All cookies should be created such that their access is as limited as possible. 
 - `Domain:` Cookies should only be set with this if they need to be accessible on other domains, and should be set to the most restrictive domain possible
 - `Path:` Cookies should be set to the most restrictive path possible, but for most applications this will be set to the root directory
 
-## Experimental Directives
+## Directives
 
 - Name: Cookie names may be either be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources
-  - Use `__Host-` for all cookies set to an individual host (no Domain parameter) and with no Path parameter
-  - Use `__Secure-` for all other cookies
+  - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`
+  - Use `__Secure-` for all other cookies sent from secure origins (such as HTTPS)
 
 ## Examples
 
@@ -518,7 +518,7 @@ All cookies should be created such that their access is as limited as possible. 
 # Session identifier cookie only accessible on this host that gets purged when the user closes their browser
 Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
 
-# Session identifier for all mozilla.org sites that expires in 30 days using the experimental __Secure- prefix
+# Session identifier for all mozilla.org sites that expires in 30 days using the __Secure- prefix
 Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=mozilla.org; Path=/; Secure; HttpOnly
 
 # Sets a long-lived cookie for the current host, accessible by Javascript, when the user accepts the ToS
@@ -528,7 +528,7 @@ Set-Cookie: __Host-ACCEPTEDTOS=true; Expires=Fri, 31 Dec 9999 23:59:59 GMT; Path
 ## See Also
 
 - [RFC 6265 (HTTP Cookies)](https://tools.ietf.org/html/rfc6265)
-- [HTTP Cookie Prefixes (Experimental)](https://tools.ietf.org/html/draft-west-cookie-prefixes)
+- [HTTP Cookie Prefixes](https://tools.ietf.org/html/draft-west-cookie-prefixes)
 
 # Cross-origin Resource Sharing
 
@@ -792,6 +792,7 @@ X-XSS-Protection: 1; mode=block
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| June, 2017     | April  | Moved cookie prefixes to no longer be experimental               |
 | November, 2016 | April  | Added Referrer Policy, tidied up XFO examples                    |
 | October, 2016  | April  | Updates to CSP recommendations                                   |
 | July, 2016     | April  | Updates to CSP for APIs, and CSP's deprecation of XFO, and XXSSP |
