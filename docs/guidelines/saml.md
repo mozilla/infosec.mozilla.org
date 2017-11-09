@@ -46,7 +46,7 @@ The difference is that OIDC tokens are not surfaced and thus may not be directly
 
 This sequence diagram is useful if you want to understand how SAML works, or need to modify a SAML library.
 
-![SAML sequence diagram](assets/images/SAML_sequence_diagram.png)
+![SAML sequence diagram](/assets/images/SAML_sequence_diagram.png)
 
 # Implement authentication with SAML securely in my web applications (SP/RP)
 
