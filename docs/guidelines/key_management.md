@@ -69,7 +69,7 @@ The following algorithms and sizes are still widely used but do not provide suff
 
 ## SSH
 
-See [OpenSSH](OpenSSH "wikilink").
+See [OpenSSH](openssh "wikilink").
 
 ## PGP/GnuPG
 
