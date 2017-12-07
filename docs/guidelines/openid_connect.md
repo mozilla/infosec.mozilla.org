@@ -37,7 +37,7 @@ The communication with the OpenID Connect Provider (OP) is done using tokens. An
 
 Other tokens can be used, though these do not pertain directly to authentication. These are also often called OAuth2 tokens. This is because OIDC is based on OAuth2 and thus also provides full OAuth2 support. These two types of OAuth2 tokens (Access Token and Refresh Tokens) enable their bearer to access information from other websites and resources (including additional user attributes that may not be passed by the ID token) - but are not required to perform user authentication.
 
-![OIDC Diagram](/assets/images/OIDC_diagram.png)
+![OIDC Diagram](/guidelines/assets/images/OIDC_diagram.png)
 
 ## OIDC tokens reference table
 
@@ -51,7 +51,7 @@ Other tokens can be used, though these do not pertain directly to authentication
 
 This sequence diagram is useful if you want to understand how OIDC works, or need to modify an OIDC library.
 
-![OIDC Sequence Diagram](/assets/images/OIDC_sequence_diagram.png)
+![OIDC Sequence Diagram](/guidelines/assets/images/OIDC_sequence_diagram.png)
 
 
 # Implement authentication with OpenID Connect (OIDC) securely in my web applications (RP)
