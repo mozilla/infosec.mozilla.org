@@ -19,7 +19,7 @@ here](https://docs.google.com/document/d/1SEYr-vSjw6_JqDqLAoEA5uGPvUvkC6k-kKXXr-
 
 # Least Privilege
 
-## Do not present unnecessary services
+## Do not expose unnecessary services
 
 **Goal:** Limiting the amount of reachable or usable services to the necessary minimum.
 
@@ -242,7 +242,6 @@ password, MFA to a set of dedicated systems.
     -   Ensure that API keys can be automatically rotated in the case of a data leak.
 -   Use a password manager to store distinct passwords for each service a user accesses.
 -   Use purpose-built credential sharing mechanisms when sharing is required (1password for teams, LastPass, etc.)
-
 
 **Do not**
 
