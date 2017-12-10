@@ -15,7 +15,7 @@ operational teams throughout Mozilla to ensure their implementation.*
 
 **NOTE:** The “**do**” and “**do not**” used in this document are example of controls or implementation of the
 principles, but do not represent an exhaustive list of possibilities. Mozilla teams may also find [example violations
-here](https://docs.google.com/document/d/1SEYr-vSjw6_JqDqLAoEA5uGPvUvkC6k-kKXXr-tjNBI/).
+here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWVkM6w4).
 
 # Least Privilege
 
@@ -261,4 +261,4 @@ password, MFA to a set of dedicated systems.
 
 **NOTE:** The “**do**” and “**do not**” used in this document are example of controls or implementation of the
 principles, but do not represent an exhaustive list of possibilities. Mozilla teams may also find [example violations
-here](https://docs.google.com/document/d/1SEYr-vSjw6_JqDqLAoEA5uGPvUvkC6k-kKXXr-tjNBI/).
+here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWVkM6w4).
