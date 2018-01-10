@@ -34,6 +34,8 @@ Ensure Ruby, Gem and Bundle are installed.
 - The theme is [Frontierline](https://github.com/craigcook/frontierline-theme) and is based on jekyll-theme-slate for the purpose of Jekyll integration.
 - The site is rendered by [Jekyll](https://jekyllrb.com/).
 - The font (ZillaLab) and logos are from the [Mozilla Design Language](https://mozilla.ninja/).
+- https://infosec.mozilla.org is fronted by AWS CloudFront and utilizes a Lambda@Edge function, that are described in
+  the `aws` directory of this repository.
 
 ## Licensing
 

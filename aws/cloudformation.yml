@@ -1,0 +1,96 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "kangs-cfn-headers-1"
+# This template creates a cloudfront distribution with a Lambda@Edge function that allows for modifying HTTP headers
+# along other things. This is useful when fronting GitHub pages for example, or any other endpoint (such as ELB's backed
+# by an EC2 instance).
+# Note that you must have the SSL certificate in ACM for the domain you want to front.
+Parameters:
+  CFNOrigin:
+    Description: Cloud Front Origin
+    Default: "mozilla.github.io/infosec.mozilla.org"
+    Type: String
+Resources:
+#CloudFront setup
+  kangsCloudFront:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        Enabled: 'true'
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          ForwardedValues:
+            QueryString: 'false'
+            Cookies:
+              Forward: none
+          AllowedMethods:
+            - GET
+            - HEAD
+          TargetOriginId: cfnOrigin
+        Origins:
+          - Id: cfnOrigin
+            DomainName: !Ref CFNOrigin
+            CustomOriginConfig:
+              HTTPPort: '443'
+              OriginProtocolPolicy: https-only
+      Tags:
+          - Key: Name
+            Value: kangs-cfn-headers-1
+# Lambda@Edge function
+# Currently this only can work in us-east-1
+# At the moment you still need to manually associate this with the cloud front distribution, in the AWS console
+# or write another function that will do that job - at least until CF supports associating Lambda@Edge functions with
+# CFN
+  kangsLambdaEdge:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      Handler: "index.handler1"
+      FunctionName: "handler1"
+      Code:
+        ZipFile: !Sub |
+          // Your code goes here!
+          'use strict';
+
+          exports.handler = (event, context, callback) => {
+              const response = event.Records[0].cf.response;
+              const headers = response.headers;
+
+          // See https://wiki.mozilla.org/Security/Guidelines/Web_Security
+          headers['Strict-Transport-Security'] = [{'key': 'Strict-Transport-Security', 'value': 'max-age=63072000'}];
+          headers['X-Content-Type-Options'] = [{'key': 'X-Content-Type-Options', 'value': 'nosniff'}];
+          headers['X-Frame-Options'] = [{'key': 'X-Frame-Options', 'value': 'DENY'}];
+          headers['X-XSS-Protection'] = [{'key': 'X-XSS-Protection', 'value': '1; mode=block'}];
+          headers['Content-Security-Policy'] = [{'key': 'Content-Security-Policy', 'value': "default-src 'none'; script-src 'self'; img-src 'self'; font-src 'self'; style-src 'self'; object-src 'self'"}];
+          callback(null, response);
+          };
+      Runtime: "nodejs6.10"
+      Role: !GetAtt LambdaEdgeExecutionRole.Arn
+  LambdaEdgeExecutionRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+              - lambda.amazonaws.com
+              - edgelambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - "*"
+            Resource: "arn:*:handler:*"
+
+Outputs:
+  CloudFrontURL:
+    Description: "CloudFront URL"
+    Value: !GetAtt kangsCloudFront.DomainName
+    Export:
+     Name: !Sub "${AWS::StackName}-CloudFrontURL"
