@@ -151,7 +151,7 @@ order to retrace actions after a security breach.
 
 **Do**
 
--   Run rapid risk assessments [Security/Risk management/Rapid Risk Assessment](Security/Risk_management/Rapid_Risk_Assessment "wikilink")
+-   Run [Rapid Risk Assessments (RRA)](https://wiki.mozilla.org/Security/Risk_management/Rapid_Risk_Assessment)
     for your services.
 -   Estimate what would be the impact if your service was compromised.
 
