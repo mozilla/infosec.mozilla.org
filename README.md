@@ -16,7 +16,7 @@ Just create new issues as you see fit, really.
 ### Converting Mediawiki to Markdown
 
 - Install [Pandoc](https://pandoc.org/).
-- `pandoc -f mediawiki -t markdown_github --atx --normalize yourfile.mediawiki`
+- `pandoc -f mediawiki -t gfm --atx yourfile.mediawiki
 - Fix it up (tip: use existing documents and copy their formatting!)
 - Profit.
 
