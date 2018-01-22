@@ -8,8 +8,8 @@ description: An open framework to assess security risk from an operational persp
 
 *The goal of these documents is to help you understand how Mozilla's Security team risk framework is utilized. It also
 aims to help create your own framework when official standards are too unflexible or convoluted to implement. Most of
-Mozilla's framework is inspired by [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm) [ISO
-27001](https://en.wikipedia.org/wiki/ISO/IEC_27001_ and other well-known prior efforts*
+Mozilla's framework is inspired by [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm) and [ISO
+27001](https://en.wikipedia.org/wiki/ISO/IEC_27001) and other well-known prior efforts*
 
 It is recommended to read the [FAIR Introduction](http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 as an introduction to how risk is generally assessed, and get familiar with the terms. Note that we do not use the FAIR
