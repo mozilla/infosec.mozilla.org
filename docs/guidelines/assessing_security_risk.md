@@ -59,7 +59,7 @@ striking the right balance is paramount when hundred of services and vendors are
 Despite it's name, the RRA mainly focuses on assessing risk impact and only partially covers risk likelihood (such as by
 recording the frequency at which bad impacts occured in the past, if any).
 
-- [rapid_risk_assessment](RRA: Rapid Risk Assessment manual)
+- [RRA: Rapid Risk Assessment manual](risk/rapid_risk_assessment)
 
 ## Likelihood indicators
 
@@ -89,8 +89,8 @@ because there are several different methods that all use similar wording and dif
 Our levels are simple and well defined (at least, according to us!). They can be used in multiple ways, to assess
 criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 
-- [standard_levels](Standard levels reference)
-- [scoring_and_other_levels](Scoring and other levels)
+- [Standard levels reference](risk/standard_levels)
+- [Scoring and other levels](risk/scoring_and_other_levels)
 
 
 # Reference documents

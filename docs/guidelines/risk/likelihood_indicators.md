@@ -14,12 +14,15 @@ effect on risk a missing security control will have*
 What follows is a methodology for associating likelihood indicators with security controls. These likelihood indicators
 can then be integrated into the [Service Mapper](https://github.com/mozilla/service-map).
 
+See also [Assessing Security Risk](/guidelines/assessing_security_risk) for an introduction to risk and our processes related to
+risk.
+
 # Meaning of the likelihood indicators
 
 The likelihood indicator for a given security control is the likelihood that the service will be exploited in a calendar
 year due to the absence of the security control.
 
-The indicators use the [standard_levels](Standard levels reference) and mean
+The indicators use the [Standard levels reference](standard_levels) and mean
 * LOW : The absence of this security control is unlikely to cause a risk to manifest. It may cause security incident
   response to be slower or more difficult. This causes HIGH and MAXIMUM impacts to result in MEDIUM risk.
 * MEDIUM : The absence of this security control may cause a risk to manifest in the coming year. This security control

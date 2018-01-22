@@ -10,6 +10,9 @@ We all regularly use a risk based methodology when making decisions in day to da
 Rapid Risk Assessment or Rapid Risk Analysis (RRA) methodology helps formalize this type of decision making and ensures
 that the process is reproducible, consistent and the results are easy to communicate.
 
+See also [Assessing Security Risk](/guidelines/assessing_security_risk) for an introduction to risk and our processes related to
+risk.
+
 # Rapid Risk Assessment
 
 **A typical Rapid Risk Analysis/Assessment (RRA) takes about 30 minutes.** It is not a security review, a full
@@ -270,7 +273,7 @@ up and this is a great time to have a quick 5 minute chat about these.
 - Is the service using SSO for login?
 - Is there a web site that can be assessed? If so, you can file a vulnerability assessment request directly.
 - Did the service follow the security checklist and
-  [principles](https://infosec.mozilla.org/fundamentals/security_principles)?
+  [principles](/fundamentals/security_principles)?
 
 ### Wrapping up
 

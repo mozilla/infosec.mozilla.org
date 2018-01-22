@@ -11,7 +11,10 @@ security documents. All Mozilla security documentation should follow the
 recommendations below.**
 
 **Note** Risk levels are not described here, but are **mandatory** when describing risk and documented in
-[standard_levels](Standard Levels).
+[Standard Levels](standard_levels).
+
+See also [Assessing Security Risk](/guidelines/assessing_security_risk) for an introduction to risk and our processes related to
+risk.
 
 ## Scoring and other levels
 ### RFC2119 handling recommendation levels
@@ -176,7 +179,7 @@ Scores are used to gamify usage of security controls and features. Note
 these levels do not directly signify risk, and are instead intended to
 provide a grade for a particular objective. The mapping to objective can
 be used as a base to create a mapping to
-[standard_levels](Standard Levels).
+[Standard Levels](standard_levels).
 
 These levels are used, for example, on the [https://observatory.mozilla.org](Mozilla Observatory).
 

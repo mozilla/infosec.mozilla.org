@@ -17,7 +17,7 @@ This document establishes standard level conventions, in particular:
   - Level expectation
 
 **Looking for scores instead?** While all document **must** still express risk using the standard levels, you can refer
-to the [scoring_and_other_levels](Scoring and other levels) guideline for scoring, pass/fail, RFC2119 definitions,
+to the [Scoring and other levels](scoring_and_other_levels) guideline for scoring, pass/fail, RFC2119 definitions,
 document readiness, etc.
 
 # Standard Documentation Levels
@@ -26,6 +26,9 @@ We strongly emphasize on presenting risk levels in all documents, pages, etc. It
 risk regardless of tools and other nomenclature used. If you use a scoring system for example, and your score is F, you
 are at higher risk - but it could mean different things on different tools. For this reason, the risk levels are the
 most important levels and **must** always be followed and present.
+
+See also [Assessing Security Risk](/guidelines/assessing_security_risk) for an introduction to risk and our processes related to
+risk.
 
 ## Standard risk levels definition and nomenclature
 
