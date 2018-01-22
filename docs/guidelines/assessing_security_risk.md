@@ -3,12 +3,13 @@ layout: default
 resource: true
 categories: [Guidelines]
 title: Assessing Security Risk
-description: An open framework to assess security risk from an operation's perspective
+description: An open framework to assess security risk from an operational perspective
 ---
 
 *The goal of these documents is to help you understand how Mozilla's Security team risk framework is utilized. It also
 aims to help create your own framework when official standards are too unflexible or convoluted to implement. Most of
-Mozilla's framework is inspired by [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001_ and other well-known prior efforts*
+Mozilla's framework is inspired by [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm) [ISO
+27001](https://en.wikipedia.org/wiki/ISO/IEC_27001_ and other well-known prior efforts*
 
 It is recommended to read the [FAIR Introduction](http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 as an introduction to how risk is generally assessed, and get familiar with the terms. Note that we do not use the FAIR
@@ -58,7 +59,7 @@ striking the right balance is paramount when hundred of services and vendors are
 Despite it's name, the RRA mainly focuses on assessing risk impact and only partially covers risk likelihood (such as by
 recording the frequency at which bad impacts occured in the past, if any).
 
-- RRA: Rapid Risk Assessment manual
+- [rapid_risk_assessment](RRA: Rapid Risk Assessment manual)
 
 ## Likelihood indicators
 
@@ -88,4 +89,15 @@ because there are several different methods that all use similar wording and dif
 Our levels are simple and well defined (at least, according to us!). They can be used in multiple ways, to assess
 criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 
-- Standard levels reference
+- [standard_levels](Standard levels reference)
+- [scoring_and_other_levels](Scoring and other levels)
+
+
+# Reference documents
+
+- [http://riskmanagementinsight.com/media/documents/FAIR_Introduction.pdf](Introduction to modern risk analysis)
+- [http://www.iso.org/iso/home/standards/iso31000.htm](ISO 31000)
+- [https://en.wikipedia.org/wiki/ISO/IEC_27001](ISO 27001)
+- [http://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/](In
+  French - EBIOS method)
+- [https://www.sans.org/critical-security-controls/controls](SANS Critical Security Controls)
