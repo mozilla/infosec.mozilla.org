@@ -39,7 +39,7 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
 ## Members
 
 - Jeff Bryner [:jeff]
-  - Guillaume Destuynder [:kang]
+  - Guillaume Destuynder [🐦](https://twitter.com/kangsterizer) [💻](https://github.com/gdestuynder/)[:kang]
   - Gene Wood [:gene]
   - April King [:April]
   - Andrew Krug [:andrew]
