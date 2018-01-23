@@ -219,32 +219,32 @@ anything already happened and make a note if so, as this indicates a possible hi
 
 Record all results and **make sure that you set an impact level** (use the "RRA Utilities" menu for this)
 
-- Confidentiality
-  - What happens if all the data is disclosed to the world?
+**Confidentiality**: What happens if all the data is disclosed to the world?
+
+**Integrity**: What happens if the data is incorrect, misleading, website defaced, etc.?
+
+**Availability**: What happens if the data or service is missing, deleted, or currently unreachable?
+
+For each, run through these questions and assign an impact level if appropriate:
+
   - Reputation issues
-    - Do we get in mainstream news? (MAXIMUM impact)
-    - Do we get in the technical news? (HIGH impact)
-    - Do we receive emails, bugs, twitter messages, etc? (MEDIUM impact)
-    - Not much? (LOW impact)
+    - Do we get in mainstream news? (<span class="risk-maximum">MAXIMUM impact</span>)
+    - Do we get in the technical news? (<span class="risk-high">HIGH impact</span>)
+    - Do we receive emails, bugs, twitter messages, etc? (<span class="risk-medium">MEDIUM impact</span>)
+    - Not much? (<span class="risk-low">LOW impact</span>)
   - Productivity issues
     - Are small teams occupied on dealing with the issue for
-      - Less than 24h? (LOW impact)
-      - Less than 2 days? (MEDIUM impact)
-      - Less than a week? (HIGH impact)
-      - More? (MAXIMUM impact)
+      - Less than 24h? (<span class="risk-low">LOW impact</span>)
+      - Less than 2 days? (<span class="risk-medium">MEDIUM impact</span>)
+      - Less than a week? (<span class="risk-high">HIGH impact</span>)
+      - More? (<span class="risk-maximum">MAXIMUM impact</span>)
     - How about large teams, or the entiere company, or our user-base?
-      - Less than 2h? (LOW impact)
-      - Less than 24h? (MEDIUM impact)
-      - Less than 2 days? (HIGH impact)
-      - More? (MAXIMUM impact)
+      - Less than 2h? (<span class="risk-low">LOW impact</span>)
+      - Less than 24h? (<span class="risk-medium">MEDIUM impact</span>)
+      - Less than 2 days? (<span class="risk-high">HIGH impact</span>)
+      - More? (<span class="risk-maximum>MAXIMUM impact</span>)
   - Financial issues?
     - Would it cost money? How much?
-- Integrity
-  - What happens if the data is incorrect, misleading, website defaced, etc.?
-    - Run through the same assessment as above.
-- Availability
-  - What happens if the data or service is missing, deleted, or currently unreachable?
-    - Run through the same assessment as above.
 
 Enhance these scenarios, eventually to create a complete threat model if the asssessed impacts are HIGH or MAXIMUM and
 if further security work is required, or the RRA is revisited.

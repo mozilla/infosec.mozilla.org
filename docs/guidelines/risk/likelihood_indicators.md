@@ -23,15 +23,15 @@ The likelihood indicator for a given security control is the likelihood that the
 year due to the absence of the security control.
 
 The indicators use the [Standard levels reference](standard_levels) and mean
-* LOW : The absence of this security control is unlikely to cause a risk to manifest. It may cause security incident
+* <span class="risk-low">LOW</span> The absence of this security control is unlikely to cause a risk to manifest. It may cause security incident
   response to be slower or more difficult. This causes HIGH and MAXIMUM impacts to result in MEDIUM risk.
-* MEDIUM : The absence of this security control may cause a risk to manifest in the coming year. This security control
+* <span class="risk-medium">MEDIUM</span> The absence of this security control may cause a risk to manifest in the coming year. This security control
   is important but with additional supporting controls may not be required. This causes MAXIMUM impacts to result in
 HIGH risk.
-* HIGH : The absence of this security control will probably cause a risk to manifest in the coming year. This security
+* <span class="risk-high">HIGH</span> The absence of this security control will probably cause a risk to manifest in the coming year. This security
   control is important and should only be missing for LOW impact services. This causes MEDIUM and HIGH impacts to result
 in HIGH risk and MAXIMUM impacts to result in MAXIMUM risk.
-* MAXIMUM : The absence of this security control will cause a risk to manifest in the coming year. This security control
+* <span class="risk-maximum">MAXIMUM</span> The absence of this security control will cause a risk to manifest in the coming year. This security control
   is required. This causes MEDIUM impacts to result in HIGH risk. This causes HIGH and MAXIMUM impacts to result in
 MAXIMUM risk.
 
@@ -50,48 +50,41 @@ This method involves thinking of hypothetical data being protected by the securi
 resulting from that data's impact level and the various possible likelihood indicator levels and looking for which
 resulting risk matches best.
 
-<div style="float:left; width: 25%;">
-
 ### LOW likelihood
 
 | Impact  | Risk   |
 | ------- | ------ |
-| LOW     | LOW    |
-| MEDIUM  | LOW    |
-| HIGH    | LOW    |
-| MAXIMUM | MEDIUM |
-
-</div><div style="float:left; width: 25%;">
+| <span class="risk-low">LOW</span>         | <span class="risk-low">LOW</span>       |
+| <span class="risk-medium">MEDIUM</span>   | <span class="risk-low">LOW</span>       |
+| <span class="risk-high">HIGH</span>       | <span class="risk-low">LOW</span>       |
+| <span class="risk-maximum">MAXIMUM</span> | <span class="risk-medium">MEDIUM</span> |
 
 ### MEDIUM likelihood
 
 | Impact  | Risk   |
 | ------- | ------ |
-| LOW     | LOW    |
-| MEDIUM  | MEDIUM |
-| HIGH    | MEDIUM |
-| MAXIMUM | HIGH   |
-</div><div style="float:left; width: 25%;">
+| <span class="risk-low">LOW</span>         | <span class="risk-low">LOW</span>       |
+| <span class="risk-medium">MEDIUM</span>   | <span class="risk-medium">MEDIUM</span> |
+| <span class="risk-high">HIGH</span>       | <span class="risk-medium">MEDIUM</span> |
+| <span class="risk-maximum">MAXIMUM</span> | <span class="risk-high">HIGH</span>     |
 
 ### HIGH likelihood
 
 | Impact  | Risk    |
 | ------- | ------- |
-| LOW     | MEDIUM  |
-| MEDIUM  | HIGH    |
-| HIGH    | HIGH    |
-| MAXIMUM | MAXIMUM |
-</div><div style="float:left; width: 25%;">
+| <span class="risk-low">LOW</span>         | <span class="risk-medium">MEDIUM</span>   |
+| <span class="risk-medium">MEDIUM</span>   | <span class="risk-high">HIGH</span>       |
+| <span class="risk-high">HIGH</span>       | <span class="risk-high">HIGH</span>       |
+| <span class="risk-maximum">MAXIMUM</span> | <span class="risk-maximum">MAXIMUM</span> |
 
 ### MAXIMUM likelihood
 
 | Impact  | Risk    |
 | ------- | ------- |
-| LOW     | MEDIUM  |
-| MEDIUM  | HIGH    |
-| HIGH    | MAXIMUM |
-| MAXIMUM | MAXIMUM |
-</div>
+| <span class="risk-low">LOW</span>         | <span class="risk-medium">MEDIUM</span>   |
+| <span class="risk-medium">MEDIUM</span>   | <span class="risk-high">HIGH</span>       |
+| <span class="risk-high">HIGH</span>       | <span class="risk-maximum">MAXIMUM</span> |
+| <span class="risk-maximum">MAXIMUM</span> | <span class="risk-maximum">MAXIMUM</span> |
 
 # Communicating the likelihood indicator
 

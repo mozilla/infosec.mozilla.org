@@ -1,0 +1,64 @@
+.risk {
+    border-radius: .25em;
+    display: inline-block;
+    font-weight: bold;
+    margin: .1em 0;
+    min-width: 6em;
+    padding: .05em .5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.risk-maximum {
+    @extend .risk;
+    background-color: #d04437;
+    color: #ffffff;
+}
+
+.risk-high {
+    @extend .risk;
+    background-color: #ffd351;
+    color: #594300;
+}
+
+.risk-medium {
+    @extend .risk;
+    background-color: #4a6785;
+    color: #ffffff;
+}
+
+.risk-low {
+    @extend .risk;
+    background-color: #cccccc;
+    color: #000000;
+}
+
+.risk-unknown {
+    @extend .risk;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.risk-color-code {
+    color: #ccc;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+.score-red {
+    @extend .risk-maximum;
+}
+
+.score-yellow {
+    @extend .risk-high;
+}
+
+.score-blue {
+    @extend .risk-medium;
+}
+
+.score-green {
+    @extend .risk;
+    background-color: #14892c;
+    color: #ffffff;
+}
