@@ -46,16 +46,16 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <tbody>
 <tr>
 <td data-sort-value="1"> <a href="#HTTPS"><span >HTTPS</span></a></td>
-<td data-sort-value="4" > <span >Maximum</span></td>
-<td data-sort-value="2" > <span >Medium</span></td>
+<td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
 <td  data-sort-value="0"></td>
 <td> Mandatory</td>
 <td> Sites should use HTTPS (or other secure protocols) for all communications</td>
 </tr>
 <tr>
 <td data-sort-value="2" > <a href="#HTTP_Public_Key_Pinning"><span >Public Key Pinning</span></a></td>
-<td data-sort-value="1" > <span >Low</span></td>
-<td data-sort-value="4" > <span >Maximum</span></td>
+<td data-sort-value="1" > <span class="risk-low">LOW</span></td>
+<td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
 <td  data-sort-value="99"> --</td>
 <td> Mandatory for maximum risk sites only</td>
 <td> Not recommended for most sites</td>
@@ -63,9 +63,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <tr>
 <td data-sort-value="3" > <a href="#HTTP_Redirections"><span >Redirections from HTTP</span></a>
 </td>
-<td data-sort-value="4" > <span >Maximum</span>
+<td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 3
 </td>
@@ -75,9 +75,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="4" > <a href="#Resource_Loading"><span >Resource Loading</span></a>
 </td>
-<td data-sort-value="4" > <span >Maximum</span>
+<td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 2
 </td>
@@ -87,9 +87,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="5" > <a href="#HTTP_Strict_Transport_Security"><span >Strict Transport Security</span></a>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 4
 </td>
@@ -99,9 +99,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="6" > <a href="#HTTPS"><span >TLS Configuration</span></a>
 </td>
-<td data-sort-value="2" > <span >Medium</span>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
-<td data-sort-value="2" > <span >Medium</span>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
 <td > 1
 </td>
@@ -111,9 +111,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="7"> <a href="#Content_Security_Policy"><span >Content Security Policy</span></a>
 </td>
-<td data-sort-value="3" ><span >High</span>
+<td data-sort-value="3" ><span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
 <td > 10
 </td>
@@ -123,9 +123,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="8"> <a href="#Cookies"><span >Cookies</span></a>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="2" > <span >Medium</span>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
 <td > 7
 </td>
@@ -135,9 +135,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="9"> <a href="#contribute.json"><span >contribute.json</span></a>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 9
 </td>
@@ -147,9 +147,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="10"> <a href="#Cross-origin_Resource_Sharing"><span >Cross-origin Resource Sharing</span></a>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 11
 </td>
@@ -159,7 +159,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="11"> <a href="#CSRF_Prevention"><span >Cross-site Request Forgery Tokenization</span></a>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
 <td data-sort-value="99" > <span >Unknown</span>
 </td>
@@ -171,9 +171,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="11"> <a href="#Referrer_Policy"><span >Referrer Policy</span></a>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 12
 </td>
@@ -183,9 +183,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="12"> <a href="#robots.txt"><span >robots.txt</span></a>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 14
 </td>
@@ -195,9 +195,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="13"> <a href="#Subresource_Integrity"><span >Subresource Integrity</span></a>
 </td>
-<td data-sort-value="2" > <span >Medium</span>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
-<td data-sort-value="2" > <span >Medium</span>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
 <td > 15
 </td>
@@ -207,9 +207,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="14"> <a href="#X-Content-Type-Options"><span >X-Content-Type-Options</span></a>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 8
 </td>
@@ -219,9 +219,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="15"> <a href="#X-Frame-Options"><span >X-Frame-Options</span></a>
 </td>
-<td data-sort-value="3" > <span >High</span>
+<td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="1" > <span >Low</span>
+<td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
 <td > 5
 </td>
@@ -231,8 +231,8 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td></tr><tr>
 <td data-sort-value="16"> <a href="#X-XSS-Protection"><span >X-XSS-Protection</span></a>
 </td>
-<td data-sort-value="1" > <span >Low</span></td>
-<td data-sort-value="2" > <span >Medium</span></td>
+<td data-sort-value="1" > <span class="risk-low">LOW</span></td>
+<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
 <td > 13</td>
 <td> Mandatory for all new websites<br>Recommended for existing websites</td>
 <td> Manual testing should be done for existing websites, prior to implementation</td>
