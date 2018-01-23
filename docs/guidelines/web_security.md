@@ -161,7 +161,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td data-sort-value="99" > <span >Unknown</span>
+<td data-sort-value="99" > <span class="risk-unknown">UNKNOWN</span>
 </td>
 <td > 6
 </td>
