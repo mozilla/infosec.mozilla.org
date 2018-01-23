@@ -14,20 +14,8 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 
 ## Documentation
 
-{% for cat in site.category-list %}
-### {{ cat }}
-<ul>
-  {% for page in site.pages %}
-    {% if page.resource == true %}
-      {% for pc in page.categories %}
-        {% if pc == cat %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a> <em>{{ page.description }}</em></li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</ul>
-{% endfor %}
+{% include_relative guidelines/index.md %}
+{% include_relative fundamentals/index.md %}
 
 ## Contact
 Email us: infosec [at] mozilla.com. For confidential information, encrypt your email using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
@@ -38,16 +26,16 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
 
 ## Members
 
-- Jeff Bryner [:jeff]
-  - Guillaume Destuynder [:kang]
-  - Gene Wood [:gene]
-  - April King [:April]
-  - Andrew Krug [:andrew]
-  - Justin Dow [:jabba]
-  - Jonathan Claudius [:claudijd]
-  - Caglar Ulucenk [:Cag]
-  - Tristan Weir [:weir]
-    - Alicia Smith [:phrozyn]
-    - Brandon Myers [:pwnbus]
-    - Michal Purzynski [:michal`]
+- Jeff Bryner *[:jeff]*
+  - Guillaume Destuynder [🐦](https://twitter.com/kangsterizer) [💻](https://github.com/gdestuynder/) *[:kang]*
+  - Gene Wood *[:gene]*
+  - April King *[:April]*
+  - Andrew Krug *[:andrew]*
+  - Justin Dow *[:jabba]*
+  - Jonathan Claudius *[:claudijd]*
+  - Caglar Ulucenk *[:Cag]*
+  - Tristan Weir *[:weir]*
+    - Alicia Smith *[:phrozyn]*
+    - Brandon Myers *[:pwnbus]*
+    - Michal Purzynski *[:michal`]*
 

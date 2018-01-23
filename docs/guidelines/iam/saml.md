@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines,IAM]
 title: SAML
 description: How to use SAML securely and make user’s session experience better
 ---

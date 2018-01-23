@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines,Risk]
 title: Scoring and other levels
 description: Standardized scoring and other levels that aren't directly representing risk levels.
 ---
