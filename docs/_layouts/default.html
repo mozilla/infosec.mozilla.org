@@ -10,6 +10,7 @@
     <script src="{{ '/assets/js/jquery.tablesorter.min.js' }}"></script>
     <script src="{{ '/assets/js/sortable.js' }}"></script>
     <script src="{{ '/assets/js/anchor.min.js' }}"></script>
+    <script src="{{ '/assets/js/anchor.js' }}"></script>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision  }}">
 
@@ -26,7 +27,7 @@
           <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
           <div class="nav-mozilla">
             <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0">Menu</span>
-            <ul class="nav-mozilla-menu" id="nav-mozilla-menu" style="">
+            <ul class="nav-mozilla-menu" id="nav-mozilla-menu">
               <li class="nav-global-home"><a href="{{ '/' }}">home</a></li>
               <li class="nav-global-fundamentals"><a href="{{ '/fundamentals/' }}">security fundamentals</a></li>
               <li class="nav-global-guidelines"><a href="{{ '/guidelines/' }}">security guidelines</a></li>
@@ -97,6 +98,5 @@
         </section>
       </div>
     </footer>
-    <script src="{{ '/assets/js/anchor.js' }}"></script>
   </body>
 </html>
