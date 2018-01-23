@@ -45,7 +45,7 @@ are also used to display important, effort, risk impact, risk probability and an
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">MAXIMUM Risk</span> <span style="color: #ccc; font-size: 0.5em; font-style: italic">HTML Color code #d04437</span></p></td>
+<td><p><span class="risk-maximum">MAXIMUM Risk</span></p><p><span class="risk-color-code">HTML Color code #d04437</span></p></td>
 <td><p><em>This is the most important level, where the risk is especially great.</em></p>
 <ul>
 <li><strong>Attention</strong>: Full attention from all concerned parties required.</li>
@@ -60,7 +60,7 @@ are also used to display important, effort, risk impact, risk probability and an
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">HIGH Risk</span> <span style="color: #ccc; font-size: 0.5em; font-style: italic">HTML Color code #ffd351</span></p></td>
+<td><p><span class="risk-high">HIGH Risk</span></p><p><span class="risk-color-code">HTML Color code #ffd351</span></p></td>
 <td><ul>
 <li><strong>Attention</strong>: Full attention from all concerned parties required.</li>
 <li><strong>Impact</strong>: Medium, high or maximum impact.</li>
@@ -73,7 +73,7 @@ are also used to display important, effort, risk impact, risk probability and an
 </ul></td>
 </tr>
 <tr class="odd">
-<td><p><span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">MEDIUM Risk</span> <span style="color: #ccc; font-size: 0.5em; font-style: italic">HTML Color code #4a6785</span></p></td>
+<td><p><span class="risk-medium">MEDIUM Risk</span></p><p><span class="risk-color-code">HTML Color code #4a6785</span></p></td>
 <td><ul>
 <li><strong>Attention</strong>: Attention from all concerned parties.</li>
 <li><strong>Impact</strong>: Low, medium or high impact.</li>
@@ -86,7 +86,7 @@ are also used to display important, effort, risk impact, risk probability and an
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">LOW Risk</span> <span style="color: #ccc; font-size: 0.5em; font-style: italic">HTML Color code #cccccc</span></p></td>
+<td><p><span class="risk-low">LOW Risk</span></p><p><span class="risk-color-code">HTML Color code #cccccc</span></p></td>
 <td><ul>
 <li><strong>Attention</strong>: Expected but not required.</li>
 <li><strong>Impact</strong>: Low or medium impact.</li>
@@ -100,7 +100,7 @@ are also used to display important, effort, risk impact, risk probability and an
 </ul></td>
 </tr>
 <tr class="odd">
-<td><p><span style="background-color: #ffffff; border: solid 1px #aaaaaa; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">UNKNOWN Risk</span> <span style="color: #ccc; font-size: 0.5em; font-style: italic">HTML Color code #ffffff</span></p></td>
+<td><p><span class="risk-unknown">UNKNOWN Risk</span></p><p><span class="risk-color-code">HTML Color code #ffffff</span></p></td>
 <td><ul>
 <li>Data collection is expected.</li>
 <li>This level is expected to change to one of the other levels.</li>
@@ -119,34 +119,29 @@ are also used to display important, effort, risk impact, risk probability and an
 
 ## Examples of usage
 
-<span style="background-color: #cccccc; border-radius: .25em; color: #000000; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">LOW Risk</span>
+<span class="risk-low">LOW Risk</span>
 
   - **Attention** Service owner or delivery team may look at it, through email or other means.
   - **Effort** Flip a configuration switch, change a password, lookup a document, etc.
   - **Risk acceptance** Accept risk of leaking non-sensitive data as peer-review process is light.
 
-<span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">MEDIUM Risk</span>
+<span class="risk-medium">MEDIUM Risk</span>
   - **Attention** Service owner or delivery team must be informed via bug, document, etc.
   - **Effort** Take a group decision, create standards, lookup statistics, manual upgrades, etc.
   - **Risk acceptance** Mitigate the risk of attackers accessing the admin panel by using SSO.
 
-<span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">HIGH Risk</span>
+<span class="risk-high">HIGH Risk</span>
   - **Attention** Ensure service, product owner is aware via bug and pings.
   - **Effort** Implement a new security control, code a new feature, change all company user passwords, etc.
   - **Risk acceptance** Hotfix to mitigate within the next few days, eventually turn off if it takes too long.
 
-<span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">MAXIMUM Risk</span>
+<span class="risk-maximum">MAXIMUM Risk</span>
   - **Attention** Ensure service,product, capability owner is aware via bug and pings.
   - **Effort** Implement a new security design/change product design, etc.
   - **Risk acceptance** Turn service off/put it behind VPN until fixed/ASAP.
 
   - Your site scored
-    <span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight:
-bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">C</span> to
-the HTTP observatory tests, it is at <span style="background-color: #4a6785; border-radius: .25em; color: #ffffff;
-display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform:
-uppercase; text-align: center;">MEDIUM Risk</span>.
-  - You have 1 immediately exploitable RCE vulnerability of maximum
-    impact and are at <span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display:
-inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase;
-text-align: center;">MAXIMUM Risk</span>.
+    <span class="risk-high">C</span> to the HTTP observatory tests, and it is at <span class="risk-medium">MEDIUM
+Risk</span>.
+  - You have 1 immediately exploitable RCE vulnerability of maximum impact and are at <span class="risk-maximum">MAXIMUM
+    Risk</span>.

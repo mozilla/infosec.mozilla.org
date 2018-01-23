@@ -6,9 +6,8 @@ title: Scoring and other levels
 description: Standardized scoring and other levels that aren't directly representing risk levels.
 ---
 
-**The goal of this document is to ensure consistency, coherence between
-security documents. All Mozilla security documentation should follow the
-recommendations below.**
+*The goal of this document is to ensure consistency, coherence between security documents. All Mozilla security
+documentation should follow the recommendations below.*
 
 **Note** Risk levels are not described here, but are **mandatory** when describing risk and documented in
 [Standard Levels](standard_levels).
@@ -22,38 +21,11 @@ risk.
 See also [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) for a formal
 definition.
 
-<table>
-<thead>
-<tr class="header">
-<th><p>Level</p></th>
-<th><p>Expectations</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-</tr>
-<tr class="even">
-<td><p><span style="border-radius: .25em; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">OPTIONAL</span></p></td>
-<td><ul>
-<li>This is up to the reader to choose to follow or not to follow this recommendation.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p><span style="border-radius: .25em;display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">SHOULD</span></p></td>
-<td><ul>
-<li>Should is very close to &quot;must do&quot; - however, exceptions may be granted after discussion.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p><span style="border-radius: .25em;display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">MUST</span></p></td>
-<td><ul>
-<li>This must be done, is required, mandatory - there is no exception.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-</tr>
-</tbody>
-</table>
+**OPTIONAL**: This is up to the reader to choose to follow or not to follow this recommendation.
+
+**SHOULD**: Should is very close to "must do"  however, exceptions may be granted after discussion.
+
+**MUST**: This must be done, is required, mandatory - there is no exception.
 
 ### Recommended configuration states
 
@@ -61,42 +33,20 @@ These are used to match recommended configuration states. It describes
 set of documentation configuration state that we recommend using,
 depending on your use-case.
 
-<table>
-<thead>
-<tr class="header">
-<th><p>Level</p></th>
-<th><p>Expectations</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p><span style="border-radius: .25em; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Modern</span></p></td>
-<td><ul>
-<li>State of the art configuration from a security point of view.</li>
-<li>Generally better for security sensitive services.</li>
-<li>Fewer server/clients may be compatible.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p><span style="border-radius: .25em; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Intermediate</span></p></td>
-<td><ul>
-<li>Usually the default configuration we recommend.</li>
-<li>Reasonable configuration that we recommend while covering the largest amount of clients.</li>
-<li>Fewer server/clients may be compatible, though the majority should be compatible with this configuration.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p><span style="border-radius: .25em;display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">Old</span></p></td>
-<td><ul>
-<li>Configuration that you may only use if other configurations cannot be followed for technical reasons</li>
-<li>Relatively safe - but must be moved to the <em>intermediate</em> configuration above when possible.</li>
-<li>Generally supports the largest amount of servers/clients.</li>
-</ul></td>
-</tr>
-<tr class="even">
-</tr>
-</tbody>
-</table>
+**Modern**:
+- State of the art configuration from a security point of view.
+- Generally better for security sensitive services.
+- Fewer server/clients may be compatible.
+
+**Intermediate**:
+- Usually the default configuration we recommend.
+- Reasonable configuration that we recommend while covering the largest amount of clients.
+- Fewer server/clients may be compatible, though the majority should be compatible with this configuration.
+
+**Old**:
+- Configuration that you may only use if other configurations cannot be followed for technical reasons
+- Relatively safe - but must be moved to the *intermediate* configuration above when possible.
+- Generally supports the largest amount of servers/clients.
 
 ### Document Status Codes
 
@@ -112,20 +62,20 @@ current status.
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span style="background-color: #14892c; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">READY</span></p></td>
+<td><p><span class="score-green">READY</span></p></td>
 <td><ul>
 <li>Means the document is ready for user consumption and is expected to be followed.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">DRAFT</span></p></td>
+<td><p><span class="score-yellow">DRAFT</span></p></td>
 <td><ul>
 <li>Means the document is in progress or does not cover all cases.</li>
 <li>You may follow this document for guidance, at your own risk.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td><p><span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">NOT READY</span></p></td>
+<td><p><span class="score-red">NOT READY</span></p></td>
 <td><ul>
 <li>Means the document should not be followed right now.</li>
 </ul></td>
@@ -150,7 +100,7 @@ It's similar to a walk/don't walk traffic sign.
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span style="background-color: #14892c; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">PASS</span></p></td>
+<td><p><span class="score-green">PASS</span></p></td>
 <td><ul>
 <li>Green generally means acceptance, allowance such as the traffic sign &quot;Walk&quot;.</li>
 </ul></td>
@@ -160,7 +110,7 @@ It's similar to a walk/don't walk traffic sign.
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">FAIL</span></p></td>
+<td><p><span class="score-red">FAIL</span></p></td>
 <td><ul>
 <li>Red generally means refusal, denial, such as the traffic sign &quot;Don't walk&quot;.</li>
 </ul></td>
@@ -197,7 +147,7 @@ These are added to represent going slightly above or below expectations.
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span style="background-color: #14892c; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">A+, A, A-</span></p></td>
+<td><p><span class="score-green">A+, A, A-</span></p></td>
 <td><p><em>Highest possible grade</em>.</p>
 <ul>
 <li>Support all features and controls.</li>
@@ -205,7 +155,7 @@ These are added to represent going slightly above or below expectations.
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #4a6785; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">B+, B, B-</span></p></td>
+<td><p><span class="score-blue">B+, B, B-</span></p></td>
 <td><ul>
 <li>Supports most important features and controls.</li>
 <li>Some outliers need attention.</li>
@@ -213,8 +163,8 @@ These are added to represent going slightly above or below expectations.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><p><span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">C+, C, C-</span></p>
-<p><span style="background-color: #ffd351; border-radius: .25em; color: #594300; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">D+, D, D-</span></p></td>
+<td><p><span class="score-yellow">C+, C, C-</span></p>
+<p><span class="score-yellow">D+, D, D-</span></p></td>
 <td><p><em>Score may moderately contribute to risk</em>.</p>
 <ul>
 <li>Potential service blocker.</li>
@@ -223,7 +173,7 @@ These are added to represent going slightly above or below expectations.
 </ul></td>
 </tr>
 <tr class="even">
-<td><p><span style="background-color: #d04437; border-radius: .25em; color: #ffffff; display: inline-block; font-weight: bold; margin: .1em 0; min-width: 6em; padding: .05em .5em; text-transform: uppercase; text-align: center;">F</span></p></td>
+<td><p><span class="score-red">F</span></p></td>
 <td><p><em>Lowest possible grade, score may greatly contribute to risk</em>.</p>
 <ul>
 <li>Zero to minimal intentions of objective met.</li>

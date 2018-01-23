@@ -2,6 +2,7 @@
 ---
 @import "frontierline/style.scss";
 @import "{{ site.theme }}";
+@import "risk.scss";
 
 body {
     font-size: 100%;
