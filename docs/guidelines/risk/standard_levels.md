@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines,Risk]
 title: Standard Levels
 description: Standardized levels for security risk, effort and other measurements.
 ---

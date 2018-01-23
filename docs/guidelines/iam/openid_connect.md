@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines,IAM]
 title: OpenID Connect
 description: How to use OpenID Connect securely and make user’s session experience better
 ---

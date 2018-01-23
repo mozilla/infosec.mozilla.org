@@ -3,4 +3,3 @@ theme: jekyll-theme-slate
 baseurl: /
 sass:
     sass_dir: _sass
-category-list: [Guidelines, Fundamentals]

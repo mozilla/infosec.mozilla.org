@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines,Risk]
 title: Assessing Security Risk
 description: An open framework to assess security risk from an operational perspective
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Guidelines]
+categories: [Guidelines, Risk]
 title: Likelihood Indicators
 description: A model for determining how security controls affect risk
 ---
