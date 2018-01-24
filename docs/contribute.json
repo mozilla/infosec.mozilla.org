@@ -10,11 +10,9 @@
         "irc": "irc://irc.mozilla.org/#infosec",
         "irc-contacts": [
             "kang"
-        ]
+        ],
+        "docs": "https://github.com/mozilla/infosec.mozilla.org/blob/master/README.md"
     },
-    "docs": [
-        "https://github.com/mozilla/infosec.mozilla.org/blob/master/README.md"
-    ],
     "bugs": {
         "list": "https://github.com/mozilla/infosec.mozilla.org/issues",
         "report": "https://github.com/mozilla/infosec.mozilla.org/issues/new",
