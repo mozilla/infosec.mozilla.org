@@ -16,7 +16,7 @@ risk.
 # Rapid Risk Assessment
 
 **A typical Rapid Risk Analysis/Assessment (RRA) takes about 30 minutes.** It is not a security review, a full
-threat-model, a vulnerability assessment, an audit, etc. These types of activites may however follow an RRA if deemed
+threat-model, a vulnerability assessment, or an audit. These types of activites may however follow an RRA if deemed
 appropriate or necessary.
 
 The main objective of the RRA is to understand the value and impact of a service to the reputation, finances,
