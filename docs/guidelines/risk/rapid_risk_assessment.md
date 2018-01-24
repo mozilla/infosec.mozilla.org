@@ -74,7 +74,7 @@ It is also recommended to have these things available for the RRA creation:
 
 - Name of a person or/and team responsible for the service.
 - Data flow diagram.
-- List/Dictionary of the data that will be processed or stored.
+- List the kind of data that will be processed or stored: secrets, credentials, public data, confidential data, and anything else that may be important for this service.
 - An understanding of how the service works.
 
 ## When NOT to run an RRA?
