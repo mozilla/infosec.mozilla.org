@@ -12,6 +12,9 @@
             "kang"
         ]
     },
+    "docs": {
+        "https://github.com/mozilla/infosec.mozilla.org/blob/master/README.md"
+    },
     "bugs": {
         "list": "https://github.com/mozilla/infosec.mozilla.org/issues",
         "report": "https://github.com/mozilla/infosec.mozilla.org/issues/new",
@@ -21,6 +24,12 @@
         "prod": "https://infosec.mozilla.org"
     },
     "keywords": [
-        "security"
+        "security",
+        "infosec",
+        "mozilla",
+        "risk",
+        "guidelines",
+        "principles",
+        "standards"
     ]
 }
