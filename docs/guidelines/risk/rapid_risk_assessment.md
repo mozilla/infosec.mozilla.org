@@ -62,7 +62,7 @@ Firefox accounts store user data:
 
 The RRA risk table facilitates discovering the answers to these questions.
 
-# FAQ: Attending RRAs
+# How-to: Attending and running RRAs
 
 ## When to run RRAs? What do I need to bring or do?
 
@@ -74,7 +74,7 @@ It is also recommended to have these things available for the RRA creation:
 
 - Name of a person or/and team responsible for the service.
 - Data flow diagram.
-- List/Dictionnary of the data that will be processed or stored.
+- List/Dictionary of the data that will be processed or stored.
 - An understanding of how the service works.
 
 ## When NOT to run an RRA?
@@ -198,7 +198,7 @@ You will need to ask the team or service owner about what *kind* of data the ser
 examples:
 
 - Specific configuration data
-- Credentials (user, machine)
+- User or service credentials, secrets
 - User data
 - etc.
 
@@ -242,7 +242,7 @@ For each, run through these questions and assign an impact level if appropriate:
       - Less than 2h? (<span class="risk-low">LOW impact</span>)
       - Less than 24h? (<span class="risk-medium">MEDIUM impact</span>)
       - Less than 2 days? (<span class="risk-high">HIGH impact</span>)
-      - More? (<span class="risk-maximum>MAXIMUM impact</span>)
+      - More? (<span class="risk-maximum">MAXIMUM impact</span>)
   - Financial issues?
     - Would it cost money? How much?
 
