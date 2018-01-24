@@ -169,7 +169,7 @@ These are added to represent going slightly above or below expectations.
 <ul>
 <li>Potential service blocker.</li>
 <li>Needs attention and features need to be enabled/controls added.</li>
-<li>Minimal to moderation intentions of objective met.</li>
+<li>Minimal to moderate intentions of objective met.</li>
 </ul></td>
 </tr>
 <tr class="even">
