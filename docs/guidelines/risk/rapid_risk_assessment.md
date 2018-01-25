@@ -39,9 +39,9 @@ data. Key points:
     though!
   - **Concise, readable**. Short and with clear risk levels.
   - **Easy to update**. Can be run during any phase of the project development and continously updated.
-  - **Informative** Collects risk impact and a data dictionary. Also collections information about how the service
+  - **Informative**. Collects risk impact and a data dictionary. Also collections information about how the service
     functions.
-  - **Let you know what to do** The RRA includes the list of recommendations from the security team with a priority for
+  - **Let you know what to do**. The RRA includes the list of recommendations from the security team with a priority for
     each item.
 
 This helps to make the following type of risk-based decisions:
@@ -117,7 +117,7 @@ This is a guided example of how to run an initial RRA. You will:
 - Invite the relevant people to a meeting.
 - Help them figure out risk impacts and record everything in the RRA doc.
 - Help them figure out the next steps.
-- Make them feel like they own the RRA document (which they do!).
+- Make them feel like they own the RRA document (and they do!).
 
 ## Before the initial RRA meeting
 
