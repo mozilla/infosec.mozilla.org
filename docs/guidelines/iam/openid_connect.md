@@ -84,15 +84,15 @@ For that reason, it is important that the web application (RP) respects the foll
 -   **Never** use implicit grants for websites. Authorization code grant ensures that the relying party is getting the access tokens, and that these cannot be intercepted within the user's browser.
 
 #### Additional notes on Implicit grants
+Implicit grants are inherently more dangerous and harder to implement safely. We advocate against their usage entirely.
 
-Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user-agent (i.e. web browser) instead of the web-server. This means all data is seen and handled by the user-agent (and thus, as per above, intercepted by the user's browser).
+Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user-agent (i.e. web browser) instead of the web-server. This means all data is seen and handled by the user-agent and therefore the user's browser.
 
-This can become dangerous when the SPA is vulnerable to XSS or CSRF attacks for example, where the attacker may retrieve the user's tokens. Many SPAs tend to store the user's `id_token` in the browser LocalStorage as a "proof of authentication" and access tokens which are then used to query otherwise private API endpoints.
-Unlike browser cookies which can be set to http-only, LocalStorage can be queried in javascript and thus through an XSS vulnerability. This data is never stored when using the authorization code grants as everything is verified web-server side, and not seen by the user-agent (i.e. web browser).
+This can become dangerous when the SPA is vulnerable to XSS or CSRF attacks (e.g. attacks where the attacker may retrieve the user's tokens). Many SPAs tend to store the user's `id_token` in the browser LocalStorage as a "proof of authentication" and access tokens which are then used to query otherwise private API endpoints. Unlike browser cookies which can be set to http-only, LocalStorage can be queried in javascript and thus through an XSS vulnerability. 
 
-Not only this means any vulnerability in your SPA may leak the user's tokens (with functional API access) that are used by your SPA, but any **other** SPA that you do not control may also leak the same tokens. These tokens, if allowed for the same APIs, can be then used to compromise your application/APIs.
+Any vulnerability in your SPA may leak the user's tokens (with functional API access) that are used by your SPA. In addition, any **other** SPA that you do not control may also leak the same tokens. These tokens, if allowed for the same APIs, can be then used to compromise your application/APIs.
 
-Due to this, Implicit grants are inherently more dangerous and harder to implement safely, and thus why we're advocating against their usage entierely.
+Authorization code grants prevent this problem by verifying everything on the web-server and preventing the user-agent from accessing this data.
 
 ### State parameter
 
