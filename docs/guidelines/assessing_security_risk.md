@@ -11,7 +11,7 @@ aims to help create your own framework when official standards are too unflexibl
 Mozilla's framework is inspired by [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm) and [ISO
 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001) and other well-known prior efforts*
 
-It is recommended to read the [FAIR Introduction](http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
+It is recommended to read the [FAIR Introduction](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 as an introduction to how risk is generally assessed, and get familiar with the terms. Note that we do not use the FAIR
 methodology, however, the concepts are well exposed in their documentation 
 
