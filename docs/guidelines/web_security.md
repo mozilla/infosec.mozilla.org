@@ -24,7 +24,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 7. [CSRF Prevention](#csrf-prevention)
 8. [Referrer Policy](#referrer-policy)
 9. [robots.txt](#robotstxt)
-10. [Subresource Integrity](#subresource-Integrity)
+10. [Subresource Integrity](#subresource-integrity)
 11. [X-Content-Type-Options](#x-content-type-options)
 12. [X-Frame-Options](#x-frame-options)
 13. [X-XSS-Protection](#x-xss-protection)
@@ -38,14 +38,14 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <th data-sort-type="number"> Guideline</th>
 <th data-sort-type="number"> Security<br>Benefit</th>
 <th data-sort-type="number"> Implementation<br>Difficulty</th>
-<th data-sort-type="number"> Order<sup>†</sup></th>
+<th data-sort-type="number"> Order<sup title="Suggested order that administrators implement the web security guidelines. It is based on a combination of the security impact and the ease of implementation from an operational and developmental perspective.">†</sup></th>
 <th> Requirements</th>
 <th> Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-sort-value="1"> <a href="#HTTPS"><span >HTTPS</span></a></td>
+<td data-sort-value="1"> <a href="#https"><span >HTTPS</span></a></td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
 <td  data-sort-value="0"></td>
@@ -53,7 +53,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <td> Sites should use HTTPS (or other secure protocols) for all communications</td>
 </tr>
 <tr>
-<td data-sort-value="2" > <a href="#HTTP_Public_Key_Pinning"><span >Public Key Pinning</span></a></td>
+<td data-sort-value="2" > <a href="#http-public-key-pinning"><span >Public Key Pinning</span></a></td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span></td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
 <td  data-sort-value="99"> --</td>
@@ -61,7 +61,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <td> Not recommended for most sites</td>
 </tr>
 <tr>
-<td data-sort-value="3" > <a href="#HTTP_Redirections"><span >Redirections from HTTP</span></a>
+<td data-sort-value="3" > <a href="#http-redirections"><span >Redirections from HTTP</span></a>
 </td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span>
 </td>
@@ -73,7 +73,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Websites must redirect to HTTPS, API endpoints should disable HTTP entirely
 </td></tr><tr>
-<td data-sort-value="4" > <a href="#Resource_Loading"><span >Resource Loading</span></a>
+<td data-sort-value="4" > <a href="#resource-loading"><span >Resource Loading</span></a>
 </td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span>
 </td>
@@ -85,7 +85,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Both passive and active resources should be loaded through protocols using TLS, such as HTTPS
 </td></tr><tr>
-<td data-sort-value="5" > <a href="#HTTP_Strict_Transport_Security"><span >Strict Transport Security</span></a>
+<td data-sort-value="5" > <a href="#http-strict-transport-security"><span >Strict Transport Security</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
@@ -97,7 +97,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Minimum allowed time period of six months
 </td></tr><tr>
-<td data-sort-value="6" > <a href="#HTTPS"><span >TLS Configuration</span></a>
+<td data-sort-value="6" > <a href="#https"><span >TLS Configuration</span></a>
 </td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
@@ -107,9 +107,9 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Mandatory
 </td>
-<td> Use the most secure Mozilla TLS configuration for your user base, typically <a href="/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29" title="Security/Server Side TLS">Intermediate</a>
+<td> Use the most secure Mozilla TLS configuration for your user base, typically <a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29" title="Security/Server Side TLS">Intermediate</a>
 </td></tr><tr>
-<td data-sort-value="7"> <a href="#Content_Security_Policy"><span >Content Security Policy</span></a>
+<td data-sort-value="7"> <a href="#content-security-policy"><span >Content Security Policy</span></a>
 </td>
 <td data-sort-value="3" ><span class="risk-high">HIGH</span>
 </td>
@@ -121,7 +121,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Disabling inline script is the greatest concern for CSP implementation
 </td></tr><tr>
-<td data-sort-value="8"> <a href="#Cookies"><span >Cookies</span></a>
+<td data-sort-value="8"> <a href="#cookies"><span >Cookies</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
@@ -133,7 +133,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> All cookies must be set with the Secure flag, and set as restrictively as possible
 </td></tr><tr>
-<td data-sort-value="9"> <a href="#contribute.json"><span >contribute.json</span></a>
+<td data-sort-value="9"> <a href="#contributejson"><span >contribute.json</span></a>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
@@ -145,7 +145,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Mozilla sites should serve contribute.json and keep contact information up-to-date
 </td></tr><tr>
-<td data-sort-value="10"> <a href="#Cross-origin_Resource_Sharing"><span >Cross-origin Resource Sharing</span></a>
+<td data-sort-value="10"> <a href="#cross-origin-resource-sharing"><span >Cross-origin Resource Sharing</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
@@ -157,7 +157,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Origin sharing headers and files should not be present, except for specific use cases
 </td></tr><tr>
-<td data-sort-value="11"> <a href="#CSRF_Prevention"><span >Cross-site Request Forgery Tokenization</span></a>
+<td data-sort-value="11"> <a href="#csrf-prevention"><span >Cross-site Request Forgery Tokenization</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
@@ -169,7 +169,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Mandatory for websites that allow destructive changes<br>Unnecessary for all other websites<br>Most application frameworks have built-in CSRF tokenization to ease implementation
 </td></tr><tr>
-<td data-sort-value="11"> <a href="#Referrer_Policy"><span >Referrer Policy</span></a>
+<td data-sort-value="11"> <a href="#referrer-policy"><span >Referrer Policy</span></a>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
@@ -181,7 +181,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Improves privacy for users, prevents the leaking of internal URLs via <tt>Referer</tt> header
 </td></tr><tr>
-<td data-sort-value="12"> <a href="#robots.txt"><span >robots.txt</span></a>
+<td data-sort-value="12"> <a href="#robotstxt"><span >robots.txt</span></a>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
@@ -193,7 +193,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Websites that implement robots.txt must use it only for noted purposes
 </td></tr><tr>
-<td data-sort-value="13"> <a href="#Subresource_Integrity"><span >Subresource Integrity</span></a>
+<td data-sort-value="13"> <a href="#subresource-integrity"><span >Subresource Integrity</span></a>
 </td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
@@ -205,7 +205,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> <sup >‡</sup> Only for websites that load JavaScript or stylesheets from foreign origins
 </td></tr><tr>
-<td data-sort-value="14"> <a href="#X-Content-Type-Options"><span >X-Content-Type-Options</span></a>
+<td data-sort-value="14"> <a href="#x-content-type-options"><span >X-Content-Type-Options</span></a>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
@@ -217,7 +217,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Websites should verify that they are setting the proper MIME types for all resources
 </td></tr><tr>
-<td data-sort-value="15"> <a href="#X-Frame-Options"><span >X-Frame-Options</span></a>
+<td data-sort-value="15"> <a href="#x-frame-options"><span >X-Frame-Options</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
@@ -229,7 +229,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 </td>
 <td> Websites that don't use DENY or SAMEORIGIN must employ clickjacking defenses
 </td></tr><tr>
-<td data-sort-value="16"> <a href="#X-XSS-Protection"><span >X-XSS-Protection</span></a>
+<td data-sort-value="16"> <a href="#x-xss-protection"><span >X-XSS-Protection</span></a>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span></td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
@@ -305,7 +305,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## HTTP Redirections
 
-Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occured, [HSTS](#HTTP_Strict_Transport_Security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
+Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occured, [HSTS](#http-strict-transport-security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
 
 Redirections should be done with the 301 redirects, unless they redirect to a different path, in which case they may be done with 302 redirections. Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.
 
@@ -434,7 +434,7 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 - [Content Security Policy Playground](http://www.cspplayground.com/)
 - [Content Security Policy Level 2 Standard](https://www.w3.org/TR/CSP2/)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
-- [Using the frame-ancestors directive to prevent framing](#X-Frame-Options)
+- [Using the frame-ancestors directive to prevent framing](#x-frame-options)
 
 # contribute.json
 
