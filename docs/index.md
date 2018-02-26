@@ -38,4 +38,5 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
     - Alicia Smith *[:phrozyn]*
     - Brandon Myers *[:pwnbus]*
     - Michal Purzynski *[:michal`]*
+    - Zack Mullaly *[:zack]*
 
