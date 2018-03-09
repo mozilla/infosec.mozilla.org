@@ -10,7 +10,7 @@ description: What headers, setup, etc. should you follow for your web site?
 The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
 
 # Table of Contents
-1. [Cheat Sheet](web-security-cheat-sheet)
+1. [Cheat Sheet](#web-security-cheat-sheet)
 2. [Transport Layer Security (TLS/SSL)](#transport-layer-security-tlsssl)
     1. [HTTPS](#https)
     2. [HTTP Strict Transport Security](#http-strict-transport-security)
