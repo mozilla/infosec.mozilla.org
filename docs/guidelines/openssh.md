@@ -130,6 +130,7 @@ AuthenticationMethods publickey,keyboard-interactive:pam
 KbdInteractiveAuthentication yes
 UsePAM yes
 # Ensure /bin/login is not used so that it cannot bypass PAM settings for sshd.
+# Note, this option is no longer needed as of OpenSSH 7.4 as support for UseLogin has been removed
 UseLogin no
 ```
 
