@@ -72,9 +72,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <p>This practice is discouraged because:
 </p>
 <ul>
-<li> When a user's access status changes due to leaving the company or changing teams, the associated change in the system
-</li>
-<li> which uses decentralized user account management is not automatically made resulting in unintended system access.
+<li> When a user's access status changes due to leaving the company or changing teams, the associated change in the system which uses decentralized user account management is not automatically made resulting in unintended system access.
 </li>
 <li> When a user changes an attribute of their account in the centralized account management system, for example their
 </li>
