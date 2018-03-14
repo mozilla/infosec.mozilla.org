@@ -6,22 +6,17 @@ title: Phishing
 description: A fraudulent practice of sending emails (or other communications) purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.
 ---
 
-*The goal of this document is to help educate users about the risks of phishing attacks.  This document can be used both as a pro-active and a re-active aid to help reduce the likelihood of falling victim to a phishing attack.*
+*The goal of this document is to help users figure out if their being phished and escalate accordingly.*
+
+If at any point you believe you are being targeted in a phishing campaign, it's important to raise those concerns with your security team. For example, if you are a mozilla employee or contributor, you would use [infosec@mozilla.com](mailto:infosec@mozilla.com).
 
 # Background
 
-Phishing is an attack used by the computer hacking and fraud community to lure people to fraudulent websites that mimic ones they would normally use. They do this by creating e-mails that appear like they are being sent by a legitimate company or sender.
-
-Phishing emails often have the following characteristics:
-
-  - Phishing emails may ask you to click on a link in the e-mail, which would take you to a mock-up of the legitimate company's website where you are asked for your login credentials or other sensitive information (e.g. personally identifiable information (PII)).
-  - Phishing emails can have a forged sender's address to mask an attacker's identity and make the email seem legitimate
-  - Attackers can also create misleading hyperlinks inside of emails
-  - Attackers will often use phishing emails with malicious attachments that are coerced to be opened or executed to compromise your system
+Phishing is an attack used to elicit an action from you that you would otherwise not do (click a link, login, pay a bill, click an attachment, etc.) that has a negative affect on you, your computers, your business, or others (often compromising an account, a computer, or eliciting payment for services not rendered).
 
 # Intuition
 
-Your own intuition is probably your best asset for easily detecting phishing attacks.  If an email seems out of place, unsolicited or asks you to take a weird action, stop and consider whether you are in a phishing scenario.  If you find yourself in this state, the below information will be helpful in supporting those "weird feels" with evidence that would validate those concerns.   If at any time you get a feeling something isn't right, you are encouraged to investigate further. If you feel out of your depth, please raise it with your information security team ([infosec@mozilla.com](mailto:infosec@mozilla.com) if at Mozilla) for further review and validation.
+Your own intuition is probably your best asset for easily detecting phishing attacks.  If an email seems out of place, unsolicited or asks you to take a weird action, stop and consider whether you are in a phishing scenario.  The below information will be helpful in supporting those "weird feels" with evidence that would validate those concerns.
 
 # Email Headers
 
@@ -34,8 +29,6 @@ From: Chris Beard (cbeard@mozilla.com) <abadguy@evil.com>
 To: You <you@example.com>
 Subject: An Example Subject
 ```
-
-If you observe this or some other behavior that suggests you've received a phishing email, please raise it with your information security team ([infosec@mozilla.com](mailto:infosec@mozilla.com) if at Mozilla) for further review. Attach a copy of the email headers for review.
 
 # Links
 
@@ -51,7 +44,7 @@ However, an attacker may replace the 'l' with a numerical 1 to try and trick you
 
 `https://mozi11a.org/`
 
-If you observe this or some other behavior that suggests you've received a phishing email and have been coerced into clicking a malicious link, it's important to raise it with your information security team ([infosec@mozilla.com](mailto:infosec@mozilla.com) if at Mozilla) for further review and attach the email headers (see above) and provide the example URL for further review.
+If you observe this or some other behavior that suggests you've received a phishing email and have been coerced into clicking a malicious link, it's important to raise it with your security team for further review and attach the email headers (see above) and provide the example URL for further review.
 
 # Attachments
 
@@ -63,7 +56,7 @@ There are a number of malicious attachment types that are more dangerous than ot
 - MS Word/Excel Document (very powerful, especially in cases where Macros need to be enabled)
 - Bash/.exe Files (extremely dangerous)
 
-If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your information security team ([infosec@mozilla.com](mailto:infosec@mozilla.com) if at Mozilla) for further review and attach the email headers (see above) and provide the example attachment for further review.
+If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your security team for further review and attach the email headers (see above) and provide the example attachment for further review.
 
 
 ## References/Additional Reading
