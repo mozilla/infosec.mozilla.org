@@ -20,7 +20,13 @@ Your own intuition is probably your best asset for easily detecting phishing att
 
 # Email Headers
 
-Email headers are a great way to deduce the true origin of a given email.  As noted above, emails often contain a format section which is forgable by an attacker to make it seem as though an email came from a different source.  If you're using Gmail, here's a good reference [2](https://support.google.com/mail/answer/29436?hl=en) for viewing the headers of a given email.  When viewing the full headers, it's important to understand who actually sent a given email.  As noted above, formatting content within emails can be tampered with to make an email seem as though it's from someone else.
+Email headers are a great way to deduce the true origin of a given email.  As noted above, emails often contain a format section which is forgable by an attacker to make it seem as though an email came from a different source.  If you're using Gmail, you can follow the following steps to view the full email headers.
+
+1. Open the email
+2. Go to the right drop down menu
+3. Select show original
+
+When viewing the full headers, it's important to understand who actually sent a given email.  As noted above, formatting content within emails can be tampered with to make an email seem as though it's from someone else.
 
 One of the more common techniques with phishing emails is to abuse the From: field content. This often looks like...
 
@@ -44,7 +50,7 @@ However, an attacker may replace the 'l' with a numerical 1 to try and trick you
 
 `https://mozi11a.org/`
 
-If you observe this or some other behavior that suggests you've received a phishing email and have been coerced into clicking a malicious link, it's important to raise it with your security team for further review and attach the email headers (see above) and provide the example URL for further review.
+If you observe this or some other behavior that suggests you've received a phishing email and have been coerced into clicking a malicious link, it's important to raise it with your security team for further review and attach the email headers (see above) and provide the phishing URL for further review.
 
 # Attachments
 
