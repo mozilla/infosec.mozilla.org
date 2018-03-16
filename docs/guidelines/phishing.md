@@ -38,7 +38,7 @@ Subject: An Example Subject
 
 # Links
 
-Links in email addresses can be misleading when crafted in HTML, much like a link on any webpage.  It's important to hover over any links provided in emails before clicking them to ensure they take you to the correct domain.  This hover action will present you with a preview of the URL in the bottom of your email client.
+HTML documents can contain links to email addresses (such as `mailto:hello@example.com`). These links can be misleading, much like a link on any webpage.  It's important to hover over any links provided in emails before clicking them to ensure they take you to the correct domain.  This hover action will present you with a preview of the URL in the bottom of your email client.
 
 A common tactic for detecting malicious URLs in email is simply making sure the link is to the right domain. Phishing attacks will often leverage common looking domains with one character subsituted in the hopes of getting you to trust them.
 
