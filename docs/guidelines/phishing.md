@@ -8,7 +8,7 @@ description: A fraudulent practice of sending emails (or other communications) p
 
 *The goal of this document is to help users figure out if their being phished and escalate accordingly.*
 
-If at any point you believe you are being targeted in a phishing campaign, it's important to raise those concerns with your security team. For example, if you are a mozilla employee or contributor, you would use [infosec@mozilla.com](mailto:infosec@mozilla.com).
+If at any point you believe you are being targeted in a phishing campaign, it's important to raise those concerns with your [security team](/#contact).
 
 # Background
 
@@ -62,7 +62,7 @@ There are a number of malicious attachment types that are more dangerous than ot
 - MS Word/Excel Document (very powerful, especially in cases where Macros need to be enabled)
 - Bash/.exe Files (extremely dangerous)
 
-If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your security team for further review and attach the email headers (see above) and provide the example attachment for further review.
+If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your [security team](/#contact) for further review and attach the email headers (see above) and provide the example attachment for further review.
 
 
 ## References/Additional Reading
