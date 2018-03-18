@@ -31,7 +31,7 @@ When viewing the full headers, it's important to understand who actually sent a 
 One of the more common techniques with phishing emails is to abuse the From: field content. This often looks like...
 
 ```
-From: Chris Beard (cbeard@mozilla.com) <abadguy@evil.com>
+From: Pat Smith (psmith@example.com) <abadguy@evil.com>
 To: You <you@example.com>
 Subject: An Example Subject
 ```
