@@ -101,7 +101,7 @@ here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWV
 -   Establish regular recurring maintenance windows in which to patch software.
 -   Ensure individual systems can be turned off and back on without affecting service availability.
 -   Enable automatic patching where possible.
--   Check web application libraries and dependencies for vulnerablities.
+-   Check web application libraries and dependencies for vulnerabilities.
 
 ## Meet Web Standards
 
