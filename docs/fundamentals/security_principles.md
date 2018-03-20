@@ -114,7 +114,7 @@ here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWV
 
 ## Guarantee data integrity and confidentiality
 
-**Goal:** Ensuring data confidentiality, integrity, and authenticity is respected throughout it's lifecycle.
+**Goal:** Ensuring data confidentiality, integrity, and authenticity is respected throughout its lifecycle.
 
 **Do**
 
