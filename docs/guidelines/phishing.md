@@ -58,7 +58,7 @@ Phishing emails often contain attachments in the hope that you will click and ru
 
 There are a number of malicious attachment types that are more dangerous than others, which include:
 
-- PDF Documents (very powerful, can have embedded malcious content)
+- PDF Documents (very powerful, can have embedded malicious content)
 - MS Word/Excel Document (very powerful, especially in cases where Macros need to be enabled)
 - Bash/.exe Files (extremely dangerous)
 
