@@ -204,14 +204,14 @@ utilizing a combination of two different components such as something you know (
     when behind a bastion host.
 
 
-## Use central identity management (Single-Sign On)
+## Use central identity management (Single Sign-On)
 
 **Goal:** Minimize credential theft and identity mismanagement by minimizing the handling of user credentials such as
 password, MFA to a set of dedicated systems.
 
 **Do**
 
--   Use an SSO (Single Sign On) solution that authenticates users credentials on your service’s behalf.
+-   Use an SSO (Single Sign-On) solution that authenticates users credentials on your service’s behalf.
 -   Servers update their user sessions from the SSO systems regularly to ensure the user is still active and valid.
 -   Use authorization (e.g. group membership) data from the SSO system (possibly, in addition to your own authorization
     data)
