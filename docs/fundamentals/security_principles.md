@@ -206,7 +206,7 @@ utilizing a combination of two different components such as something you know (
 
 ## Use central identity management (Single-Sign On)
 
-**Goal:** Minimize credential theft and identity mismanagement by minizing the handling of user credentials such as
+**Goal:** Minimize credential theft and identity mismanagement by minimizing the handling of user credentials such as
 password, MFA to a set of dedicated systems.
 
 **Do**
