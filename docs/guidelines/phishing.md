@@ -6,7 +6,7 @@ title: Phishing
 description: A fraudulent practice of sending emails (or other communications) purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.
 ---
 
-*The goal of this document is to help users figure out if their being phished and escalate accordingly.*
+*The goal of this document is to help users figure out if they are being phished and escalate accordingly.*
 
 If at any point you believe you are being targeted in a phishing campaign, it's important to raise those concerns with your [security team](/#contact).
 
