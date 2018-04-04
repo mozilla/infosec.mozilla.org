@@ -65,6 +65,6 @@ There are a number of malicious attachment types that are more dangerous than ot
 If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your [security team](/#contact) for further review and attach the email headers (see above) and provide the example attachment for further review.
 
 
-## References/Additional Reading
+## References/Additional Reading 2
 
 - <https://support.google.com/mail/answer/29436?hl=en>
