@@ -334,7 +334,7 @@ Due to the risk of knocking yourself off the internet, HPKP must be implemented 
 
 ### Directives
 
-- `max-age:` how long the user agent the keys will be pinned; the site must use a cert that meets these pins until this time expires
+- `max-age:` how long the user agent keeps/uses/enforces the keys that will be pinned; the site must use a cert that meets these pins until this time expires
 - `includeSubDomains:` whether user agents should pin all subdomains to the same pins
 
 Unlike with HSTS, what to set `max-age` is highly individualized to a given site. A longer value is more secure, but screwing up your key pins will result in your site being unavailable for a longer period of time. Recommended values fall between 15 and 120 days.
