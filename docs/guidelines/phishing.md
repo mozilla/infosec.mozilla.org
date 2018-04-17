@@ -50,6 +50,8 @@ However, an attacker may replace the `l` with a numerical 1 to try and trick you
 
 `https://mozi11a.org/`
 
+One way to avoid falling for such attacks, is simply not to click links provided in email.  If an email is asking that you click a link to login to a website, consider visiting the website directly using a bookmark.  Another technique is to make use of a password manager that supports an auto-fill feature that binds to the site address.  A password manager with an auto-fill feature will often require the website to match exactly before submitting credentials and this can sometimes act as a red flag if the auto-fill feature does not work.
+
 If you observe this or some other behavior that suggests you've received a phishing email and have been coerced into clicking a malicious link, it's important to raise it with your security team for further review and attach the email headers (see above) and provide the phishing URL for further review.
 
 # Attachments
