@@ -290,10 +290,12 @@ The header consists of one mandatory parameter (`max-age`) and two optional para
 
 ### Examples
 
-```
+```sh
 # Only connect to this site via HTTPS for the two years (recommended)
 Strict-Transport-Security: max-age=63072000
+```
 
+```sh
 # Only connect to this site and subdomains via HTTPS for the next two years and also include in the preload list
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ```
@@ -311,14 +313,16 @@ Redirections should be done with the 301 redirects, unless they redirect to a di
 
 ### Examples
 
-```
+```nginx
 # Redirect all incoming http requests to the same site and URI on https, using nginx
 server {
   listen 80;
 
   return 301 https://$host$request_uri;
 }
+```
 
+```apache
 # Redirect for site.mozilla.org from http to https, using Apache
 <VirtualHost *:80>
   ServerName site.mozilla.org
@@ -341,7 +345,7 @@ Unlike with HSTS, what to set `max-age` is highly individualized to a given site
 
 ### Examples
 
-```
+```sh
 # Pin to DigiCert, Let's Encrypt, and the local public-key, including subdomains, for 15 days
 Public-Key-Pins: max-age=1296000; includeSubDomains; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
  pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; pin-sha256="P0NdsLTMT6LSwXLuSEHNlvg4WxtWb5rIJhfZMyeXUE0="
@@ -360,13 +364,17 @@ Despite the fact that modern browsers make it evident that websites are loading 
 
 ### Examples
 
-```
+```html
 <!-- HTTPS is a fantastic way to load a JavaScript resource -->
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+```
 
+```html
 <!-- Attempts to load over HTTP will be blocked and will generate mixed content warnings -->
 <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+```
 
+```html
 <!-- Although passive content won't be blocked, it will still generate mixed content warnings -->
 <img src="http://very.badssl.com/image.jpg">
 ```
@@ -397,33 +405,47 @@ Note that disabling inline JavaScript means that <em>all</em> JavaScript must be
 
 ## Examples
 
-```
+```sh
 # Disable unsafe inline/eval, only allow loading of resources (images, fonts, scripts, etc.) over https
 # Note that this does not provide any XSS protection
 Content-Security-Policy: default-src https:
+```
 
-<-- Do the same thing, but with a <meta> tag -->
+```html
+<!-- Do the same thing, but with a <meta> tag -->
 <meta http-equiv="Content-Security-Policy" content="default-src https:">
+```
 
+```sh
 # Disable the use of unsafe inline/eval, allow everything else except plugin execution
 Content-Security-Policy: default-src *; object-src 'none'
+```
 
+```sh
 # Disable unsafe inline/eval, only load resources from same origin except also allow images from imgur
 # Also disables the execution of plugins
 Content-Security-Policy: default-src 'self'; img-src 'self' https://i.imgur.com; object-src 'none'
+```
 
+```sh
 # Disable unsafe inline/eval and plugins, only load scripts and stylesheets from same origin, fonts from google,
 # and images from same origin and imgur. Sites should aim for policies like this.
 Content-Security-Policy: default-src 'none'; font-src 'https://fonts.googleapis.com';
 			 img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self'; style-src 'self'
+```
 
+```sh
 # Pre-existing site that uses too much inline code to fix
 # but wants to ensure resources are loaded only over https and disable plugins
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+```
 
+```sh
 # Don't implement the above policy yet; instead just report violations that would have occured
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+```
 
+```sh
 # Disable the loading of any resources and disable framing, recommended for APIs to use
 Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 ```
@@ -446,7 +468,7 @@ Require subkeys include `name`, `description`, `bugs`, `participate` (particular
 
 ## Examples
 
-```
+```json
 {
   "name": "Bedrock",
     "description": "The app powering www.mozilla.org.",
@@ -498,6 +520,9 @@ All cookies should be created such that their access is as limited as possible. 
 
 ## Directives
 
+- Name: Cookie names may be either be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources
+  - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`
+  - Use `__Secure-` for all other cookies sent from secure origins (such as HTTPS)
 - `Secure`: All cookies must be set with the `Secure` flag, indicating that they should only be sent over HTTPS
 - `HttpOnly:` Cookies that don't require access from JavaScript should be set with the `HttpOnly` flag
 - Expiration: Cookies should expire as soon as is necessary: session identifiers in particular should expire quickly
@@ -505,30 +530,41 @@ All cookies should be created such that their access is as limited as possible. 
   - `Max-Age:` Sets a relative expiration date for a given cookie (not supported by IE <8)
 - `Domain:` Cookies should only be set with this if they need to be accessible on other domains, and should be set to the most restrictive domain possible
 - `Path:` Cookies should be set to the most restrictive path possible, but for most applications this will be set to the root directory
-
-## Directives
-
-- Name: Cookie names may be either be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources
-  - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`
-  - Use `__Secure-` for all other cookies sent from secure origins (such as HTTPS)
+- `SameSite`: Forbid sending the cookie via cross-origin requests (such as from `<img>` tags, etc.), as a strong [anti-CSRF measure](#csrf-prevention)
+  - `SameSite=Strict`: Only send the cookie when site is directly navigated to
+  - `SameSite=Lax`: Send the cookie when navigating to your site from another site
 
 ## Examples
 
-```
+```sh
 # Session identifier cookie only accessible on this host that gets purged when the user closes their browser
 Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
+```
 
+```sh
 # Session identifier for all mozilla.org sites that expires in 30 days using the __Secure- prefix
-Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=mozilla.org; Path=/; Secure; HttpOnly
+# This cookie is not sent cross-origin, but is sent when navigating to any Mozilla site from from another site
+Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=mozilla.org; Path=/; Secure; HttpOnly; SameSite=Lax
+```
 
+```sh
 # Sets a long-lived cookie for the current host, accessible by Javascript, when the user accepts the ToS
-Set-Cookie: __Host-ACCEPTEDTOS=true; Expires=Fri, 31 Dec 9999 23:59:59 GMT; Path=/; Secure
+# This cookie is sent when navigating to your sent from another site, such as by clicking a link
+Set-Cookie: __Host-ACCEPTEDTOS=true; Expires=Fri, 31 Dec 9999 23:59:59 GMT; Path=/; Secure; SameSite=Lax
+```
+
+```sh
+# Session identifier used for a secure site, such as bugzilla.mozilla.org. It isn't sent from cross-origin
+# requests, nor is it sent when navigating to bugzilla.mozilla.org from another site. Used in conjunction with
+# other anti-CSRF measures, this is a very strong way to defend your site against CSRF attacks.
+Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; HttpOnly; SameSite=Strict
 ```
 
 ## See Also
 
 - [RFC 6265 (HTTP Cookies)](https://tools.ietf.org/html/rfc6265)
 - [HTTP Cookie Prefixes](https://tools.ietf.org/html/draft-west-cookie-prefixes)
+- [Same-site Cookies](https://tools.ietf.org/html/draft-west-first-party-cookies-07)
 
 # Cross-origin Resource Sharing
 
@@ -538,20 +574,26 @@ These should not be present unless specifically needed. Use cases include conten
 
 ## Examples
 
-```
+```sh
 # Allow any site to read the contents of this JavaScript library, so that subresource integrity works
 Access-Control-Allow-Origin: *
+```
 
+```sh
 # Allow https://random-dashboard.mozilla.org to read the returned results of this API
 Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
+```
 
+```xml
 <!-- Allow Flash from https://random-dashboard.mozilla.org to read page contents -->
 <cross-domain-policy xsi:noNamespaceSchemaLocation="http://www.adobe.com/xml/schemas/PolicyFile.xsd">
   <allow-access-from domain="random-dashboard.mozilla.org"/>
   <site-control permitted-cross-domain-policies="master-only"/>
   <allow-http-request-headers-from domain="random-dashboard.mozilla.org" headers="*" secure="true"/>
 </cross-domain-policy>
+```
 
+```xml
 <!-- The same thing, but for Silverlight-->
 <?xml version="1.0" encoding="utf-8"?>
 <access-policy>
@@ -585,17 +627,21 @@ Cross-site request forgeries are a class of attacks where unauthorized commands 
 
 When a user visits a page with that HTML fragment, the browser will attempt to make a GET request to that URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
-While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request.
+While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request. Although [`SameSite`](#Cookies) cookies are the best defense against CSRF attacks, they are not yet fully supported in all browsers and should be used in conjection with other anti-CSRF defenses.
 
 ## Examples
 
-```
+```html
 <!-- A secret anti-CSRF token, included in the form to delete an account -->
 <input type="hidden" name="csrftoken" value="1df93e1eafa42012f9a8aff062eeb1db0380b">
+```
 
-# Server-side: set an anti-CSRF cookie that JavaScript must send as an X header
-Set-Cookie: CSRFTOKEN=1df93e1eafa42012f9a8aff062eeb1db0380b; Path=/; Secure
+```sh
+# Server-side: set an anti-CSRF cookie that JavaScript must send as an X header, which can't be done cross-origin
+Set-Cookie: CSRFTOKEN=1df93e1eafa42012f9a8aff062eeb1db0380b; Path=/; Secure; SameSite=Strict
+```
 
+```javascript
 // Client-side, have JavaScript add it as an X header to the XMLHttpRequest
 var token = readCookie(CSRFTOKEN);                   // read the cookie
 httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Token header
@@ -612,7 +658,7 @@ When a user navigates to a site via a hyperlink or a website loads an external r
 
 In normal operation, if a page at <https://example.com/page.html> contains `<img src="https://not.example.com/image.jpg">`, then the browser will send a request like this:
 
-```
+```http
 GET /image.jpg HTTP/1.1
 Host: not.example.com
 Referer: https://example.com/page.html
@@ -637,21 +683,29 @@ Please note that support for Referrer Policy is still in its infancy. Chrome cur
 
 ## Examples
 
-```
+```sh
 # On example.com, only send the Referer header when loading or linking to other example.com resources
 Referrer-Policy: same-origin
+```
 
+```sh
 # Only send the shortened referrer to a foreign origin, full referrer to a local host
 Referrer-Policy: strict-origin-when-cross-origin
+```
 
+```sh
 # Disable referrers for browsers that don't support strict-origin-when-cross-origin
 # Uses strict-origin-when-cross-origin for browsers that do
 Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+```
 
-# Do the same, but with a meta tag
+```html
+<!-- Do the same, but with a meta tag -->
 <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+```
 
-# Do the same, but only for a single link
+```html
+<!-- Do the same, but only for a single link -->
 <a href="https://mozilla.org/" referrerpolicy="no-referrer, strict-origin-when-cross-origin">
 ```
 
@@ -668,11 +722,13 @@ Sites may optionally use robots.txt, but should only use it for these purposes. 
 
 ## Examples
 
-```
+```sh
 # Stop all search engines from archiving this site
 User-agent: *
 Disallow: /
+```
 
+```sh
 # Using robots.txt to hide certain directories is a terrible idea
 User-agent: *
 Disallow: /secret/admin-interface
@@ -699,17 +755,21 @@ Note that CDNs must support the Cross Origin Resource Sharing (CORS) standard by
 
 ## Examples
 
-```
+```html
 <!-- Load jQuery 2.1.4 from their CDN -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"
   integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
   crossorigin="anonymous"></script>
+```
 
+```html
 <!-- Load AngularJS 1.4.8 from their CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
   integrity="sha384-r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp"
   crossorigin="anonymous"></script>
+```
 
+```sh
 # Generate the hash myself
 $ curl -s https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js | \
     openssl dgst -sha384 -binary | \
@@ -729,7 +789,7 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 
 ## Examples
 
-```
+```sh
 # Prevent browsers from incorrectly detecting non-scripts as scripts
 X-Content-Type-Options: nosniff
 ```
@@ -754,15 +814,19 @@ Sites that require the ability to be iframed must use either Content Security Po
 
 ## Examples
 
-```
+```sh
 # Block site from being framed with X-Frame-Options and CSP
 Content-Security-Policy: frame-ancestors 'none'
 X-Frame-Options: DENY
+```
 
+```sh
 # Only allow my site to frame itself
 Content-Security-Policy: frame-ancestors 'self'
 X-Frame-Options: SAMEORIGIN
+```
 
+```sh
 # Allow only framer.mozilla.org to frame site
 # Note that this blocks framing from browsers that don't support CSP2+
 Content-Security-Policy: frame-ancestors https://framer.mozilla.org
@@ -783,7 +847,7 @@ New websites should use this header, but given the small risk of false positives
 
 ## Examples
 
-```
+```sh
 # Block pages from loading when they detect reflected XSS attacks
 X-XSS-Protection: 1; mode=block
 ```
@@ -792,6 +856,7 @@ X-XSS-Protection: 1; mode=block
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| April, 2018    | April  | Added SameSite cookies and syntax highlighting                   |
 | June, 2017     | April  | Moved cookie prefixes to no longer be experimental               |
 | November, 2016 | April  | Added Referrer Policy, tidied up XFO examples                    |
 | October, 2016  | April  | Updates to CSP recommendations                                   |
