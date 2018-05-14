@@ -332,7 +332,7 @@ server {
 
 ## HTTP Public Key Pinning
 
-[Maximum risk](Security/Risk_management/Rapid_Risk_Assessment#RRA_Risk_table_(5-10_minutes)) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fradulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
+[Maximum risk](https://infosec.mozilla.org/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fradulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
 
 Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for the majority websites to implement HPKP.
 
