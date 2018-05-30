@@ -69,4 +69,10 @@ If you observe this or some other behavior that suggests someone is sending you 
 
 ## References/Additional Reading
 
-- <https://support.google.com/mail/answer/29436?hl=en>
+- [Phishing and Malware Protection in Firefox](https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work)
+- [Report a Bad Site to Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/)
+- [Report a Bad Site to StopBadWare.org](https://www.stopbadware.org/report-badware)
+- [Anti-Phishing Working Group](https://www.apwg.org/)
+- [Phishing Wikipedia](https://en.wikipedia.org/wiki/Phishing)
+
+
