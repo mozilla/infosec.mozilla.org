@@ -74,5 +74,6 @@ If you observe this or some other behavior that suggests someone is sending you 
 - [Report a Bad Site to StopBadWare.org](https://www.stopbadware.org/report-badware)
 - [Anti-Phishing Working Group](https://www.apwg.org/)
 - [Phishing Wikipedia](https://en.wikipedia.org/wiki/Phishing)
+- [WebAuthn](https://duo.com/blog/web-authentication-what-it-is-and-what-it-means-for-passwords)
 
 
