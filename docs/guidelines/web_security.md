@@ -453,7 +453,6 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 ## See Also
 
 - [An Introduction to Content Security Policy](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
-- [Content Security Policy Playground](http://www.cspplayground.com/)
 - [Content Security Policy Level 2 Standard](https://www.w3.org/TR/CSP2/)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Using the frame-ancestors directive to prevent framing](#x-frame-options)
