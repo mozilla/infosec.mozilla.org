@@ -278,7 +278,7 @@ The header consists of one mandatory parameter (`max-age`) and two optional para
 
 ### Directives
 
-- `max-age:` how long user agents will redirect to HTTPS, in seconds
+- `max-age`: number of seconds the user agent will enforce the key pins and require a site to use a cert that satisfies them
 - `includeSubDomains:` whether user agents should upgrade requests on subdomains
 - `preload:` whether the site should be included in the [HSTS preload list](https://hstspreload.org/)
 
