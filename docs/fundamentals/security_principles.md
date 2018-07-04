@@ -199,7 +199,7 @@ utilizing a combination of two different components such as something you know (
 
 -   Use an SSO (Single Sign On) solution with MFA.
 -   For services that can not support SSO, use the service’s individual MFA features (e.g. GitHub and Google MFA).
--   Servers carrying secrets or widespread access (or any other potentially sensitive data) should be verify the user's
+-   Servers carrying secrets or widespread access (or any other potentially sensitive data) should verify the user's
     identity end to end, such as by prompting for an additional MFA verification when connecting to the server, even
     when behind a bastion host.
 
