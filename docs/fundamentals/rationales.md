@@ -74,13 +74,7 @@ The Enterprise Information Security (Infosec) team maintains this document as a 
 <ul>
 <li> When a user's access status changes due to leaving the company or changing teams, the associated change in the system which uses decentralized user account management is not automatically made resulting in unintended system access.
 </li>
-<li> When a user changes an attribute of their account in the centralized account management system, for example their
-</li>
-<li> email address or password, that change is not reflected in the systems which use decentralized user account
-</li>
-<li> management. Conversely when the user changes an attribute in the systems which use decentralized user account
-</li>
-<li> management, that change is not propagated to the centralized account management system.
+<li> When a user changes an attribute of their account in the centralized account management system, for example their email address or password, that change is not reflected in the systems which use decentralized user account management. Conversely when the user changes an attribute in the systems which use decentralized user account management, that change is not propagated to the centralized account management system.
 </li>
 </ul>
 </td></tr>
