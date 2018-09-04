@@ -611,6 +611,7 @@ Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
 
 ## See Also
 
+- [CORS for Developers](https://w3c.github.io/webappsec-cors-for-developers/)
 - [MDN on HTTP access control (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 - [Adobe on Setting crossdomain.xml](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html)
 - [Microsoft on Setting clientaccesspolicy.xml](https://msdn.microsoft.com/library/cc197955%28v=vs.95%29.aspx)
@@ -855,6 +856,7 @@ X-XSS-Protection: 1; mode=block
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| July, 2018     | April  | Link to CORS for Developers                                      |
 | April, 2018    | April  | Added SameSite cookies and syntax highlighting                   |
 | June, 2017     | April  | Moved cookie prefixes to no longer be experimental               |
 | November, 2016 | April  | Added Referrer Policy, tidied up XFO examples                    |
