@@ -617,7 +617,7 @@ Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
 
 # CSRF Prevention
 
-Cross-site request forgeries are a class of attacks where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the users cookies (and hence session information), they appear to be validly issued commands. A CSRF attack might like this:
+Cross-site request forgeries are a class of attacks where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the users cookies (and hence session information), they appear to be validly issued commands. A CSRF attack might look like this:
 
 ```
 <!-- Attempt to delete a user's account -->
