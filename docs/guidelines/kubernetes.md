@@ -6,14 +6,14 @@ title: Kubernetes
 description: A high level guide of basic security needs for Kubernetes
 ---
 
-*The goal of this document is to help you understand the basics of how to securely implement [Kubernetes](http://kubernetes.io/docs/) at Mozilla.
+*The goal of this document is to help you understand the basics of how to securely implement [Kubernetes](https://kubernetes.io/docs/) at Mozilla.
 All Mozilla sites and deployment should follow the recommendations below.
 The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
 
 
 # Why Kubernetes?
 ## Container-Based Approach
-Kubernetes is a platform used to deploy containers to cloud environments. Mozilla has been using containers to develop and deploy applications for over a year, most notably powering <http://www.mozilla.org/>
+Kubernetes is a platform used to deploy containers to cloud environments. Mozilla has been using containers to develop and deploy applications for over a year, most notably powering <https://www.mozilla.org/>
 
 ## Efficiencies of Clusters Over AMI Per Application Model
 Because Kubernetes hosts containers on clusters of machines, all deployed applications inherit the clusters security best practices, alerting, logging and monitoring. These are implemented once and developers only need to develop alerting/monitoring specific to their application.
@@ -56,4 +56,3 @@ If using Deis, consider enforcing controller whitelists for IP ranges expected t
 - <https://kubernetes.io/> (Main site for kubernetes)
 - <https://deis.com/docs/workflow/quickstart/> (Deis Workflow quick start for k8s/helm/app deployment)
 - <http://2016.video.sector.ca/video/189177390> (SecTor 2016 Introductory Presentation on Kubernetes security)
-

@@ -113,7 +113,7 @@ To deactivate weak moduli in two commands: `awk '$5 >= 2047' /etc/ssh/moduli /et
 
 Recent versions of OpenSSH support MFA (Multi-Factor Authentication). Using MFA is recommended where possible.
 
-It requires additional setup, such as using the [OATH Toolkit](http://www.nongnu.org/oath-toolkit/) or [DuoSecurity](https://www.duosecurity.com).
+It requires additional setup, such as using the [OATH Toolkit](https://www.nongnu.org/oath-toolkit/) or [DuoSecurity](https://www.duosecurity.com).
 
 **ATTENTION** In order to allow using one time passwords (OTPs) and any other text input, Keyboard-interactive is enabled in OpenSSH. This *MAY* allow for password authentication to work. It is therefore very important to check your PAM configuration so that PAM disallow password authentication for OpenSSH.
 
@@ -448,13 +448,13 @@ Keep in mind that these numbers may differ on a slower machine, and that this co
 -   [Key management Guidelines](key_management)
 -   [Server Side TLS Guidelines](https://wiki.mozilla.org/Security/Server_Side_TLS)
 -   [RFC4418 (umac)](https://www.ietf.org/rfc/rfc4418.txt)
--   [umac draft](http://www.openssh.com/txt/draft-miller-secsh-umac-01.txt)
+-   [umac draft](https://www.openssh.com/txt/draft-miller-secsh-umac-01.txt)
 -   [Safe curves](https://safecurves.cr.yp.to/)
 -   [DJM blog](http://blog.djm.net.au/2013/11/chacha20-and-poly1305-in-openssh.html)
 -   [Stribika blog](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
--   [AES-GCM performance study](http://2013.diac.cr.yp.to/slides/gueron.pdf)
+-   [AES-GCM performance study](https://2013.diac.cr.yp.to/slides/gueron.pdf)
 -   [CHACHA20 vs AES-GCM performance study](https://security.googleblog.com/2014/04/speeding-up-and-strengthening-https.html)
--   [PROTOCOL.certkeys](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=1.9&content-type=text/plain)
+-   [PROTOCOL.certkeys](https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=1.9&content-type=text/plain)
 -   [rfc44880bis from GnuPG](https://wiki.gnupg.org/rfc4880bis)
 -   [Weak Diffie-Hellman and the Logjam Attack](https://weakdh.org/)
 -   [On OpenSSH and Logjam, by Jethro Beekman](https://jbeekman.nl/blog/2015/05/ssh-logjam/)

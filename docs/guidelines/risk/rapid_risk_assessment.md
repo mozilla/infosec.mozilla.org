@@ -292,7 +292,7 @@ up and this is a great time to have a quick 5 minute chat about these.
 ## Reference documents and similar work
 
 - <https://binary.protect.io/workcard.pdf>
-- <http://en.wikipedia.org/wiki/ISO_31000>
+- <https://en.wikipedia.org/wiki/ISO_31000>
 - <http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf>
 
 ## RRA Links

@@ -27,7 +27,7 @@
 // Consistent font sizes for headings and titles.
 // Don't misuse these mixins; they're for headings! Use the regular font-size mixin for other elements.
 // Type scale based on a 1.333 ratio (Perfect Fourth) with 16px base, rounded to whole pixels for simplicity.
-// See: http://www.modularscale.com/?16&px&1.333&web&text
+// See: https://www.modularscale.com/?16&px&1.333&web&text
 // Usage:
 //  .foo { @include font-size-level1; }
 

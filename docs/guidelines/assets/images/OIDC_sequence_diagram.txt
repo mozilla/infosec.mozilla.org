@@ -1,4 +1,4 @@
-# This file can be used with http://sequencediagram.org/
+# This file can be used with https://sequencediagram.org/
 # And rendered to an image file
 
 title Authentication Sequence with OpenID Connect

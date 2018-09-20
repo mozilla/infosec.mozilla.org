@@ -67,7 +67,7 @@ For that reason, it is important that the web application (RP) respects the foll
     -   This ensures that access is revoked within *15 minutes* in the event that the user's account is disabled by the OpenID Connect Provider (OP).
     -   This issues a new ID token, with new attributes if they have changed.
     -   This may also renew the ID token expiration time.
-    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](http://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).
+    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](https://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).
 -   The web application (RP) can **optionally** provide a `logout` URL, which the OpenID Connect Provider (OP) can call to indicate if a user has logged out (so that the web application immediately know when to log the user out as well).
 
 ## Other important security considerations
@@ -112,12 +112,12 @@ Avoid using or storing refresh tokens. This is especially important for relying 
 -   [JSON Identity Suite](https://ldapwiki.com/wiki/JSON%20Identity%20Suite)
 -   <https://jwt.io/> (JWT token decoder)
 -   [SCIM: System for Cross domain Identity management](http://www.simplecloud.info/)
--   <http://openid.net/> (Official documentation)
--   <http://openid.net/developers/libraries/> (OIDC integration libraries for different programming languages and tools)
+-   <https://openid.net/> (Official documentation)
+-   <https://openid.net/developers/libraries/> (OIDC integration libraries for different programming languages and tools)
 -   <https://github.com/mozilla/mozilla-django-oidc/> (The django OpenID Connect library used on many Mozilla sites)
 -   <https://auth0.com/docs/protocols> (Auth0 documentation)
--   <http://developer.okta.com/docs/api/resources/oidc> (Okta documentation)
--   [Authorization code grant vs Implicit grant](http://stackoverflow.com/questions/7522831/what-is-the-purpose-of-the-implicit-grant-authorization-type-in-oauth-2)
+-   <https://developer.okta.com/docs/api/resources/oidc> (Okta documentation)
+-   [Authorization code grant vs Implicit grant](https://stackoverflow.com/questions/7522831/what-is-the-purpose-of-the-implicit-grant-authorization-type-in-oauth-2)
 -   [OAuth2 Implicit Flow thread model](https://tools.ietf.org/html/rfc6819#section-4.4.2.1)
--   [OIDC vs OpenID vs OAuth2](http://security.stackexchange.com/questions/44611/difference-between-oauth-openid-and-openid-connect-in-very-simple-term)
--   <http://nordicapis.com/api-security-oauth-openid-connect-depth/>
+-   [OIDC vs OpenID vs OAuth2](https://security.stackexchange.com/questions/44611/difference-between-oauth-openid-and-openid-connect-in-very-simple-term)
+-   <https://nordicapis.com/api-security-oauth-openid-connect-depth/>
