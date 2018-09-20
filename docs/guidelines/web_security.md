@@ -679,7 +679,7 @@ Although there are other options for referrer policies, they do not protect user
 
 `no-referrer-when-downgrade` is the default behavior for all current browsers, and can be used when sites are concerned about breaking existing systems that rely on the full Referrer header for their operation.
 
-Please note that support for Referrer Policy is still in its infancy. Chrome currently only supports `no-referrer` from the directives above, and Firefox awaits full support with Firefox 52.
+Referrer Policy has good support across modern browsers. The exception is Microsoft Edge, which still supports an older version of the specification.
 
 ## Examples
 
