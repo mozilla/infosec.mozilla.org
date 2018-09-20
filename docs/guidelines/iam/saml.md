@@ -69,4 +69,4 @@ For that reason, it is important that the web application (SP/RP) respects the f
 -   [SCIM: System for Cross domain Identity management](http://www.simplecloud.info/)
 -   <https://auth0.com/docs/protocols> (Auth0 documentation)
 -   [SAML2 Session expiration](https://stackoverflow.com/questions/29508906/notonorafter-in-subjectconfirmationdata-and-conditions-and-sessionnotonorafter)
--   <http://samltool.io/> (Decoder for SAML Assertions)
+-   <https://samltool.io/> (Decoder for SAML Assertions)
