@@ -245,6 +245,7 @@ password, MFA to a set of dedicated systems.
 
 **Do not**
 
+-   Use easy to guess passwords or vendor default passwords.
 -   Send your password to other individuals.
 -   Send shared passwords over email or communication mediums other than purpose-built credential sharing mechanisms.
 -   Use the same password for multiple services.
