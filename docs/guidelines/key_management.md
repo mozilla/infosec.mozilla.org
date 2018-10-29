@@ -88,7 +88,7 @@ Key is valid for? (0) 2y
 ### Protection of user keys
 
 -   Protected by strong passphrase.
--   Never copied to another system than your own workstation/personal physical disks/tokens.
+-   Never copied to another system/disk aside from your own secured workstation/personal physical disks/tokens.
 
 ### Protection of machine keys
 
