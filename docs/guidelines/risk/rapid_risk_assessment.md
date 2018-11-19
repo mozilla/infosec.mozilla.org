@@ -66,7 +66,6 @@ The RRA risk table facilitates discovering the answers to these questions.
 
 To manually request an RRA, please (file a bug)[https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Rapid%20Risk%20Analysis] to our component. Please include basic information about the project, a diagram, any relevant links and 0-2 additional people to invite for the assessment.
 
-Note that any projects started through CASA will be automatically evaluated, and bugs will be automatically filed to start the RRA.
 
 # How-to: Attending and running RRAs
 
