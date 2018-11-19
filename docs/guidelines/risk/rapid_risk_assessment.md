@@ -62,6 +62,12 @@ Firefox accounts store user data:
 
 The RRA risk table facilitates discovering the answers to these questions.
 
+# How-to: Request an RRA be run on your service
+
+(File a bug)[https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Rapid%20Risk%20Analysis] to start an RRA. Include basic information about the project, including any relevant links and 0-2 additional people to include during the meeting. Our team will automatically triage the RRA and someone from InfoSec will reach out to you.
+
+Note that any projects started through CASA will be automatically evaluated, and bugs will be automatically filed to start the RRA.
+
 # How-to: Attending and running RRAs
 
 ## When to run RRAs? What do I need to bring or do?
