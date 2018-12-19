@@ -44,7 +44,7 @@ AuthenticationMethods publickey
 LogLevel VERBOSE
 
 # Log sftp level file access (read/write/etc.) that would not be easily logged otherwise.
-Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO
+Subsystem sftp  /usr/lib/openssh/sftp-server -f AUTHPRIV -l INFO
 
 # Root login is not allowed for auditing reasons. This is because it's difficult to track which process belongs to which root user:
 #
@@ -92,7 +92,7 @@ RequiredAuthentications2 publickey
 LogLevel VERBOSE
 
 # Log sftp level file access (read/write/etc.) that would not be easily logged otherwise.
-Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO
+Subsystem sftp  /usr/lib/openssh/sftp-server -f AUTHPRIV -l INFO
 
 # Root login is not allowed for auditing reasons. This is because it's difficult to track which process belongs to which root user:
 #
@@ -273,8 +273,8 @@ When SSH keys are necessary for automation between systems, it is reasonable to 
 ```
 # groupadd sftpusers
 # usermod -a -g sftpusers <userthat_needs_ftp>
-# chgrp sftpusers /usr/lib/ssh/sftp-server
-# chmod 0750 /usr/lib/ssh/sftp-server
+# chgrp sftpusers /usr/lib/openssh/sftp-server
+# chmod 0750 /usr/lib/openssh/sftp-server
 ```
 
 #### Multi-factor bypass setup for machine keys
