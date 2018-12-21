@@ -67,7 +67,7 @@ There are a number of malicious attachment types that are more dangerous than ot
 If you observe this or some other behavior that suggests someone is sending you unsolicited dangerous attachment types raise it with your [security team](/#contact) for further review and attach the email headers (see above) and provide the example attachment for further review.
 
 
-## References/Additional Reading
+## References/Additional Reading 2
 
 - [Phishing and Malware Protection in Firefox](https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work)
 - [Report a Bad Site to Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/)
