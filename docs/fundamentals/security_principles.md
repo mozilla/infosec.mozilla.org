@@ -110,7 +110,7 @@ here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWV
 **Do**
 
 -   Achieve B+ or higher on [Mozilla's Observatory](https://observatory.mozilla.org).
--   Follow the [Web Security Guidelines](../guidelines/web_security).
+-   Follow the [Web Security Guidelines](../guidelines/web_security.md).
 
 ## Guarantee data integrity and confidentiality
 
