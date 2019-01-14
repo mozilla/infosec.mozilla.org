@@ -1,4 +1,10 @@
-Guidelines : AWS Cloud Security
+---
+layout: default
+resource: true
+categories: [Guidelines]
+title: AWS Security
+description: Best practices for securely operating in Amazon Web Services
+---
 
 The goal of this document is to help teams operate safely within Amazon Web Services. All Mozilla AWS accounts should follow the recommendations below.
 
