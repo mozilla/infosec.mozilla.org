@@ -111,5 +111,6 @@ resulting risk matches best.
 
 # Communicating the likelihood indicator
 
-Likelihood indicators should be sent in the [standard ServiceUI format](https://mana.mozilla.org/wiki/display/SECURITY/Risk+Integration+Architecture#RiskIntegrationArchitecture-RESTInterfaces(ofServiceUI))
+Likelihood indicators should be sent in the 
+[standard ServiceUI format](https://mana.mozilla.org/wiki/display/SECURITY/Risk+Integration+Architecture#RiskIntegrationArchitecture-RESTInterfaces(ofServiceUI)
 to the ServiceUI.
