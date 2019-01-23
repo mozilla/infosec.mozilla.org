@@ -33,7 +33,7 @@ and can be translated as:
 * <span class="risk-low">LOW likelihood</span> : The absence of this security control is unlikely to cause a risk to
   manifest. It may cause security incident response to be slower or more
   difficult. This causes HIGH and MAXIMUM impacts to result in MEDIUM risk.
-* MEDIUM : The absence of this security control may cause a risk to manifest in
+* <span class="risk-medium">MEDIUM likelihood</span> : The absence of this security control may cause a risk to manifest in
   the coming year. This security control is important but with additional
   supporting controls may not be required. This causes MAXIMUM impacts to
   result in HIGH risk.
