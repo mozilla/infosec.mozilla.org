@@ -101,4 +101,4 @@ criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 - [http://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/](In
   French - EBIOS method)
 - [https://www.sans.org/critical-security-controls/controls](SANS Critical Security Controls)
-- [https://creately.com/blog/diagrams/risk-management-techniques/] (Visualizations common in Risk Management)
+- [https://creately.com/blog/diagrams/risk-management-techniques/](Visualizations common in Risk Management)
