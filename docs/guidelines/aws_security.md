@@ -10,7 +10,7 @@ The goal of this document is to help teams operate safely within Amazon Web Serv
 
 # Root User
 
-If an attacker gains control of the root user in an AWS account, there is no higher authority role that a security incident responder can use to eradicate the attackers access. With root user access, the attacker can exploit the resources in the AWS account and the security team will have little ability to respond.
+The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) of an AWS account is the single identity that has complete access to all AWS services and resources in the account. The root user has no username, is not a part of the AWS IAM product and instead uses their Amazon email address to log in. If an attacker gains control of the root user in an AWS account, there is no higher authority role that a security incident responder can use to eradicate the attackers access. With root user access, the attacker can exploit the resources in the AWS account and infosec will have little ability to respond.
 
 ## Use a strong unique password for the root user
 
