@@ -14,7 +14,7 @@ If an attacker gains control of the root user in an AWS account, there is no hig
 
 ## Use a strong unique password for the root user
 
-* How to : Generate a password with a password manager and store that password in a password manager protected by MFA or offline as it is rarely if ever needed. One way to store the MFA offline is to use the infosec [security backup service](https://mana.mozilla.org/wiki/display/SECURITY/Security+backup+service)
+* How to : Generate a password with a password manager and store that password in a password manager protected by MFA or offline as it is rarely if ever needed. One way to store the MFA offline is to store it in a safe deposit box, or a similar physical safe solution. For example, Mozilla uses the infosec [security backup service](https://mana.mozilla.org/wiki/display/SECURITY/Security+backup+service)
 * Audited : False
 * Rationale
     - [Non-unique passwords are risky](https://wiki.mozilla.org/Security/Fundamentals#password-reuse)
