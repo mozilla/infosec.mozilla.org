@@ -30,7 +30,7 @@ security control.
 
 The indicators use the [standard levels](https://wiki.mozilla.org/Security/Standard_Levels)
 and can be translated as:
-* LOW : The absence of this security control is unlikely to cause a risk to
+* <span class="risk-low">LOW likelihood</span> : The absence of this security control is unlikely to cause a risk to
   manifest. It may cause security incident response to be slower or more
   difficult. This causes HIGH and MAXIMUM impacts to result in MEDIUM risk.
 * MEDIUM : The absence of this security control may cause a risk to manifest in
