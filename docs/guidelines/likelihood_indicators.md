@@ -59,6 +59,8 @@ When determining the likelihood indicator for a security control consider
   this security control
 * Are there current ongoing attacks on other services which are protected by
   this security control
+* How often has the service suffered an incident due to this or this type of 
+  missing control in the past?
 
 ## The Reverse Engineering Method
 
