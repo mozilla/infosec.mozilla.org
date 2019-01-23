@@ -45,7 +45,7 @@ If an attacker gains control of the root user in an AWS account, there is no hig
 
 # CloudTrail
 
-CloudTrail logs enable infosec to perform incident response when an account has been compromised.
+CloudTrail logs enable the security team to perform incident response when an account has been compromised.
 
 ## Use the Mozilla Secure CloudTrail Storage System
 
