@@ -25,7 +25,7 @@ security controls. These likelihood indicators can then be integrated into the
 # Meaning of the likelihood indicators
 
 The likelihood indicator for a given security control is the likelihood that
-the service will be exploited in a calendar year due to the absence of the
+a vulnerability in the service will be exploited in a calendar year due to the absence of the
 security control.
 
 The indicators use the [standard levels](https://wiki.mozilla.org/Security/Standard_Levels)
