@@ -56,7 +56,7 @@ CloudTrail logs enable the security team to perform incident response when an ac
 
 # Route53
 
-## Avoid leaving DNS records in Route53 that resolve to third party services which you are no longer using
+## Do not leave DNS records in Route53 that resolve to third party services which you are no longer using
 
 * How to : Review the DNS records you have setup in DNS zones hosted in Route53. Look for records which resolve to IPs or names of third party services (e.g. GitHub, Heroku, AmazonAWS ) but which are not setup and configured with that third party service. For example, look for a CNAME that [resolves to foo.github.io](https://help.github.com/articles/setting-up-a-www-subdomain/) but when browsed to returns a 404 "Site not found . GitHub Pages"
 * Audited : False
