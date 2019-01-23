@@ -61,7 +61,7 @@ CloudTrail logs enable the security team to perform incident response when an ac
 * How to : Review the DNS records you have setup in DNS zones hosted in Route53. Look for records which resolve to IPs or names of third party services (e.g. GitHub, Heroku, AmazonAWS ) but which are not setup and configured with that third party service. For example, look for a CNAME that [resolves to foo.github.io](https://help.github.com/articles/setting-up-a-www-subdomain/) but when browsed to returns a 404 "Site not found . GitHub Pages"
 * Audited : False
 * Rationale
-    - If an attacker registers an account with a third party service for which your Route53 zone contains a record pointing to that service, the attacker can then host their malicious content on their site with your domain name. With this they could create a phishing site in your DNS domain, exploit same origin bugs, obtain domain wide cookies from users and execute cross site scripting attacks.
+    - If an attacker registers an account with a third party service for which your Route53 zone contains a record pointing to that service, the attacker can then host their malicious content on their site with your domain name. With this they could create a phishing site in your DNS domain, exploit same origin bugs, obtain domain wide cookies from users and execute cross site scripting attacks. This is also known as domain take-over.
 
 # S3
 
