@@ -29,7 +29,7 @@ a vulnerability in the service will be exploited in a calendar year due to the a
 security control.
 
 The indicators use the [standard levels](https://wiki.mozilla.org/Security/Standard_Levels)
-and mean
+and can be translated as:
 * LOW : The absence of this security control is unlikely to cause a risk to
   manifest. It may cause security incident response to be slower or more
   difficult. This causes HIGH and MAXIMUM impacts to result in MEDIUM risk.
