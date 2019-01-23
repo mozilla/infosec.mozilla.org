@@ -42,7 +42,7 @@ and can be translated as:
   only be missing for LOW impact services. This causes MEDIUM and HIGH impacts
   to result in HIGH risk and MAXIMUM impacts to result in MAXIMUM
   risk.
-* MAXIMUM : The absence of this security control will cause a risk to manifest
+* <span class="risk-maximum">MAXIMUM likelihood</span> : The absence of this security control will cause a risk to manifest
   in the coming year. This security control is required. This causes MEDIUM 
   impacts to result in HIGH risk. This causes HIGH and MAXIMUM impacts to result
   in MAXIMUM risk.
