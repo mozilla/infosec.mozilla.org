@@ -51,7 +51,8 @@ and can be translated as:
 
 When determining the likelihood indicator for a security control consider
 
-* How easy is it for a threat agent to determine that the control is missing
+* How easy is it for a threat agent to determine the existence of a vulnerability
+* How easy is it for a threat agent to determine that a control to protect against the vulnerability is missing
 * How easy is it for a threat agent to exploit the fact that the control is
   missing
 * How well known are the paths of exploitation mad possible by the absence of
