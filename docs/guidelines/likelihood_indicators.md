@@ -7,7 +7,7 @@ description: A model for determining how security controls affect risk
 ---
 
 *The goal of this document is to describe a methodology for determining what
-effect on risk a missing security control will have*
+effect on the likelihood component of risk a missing security control will have*
 
 # Overview
 
