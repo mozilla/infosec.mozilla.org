@@ -55,8 +55,8 @@ When determining the likelihood indicator for a security control consider
 * How easy is it for a threat agent to determine that a control to protect against the vulnerability is missing
 * How easy is it for a threat agent to exploit a vulnerability in the service when that control is
   missing
-* How well known are the paths of exploitation mad possible by the absence of
-  this security control
+* To what degree do missing security controls make it easier to discover 
+  vulnerabilities in the service
 * Are there current ongoing attacks on other services which are protected by
   this security control
 * How often has the service suffered an incident due to this or this type of 
