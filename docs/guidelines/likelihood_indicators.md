@@ -37,7 +37,7 @@ and can be translated as:
   the coming year. This security control is important but with additional
   supporting controls may not be required. This causes MAXIMUM impacts to
   result in HIGH risk.
-* HIGH : The absence of this security control will probably cause a risk to
+* <span class="risk-high">HIGH likelihood</span> : The absence of this security control will probably cause a risk to
   manifest in the coming year. This security control is important and should
   only be missing for LOW impact services. This causes MEDIUM and HIGH impacts
   to result in HIGH risk and MAXIMUM impacts to result in MAXIMUM
