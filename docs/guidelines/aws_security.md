@@ -56,7 +56,7 @@ CloudTrail logs enable the security team to perform incident response when an ac
 
 ## Use the Mozilla Secure CloudTrail Storage System
 
-* Mozilla teams should have CloudTrail enabled and sending it's contents to the Mozilla Secure CloudTrail Storage System. You can enable it by following these [instructions](https://mana.mozilla.org/wiki/display/SECURITY/AWS+Secure+CloudTrail+Storage+System#AWSSecureCloudTrailStorageSystem-HowtoenableyourMozillaAWSaccounttousetheSecureCloudTrailStorageSystem)
+* How to : Mozilla teams should have CloudTrail enabled and sending it's contents to the Mozilla Secure CloudTrail Storage System. You can enable it by following these [instructions](https://mana.mozilla.org/wiki/display/SECURITY/AWS+Secure+CloudTrail+Storage+System#AWSSecureCloudTrailStorageSystem-HowtoenableyourMozillaAWSaccounttousetheSecureCloudTrailStorageSystem)
 * Audited : True
 * Rationale
     - In order to protect the CloudTrail logs that AWS produces from an attacker who compromised your AWS account from deleting them, the Mozilla Secure CloudTrail Storage System causes AWS to ship these logs to a segregated and secure AWS account, separate from your own. This ensures that if an attacker compromises your AWS account, they will not be able to destroy the records of what changes they made to your account.
