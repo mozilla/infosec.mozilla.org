@@ -27,6 +27,13 @@ The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.ht
 * Rationale
     - [MFA is an effective means of preventing unauthorized access](https://wiki.mozilla.org/Security/Fundamentals#mfa)
 
+## Enable multi factor authentication (MFA) for non federated IAM users
+
+* How to : [Instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-iam-user)
+* Audited : False
+* Rationale
+    - [MFA is an effective means of preventing unauthorized access](https://wiki.mozilla.org/Security/Fundamentals#mfa)
+
 ## Avoid creating API keys for the root user
 
 * How to : Instead of creating API keys for the root user, create them for an IAM user
