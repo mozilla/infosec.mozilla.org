@@ -19,8 +19,7 @@ Likelihood on the other hand is primarily driven by the presence or absence of
 security controls in the service.
 
 What follows is a methodology for associating likelihood indicators with
-security controls. These likelihood indicators can then be integrated into the
-[Risk Integration Architecture](https://mana.mozilla.org/wiki/display/SECURITY/Risk+Integration+Architecture).
+security controls.
 
 # Meaning of the likelihood indicators
 
