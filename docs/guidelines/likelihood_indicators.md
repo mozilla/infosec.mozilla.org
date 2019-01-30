@@ -111,9 +111,3 @@ resulting risk matches best.
 | HIGH    | MAXIMUM |
 | MAXIMUM | MAXIMUM |
 </div>
-
-# Communicating the likelihood indicator
-
-Likelihood indicators should be sent in the 
-[standard ServiceUI format](https://mana.mozilla.org/wiki/display/SECURITY/Risk+Integration+Architecture#RiskIntegrationArchitecture-RESTInterfaces(ofServiceUI)
-to the ServiceUI.
