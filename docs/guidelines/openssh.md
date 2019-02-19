@@ -63,7 +63,7 @@ File: `/etc/ssh/moduli`
 
 All Diffie-Hellman moduli in use should be at least 3072-bit-long (they are used for `diffie-hellman-group-exchange-sha256`) as per our [Key management Guidelines](key_management) recommendations. See also `man moduli`.
 
-To deactivate short moduli in two commands: `awk '$5 >= 3071' /etc/ssh/moduli > /etc/ssh/moduli.tmp && mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
+To deactivate short moduli in two commands: `awk '$5 > 3071' /etc/ssh/moduli > /etc/ssh/moduli.tmp && mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
 
 ### **Intermediate** (OpenSSH 5.3)
 
@@ -105,9 +105,9 @@ PermitRootLogin No
 
 File: `/etc/ssh/moduli`
 
-All Diffie-Hellman moduli in use should be at least 2048-bit-long. From the structure of `moduli` files, this means the fifth field of all lines in this file should be greater than or equal to 2047.
+All Diffie-Hellman moduli in use should be at least 2048-bit-long. From the structure of `moduli` files, this means the fifth field of all lines in this file should be greater than 2047.
 
-To deactivate weak moduli in two commands: `awk '$5 >= 2047' /etc/ssh/moduli > /etc/ssh/moduli.tmp; mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
+To deactivate weak moduli in two commands: `awk '$5 > 2047' /etc/ssh/moduli > /etc/ssh/moduli.tmp; mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
 
 ### **Multi-Factor Authentication** (OpenSSH 6.3+)
 
