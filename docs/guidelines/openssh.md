@@ -107,7 +107,7 @@ File: `/etc/ssh/moduli`
 
 All Diffie-Hellman moduli in use should be at least 2048-bit-long. From the structure of `moduli` files, this means the fifth field of all lines in this file should be greater than or equal to 2047.
 
-To deactivate weak moduli in two commands: `awk '$5 >= 2047' /etc/ssh/moduli /etc/ssh/moduli > /etc/ssh/moduli.tmp; mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
+To deactivate weak moduli in two commands: `awk '$5 >= 2047' /etc/ssh/moduli > /etc/ssh/moduli.tmp; mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
 
 ### **Multi-Factor Authentication** (OpenSSH 6.3+)
 
