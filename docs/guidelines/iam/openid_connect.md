@@ -87,13 +87,13 @@ For that reason, it is important that the web application (RP) respects the foll
 #### Additional notes on Implicit grants
 Implicit grants are inherently more dangerous and difficult to implement safely. We advocate against their usage entirely whenever possible.
 
-Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user agent (i.e. web browser) instead of the web-server. This means all data is seen and handled by the user agent and therefore the user's browser.
+Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user agent (i.e. web browser) instead of the web server. This means all data is seen and handled by the user agent and therefore the user's browser.
 
 This can become dangerous when the SPA is vulnerable to XSS or CSRF attacks (e.g. attacks where the attacker may retrieve the user's tokens). Many SPAs tend to store the user's `id_token` in the browser localStorage as a "proof of authentication" and access tokens which are then used to query otherwise private API endpoints. **This is dangerous**. Unlike browser cookies which can be set to `HttpOnly`, localStorage can be queried in JavaScript and also through an XSS vulnerability. 
 
 Any vulnerability in your SPA may leak the user's tokens (with functional API access) that are used by your SPA. In addition, any **other** SPA that you do not control may also leak the same tokens. These tokens, if allowed for the same APIs, can be then used to compromise your application/APIs.
 
-Authorization code grants prevent this problem by verifying everything on the web-server and preventing the user agent from accessing this data. Note that for certain websites it may be convenient to perform the authorization code grant at the API level, so that your SPA does not need to manipulate tokens.
+Authorization code grants prevent this problem by verifying everything on the web server and preventing the user agent from accessing this data. Note that for certain websites it may be convenient to perform the authorization code grant at the API level, so that your SPA does not need to manipulate tokens.
 
 ### State parameter
 
