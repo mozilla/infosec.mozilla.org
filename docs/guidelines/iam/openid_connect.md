@@ -81,11 +81,11 @@ For that reason, it is important that the web application (RP) respects the foll
 
 ### Authorization Code Grant
 
--   **Recommend** using the authorization code grant. This requires a back-end server, reverse proxy, or similar server-side code that will generate an `HttpOnly` session cookie for the user, which means the access tokens cannot be intercepted in JavaScript within the user's browser.
--   **Avoid** using implicit grants for websites when possible. Single Page Applications (SPA) use implicit grants and receive tokens back in the user's browser with no server-side component, which means it can be intercepted by malicious JavaScript running in the user's browser. If using the implicit grant **do not** store the tokens in the browser's storage (do not use localStorage). Instead just keep them in memory. This makes it much harder for attackers using a vulnerability in your website to steal the token.
+-   **Recommend** using the authorization code grant. The authorization code grant requires a back-end server, reverse proxy, or similar server-side code that will generate an `HttpOnly` session cookie for the user, which means the access tokens cannot be intercepted in JavaScript within the user's browser.
+-   **Avoid** using implicit grants for websites when possible. Single Page Applications (SPA) use implicit grants and receive tokens back in the user's browser with no server-side component, which means it can be intercepted by malicious JavaScript running in the user's browser. If using the implicit grant **do not** store the tokens in the browser's storage (do not use localStorage). Instead, keep them in memory, which is much harder for attackers using a vulnerability in your website to steal the token.
 
 #### Additional notes on Implicit grants
-Implicit grants are inherently more dangerous and harder to implement safely. We advocate against their usage entirely where possible.
+Implicit grants are inherently more dangerous and difficult to implement safely. We advocate against their usage entirely whenever possible.
 
 Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user agent (i.e. web browser) instead of the web-server. This means all data is seen and handled by the user agent and therefore the user's browser.
 
