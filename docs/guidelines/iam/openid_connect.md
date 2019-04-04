@@ -81,7 +81,7 @@ For that reason, it is important that the web application (RP) respects the foll
 
 ### Authorization Code Grant
 
--   **Recommend** using the authorization code grant. This requires a back-end server, reverse-proxy, or similar server-side code that will generate an `HttpOnly` session cookie for the user, which means the access tokens cannot be intercepted in JavaScript within the user's browser.
+-   **Recommend** using the authorization code grant. This requires a back-end server, reverse proxy, or similar server-side code that will generate an `HttpOnly` session cookie for the user, which means the access tokens cannot be intercepted in JavaScript within the user's browser.
 -   **Avoid** using implicit grants for websites when possible. Single Page Applications (SPA) use implicit grants and receive tokens back in the user's browser with no server-side component, which means it can be intercepted by malicious JavaScript running in the user's browser. If using the implicit grant **do not** store the tokens in the browser's storage (do not use localStorage). Instead just keep them in memory. This makes it much harder for attackers using a vulnerability in your website to steal the token.
 
 #### Additional notes on Implicit grants
