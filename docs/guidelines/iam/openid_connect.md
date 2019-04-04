@@ -67,8 +67,9 @@ For that reason, it is important that the web application (RP) respects the foll
     -   This ensures that access is revoked within *15 minutes* in the event that the user's account is disabled by the OpenID Connect Provider (OP).
     -   This issues a new ID token, with new attributes if they have changed.
     -   This may also renew the ID token expiration time.
-    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](https://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).
--   The web application (RP) can **optionally** provide a `logout` URL, which the OpenID Connect Provider (OP) can call to indicate if a user has logged out (so that the web application immediately know when to log the user out as well).
+    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](https://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).\
+    - This can also be done in the back-end to avoid a round-trip in the user-agent (user's web browser).
+
 
 ## Other important security considerations
 
@@ -80,19 +81,19 @@ For that reason, it is important that the web application (RP) respects the foll
 
 ### Authorization Code Grant
 
--   **Always** use authorization code grant.
--   **Never** use implicit grants for websites. Authorization code grant ensures that the relying party is getting the access tokens, and that these cannot be intercepted within the user's browser.
+-   **Recommend** using the authorization code grant. This requires a back-end server, reverse-proxy, or similar server-side code that will generate an `httponly` session cookie for the user, which means the access tokens cannot be intercepted in Javascript within the user's browser.
+-   **Avoid** using implicit grants for websites when possible. Single Page Applications (SPA) use implicit grants and receive tokens back in the user's browser with no server-side component, which means it can be intercepted by malicious javascript running in the user's browser. If using the implicit grant **do not** store the tokens in the browser's storage (do not use localStorage). Instead just keep them in memory. This makes it much harder for attackers using a vulnerability in your website to steal the token.
 
 #### Additional notes on Implicit grants
-Implicit grants are inherently more dangerous and harder to implement safely. We advocate against their usage entirely.
+Implicit grants are inherently more dangerous and harder to implement safely. We advocate against their usage entirely where possible.
 
 Implicit grants are normally used for Single Page Applications (SPA) - these are static pages which are executed in the context of the user-agent (i.e. web browser) instead of the web-server. This means all data is seen and handled by the user-agent and therefore the user's browser.
 
-This can become dangerous when the SPA is vulnerable to XSS or CSRF attacks (e.g. attacks where the attacker may retrieve the user's tokens). Many SPAs tend to store the user's `id_token` in the browser LocalStorage as a "proof of authentication" and access tokens which are then used to query otherwise private API endpoints. Unlike browser cookies which can be set to http-only, LocalStorage can be queried in javascript and thus through an XSS vulnerability. 
+This can become dangerous when the SPA is vulnerable to XSS or CSRF attacks (e.g. attacks where the attacker may retrieve the user's tokens). Many SPAs tend to store the user's `id_token` in the browser LocalStorage as a "proof of authentication" and access tokens which are then used to query otherwise private API endpoints. **This is dangerous**. Unlike browser cookies which can be set to http-only, LocalStorage can be queried in javascript and thus through an XSS vulnerability. 
 
 Any vulnerability in your SPA may leak the user's tokens (with functional API access) that are used by your SPA. In addition, any **other** SPA that you do not control may also leak the same tokens. These tokens, if allowed for the same APIs, can be then used to compromise your application/APIs.
 
-Authorization code grants prevent this problem by verifying everything on the web-server and preventing the user-agent from accessing this data.
+Authorization code grants prevent this problem by verifying everything on the web-server and preventing the user-agent from accessing this data. Note that for certain websites it may be convenient to perform the authorization code grant at the API level, so that your SPA does not need to manipulate tokens.
 
 ### State parameter
 
@@ -102,7 +103,7 @@ This is a defense against [CSRF](https://en.wikipedia.org/wiki/Cross-site_reques
 
 ### Refresh token
 
-Avoid using or storing refresh tokens. This is especially important for relying parties (RP) which are websites (as opposed to mobile apps for example, which may not always have network access). Refresh tokens never expire and thus are very powerful. These are usually not needed for an authentication flow, though they may be needed for specific authorization flows.
+Avoid using or storing refresh tokens. This is especially important for relying parties (RP) which are websites (as opposed to mobile apps for example, which may not always have network access). Refresh tokens never expire and thus are very powerful. These are usually not needed for user authentication flows.
 
 ## Additional references
 
@@ -121,3 +122,4 @@ Avoid using or storing refresh tokens. This is especially important for relying 
 -   [OAuth2 Implicit Flow thread model](https://tools.ietf.org/html/rfc6819#section-4.4.2.1)
 -   [OIDC vs OpenID vs OAuth2](https://security.stackexchange.com/questions/44611/difference-between-oauth-openid-and-openid-connect-in-very-simple-term)
 -   <https://nordicapis.com/api-security-oauth-openid-connect-depth/>
+- [Where to store tokens in my SPA](https://auth0.com/docs/security/store-tokens)
