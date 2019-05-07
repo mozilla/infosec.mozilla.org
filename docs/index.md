@@ -25,8 +25,6 @@ For security incidents, file a bug in Bugzilla under the product/component [inve
 Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc://irc.mozilla.org/security) at irc.mozilla.org.
 
 ## Members
-
-- Jeff Bryner *[:jeff]*
   - Guillaume Destuynder [🐦](https://twitter.com/kangsterizer) [💻](https://github.com/gdestuynder/) *[:kang]*
   - Gene Wood *[:gene]*
   - April King *[:April]*
