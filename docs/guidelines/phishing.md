@@ -68,7 +68,7 @@ If you observe this or some other behavior that suggests someone is sending you 
 
 # Password Manager Behavior
 
-Phishing emails often attempt to have you enter credentials in a lookalike site with a similar domain name. The human eye may have a hard time telling the difference, but a password manager will recognize the domain name is different and refuse to autofill your credentials. By using a password manager, you make your passwords more secure _and_ reduce your risk of being phished.
+Phishing emails often attempt to have you enter credentials in a lookalike site with a similar domain name. The human eye may have a hard time telling the difference, but a password manager will refuse to autofill your credentials because it won't recognize the fraudulent domain. By using a password manager, you make your passwords more secure _and_ reduce your risk of being phished.
 
 ## References/Additional Reading
 
