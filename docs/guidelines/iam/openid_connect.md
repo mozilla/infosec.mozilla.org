@@ -67,7 +67,7 @@ For that reason, it is important that the web application (RP) respects the foll
     -   This ensures that access is revoked within *15 minutes* in the event that the user's account is disabled by the OpenID Connect Provider (OP).
     -   This issues a new ID token, with new attributes if they have changed.
     -   This may also renew the ID token expiration time.
-    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](https://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).\
+    -   This is generally done with the parameter `prompt=none` while calling the OpenID Connect `authorize` endpoint. See also [specifications](https://openid.net/specs/openid-connect-implicit-1_0.html#RequestParameters).
     - This can also be done in the back-end to avoid a round-trip in the user agent (user's web browser).
 
 
