@@ -307,4 +307,4 @@ up and this is a great time to have a quick 5 minute chat about these.
   request](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Rapid%20Risk%20Analysis)
 - [New Vulnerability
   Assessment](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Vulnerability%20Assessment)
-- [RRA Support code for the Google Docs template](../../misc/RRACodeMaster.js)
+- [RRA Support code for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRACodeMaster.js)
