@@ -22,9 +22,9 @@ Your own intuition is probably your best asset for easily detecting phishing att
 
 Email headers are a great way to deduce the true origin of a given email.  As noted above, emails often contain a format section which is forgable by an attacker to make it seem as though an email came from a different source.  If you're using Gmail, you can follow the following steps to view the full email headers.
 
-1. Open the email
-2. Go to the right drop down menu
-3. Select show original
+1. Open the email in Gmail
+2. Open the drop down menu (three vertical dots, next to the reply button)
+3. Select 'Show original'
 
 When viewing the full headers, it's important to understand who actually sent a given email.  As noted above, formatting content within emails can be tampered with to make an email seem as though it's from someone else.
 
