@@ -22,7 +22,7 @@ Public certificates are public and do not require specific access control or enc
 
 # Algorithms by security levels
 
-This section organizes algorithms and key sizes by rating (modern, intermediate, old) for a given validity period. Regardless of the rating choosen, we do recommend prefering 2 years keys with a reliable key rotation instead of trying to keep key material for long periods of time. This allow for faster operational reaction time when new algorithm weaknesses are discovered.
+This section organizes algorithms and key sizes by rating (modern, intermediate, old) for a given validity period. Regardless of the rating chosen, we do recommend preferring 2 years keys with a reliable key rotation instead of trying to keep key material for long periods of time. This allow for faster operational reaction time when new algorithm weaknesses are discovered.
 
 ## Recommended - generally valid for up to 10 years (default)
 
