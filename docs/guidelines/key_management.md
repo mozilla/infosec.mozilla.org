@@ -40,7 +40,7 @@ Use of EC is favored over RSA for performances purposes.
 
 ## Acceptable - generally valid for up 2 years
 
-These maybe be used if expiring within 2 years or up to 2020 whichever comes first.
+These maybe be used if expiring within 2 years or up to 2024 whichever comes first.
 
 | Type                 | Algorithm and key size | Bits of security |
 |----------------------|------------------------|------------------|
