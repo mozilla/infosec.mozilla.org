@@ -334,14 +334,14 @@ server {
 
 [Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fradulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
 
-Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for the majority websites to implement HPKP.
+Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for the majority of websites to implement HPKP.
 
 ### Directives
 
 - `max-age:` number of seconds the user agent will enforce the key pins and require a site to use a cert that satisfies them
 - `includeSubDomains:` whether user agents should pin all subdomains to the same pins
 
-Unlike with HSTS, what to set `max-age` is highly individualized to a given site. A longer value is more secure, but screwing up your key pins will result in your site being unavailable for a longer period of time. Recommended values fall between 15 and 120 days.
+Unlike with HSTS, what to set for `max-age` is highly individualized to a given site. A longer value is more secure, but screwing up your key pins will result in your site being unavailable for a longer period of time. Recommended values fall between 15 and 120 days.
 
 ### Examples
 
@@ -519,7 +519,7 @@ All cookies should be created such that their access is as limited as possible. 
 
 ## Directives
 
-- Name: Cookie names may be either be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources
+- Name: Cookie names may be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources
   - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`
   - Use `__Secure-` for all other cookies sent from secure origins (such as HTTPS)
 - `Secure`: All cookies must be set with the `Secure` flag, indicating that they should only be sent over HTTPS
@@ -618,7 +618,7 @@ Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
 
 # CSRF Prevention
 
-Cross-site request forgeries are a class of attacks where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the users cookies (and hence session information), they appear to be validly issued commands. A CSRF attack might look like this:
+Cross-site request forgeries are a class of attacks where unauthorized commands are transmitted to a website from a trusted user. Because they inherit the user's cookies (and hence session information), they appear to be validly issued commands. A CSRF attack might look like this:
 
 ```
 <!-- Attempt to delete a user's account -->
@@ -627,7 +627,7 @@ Cross-site request forgeries are a class of attacks where unauthorized commands 
 
 When a user visits a page with that HTML fragment, the browser will attempt to make a GET request to that URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
-While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request. Although [`SameSite`](#Cookies) cookies are the best defense against CSRF attacks, they are not yet fully supported in all browsers and should be used in conjection with other anti-CSRF defenses.
+While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request. Although [`SameSite`](#Cookies) cookies are the best defense against CSRF attacks, they are not yet fully supported in all browsers and should be used in conjunction with other anti-CSRF defenses.
 
 ## Examples
 
@@ -808,7 +808,7 @@ Sites that require the ability to be iframed must use either Content Security Po
 
 ## Directives
 
-- `DENY`: disallow allow attempts to iframe site (recommended)
+- `DENY`: disallow all attempts to iframe the site (recommended)
 - `SAMEORIGIN`: allow the site to iframe itself
 - `ALLOW-FROM `<em>`uri`</em>: deprecated; instead use CSP's `frame-ancestors` directive
 
