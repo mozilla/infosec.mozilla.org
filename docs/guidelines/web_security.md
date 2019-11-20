@@ -393,8 +393,8 @@ Note that disabling inline JavaScript means that <em>all</em> JavaScript must be
 
 ## Implementation Notes
 
-- Aiming for `default-src: https:` is a great first goal, as it disables inline code and requires https.
-- For existing websites with large codebases that would require too much work to disable inline scripts, `default-src: https: 'unsafe-inline'` is still helpful, as it keeps resources from being accidentally loaded over http. However, it does not provide any XSS protection.
+- Aiming for `default-src https:` is a great first goal, as it disables inline code and requires https.
+- For existing websites with large codebases that would require too much work to disable inline scripts, `default-src https: 'unsafe-inline'` is still helpful, as it keeps resources from being accidentally loaded over http. However, it does not provide any XSS protection.
 - It is recommended to start with a reasonably locked down policy such as `default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'` and then add in sources as revealed during testing.
 - In lieu of the preferred HTTP header, pages can instead include a `<meta http-equiv=`“`Content-Security-Policy`”` content=`“`…`”`>` tag. If they do, it should be the first `<meta>` tag that appears inside `<head>`.
 - Care needs to be taken with `data:` URIs, as these are unsafe inside `script-src` and `object-src` (or inherited from `default-src`).
