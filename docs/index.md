@@ -26,11 +26,10 @@ Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc:
 
 ## Members
   - Guillaume Destuynder [🐦](https://twitter.com/kangsterizer) [💻](https://github.com/gdestuynder/) *[:kang]*
+  - Jason Falivene *[:jfalivene]*
   - Gene Wood *[:gene]*
   - April King *[:April]*
-  - Andrew Krug *[:andrew]*
   - Justin Dow *[:jabba]*
-  - Jonathan Claudius *[:claudijd]*
   - Caglar Ulucenk *[:Cag]*
   - Tristan Weir *[:weir]*
     - Alicia Smith *[:phrozyn]*
