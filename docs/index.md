@@ -25,16 +25,13 @@ For security incidents, file a bug in Bugzilla under the product/component [inve
 Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc://irc.mozilla.org/security) at irc.mozilla.org.
 
 ## Members
-  - Guillaume Destuynder [🐦](https://twitter.com/kangsterizer) [💻](https://github.com/gdestuynder/) *[:kang]*
-  - Jason Falivene *[:jfalivene]*
-  - Gene Wood *[:gene]*
-  - April King *[:April]*
-  - Justin Dow *[:jabba]*
-  - Caglar Ulucenk *[:Cag]*
-  - Tristan Weir *[:weir]*
-    - Alicia Smith *[:phrozyn]*
-    - Brandon Myers *[:pwnbus]*
-    - Lucius Bono *[:lucius]*
-    - Michal Purzynski *[:michal`]*
-    - Emma Rose *[:emrose]*
-
+  - Jason Falivene *[@falivene]*
+    - Gene Wood *[@gene]*
+    - April King *[@april]*
+    - Caglar Ulucenk *[@cag]*
+    - Tristan Weir *[@weir]*
+      - Alicia Smith *[@phrozyn]*
+      - Brandon Myers *[@pwnbus]*
+      - Lucius Bono *[@lucius]*
+      - Michal Purzynski *[@michał]*
+      - Emma Rose *[@emma]*
