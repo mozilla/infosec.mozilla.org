@@ -95,10 +95,10 @@ criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 
 # Reference documents
 
-- [Introduction to modern risk analysis](http://riskmanagementinsight.com/media/documents/FAIR_Introduction.pdf)
+- [Introduction to modern risk analysis](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 - [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm)
 - [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001)
 - [In
   French - EBIOS method](http://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
-- [SANS Critical Security Controls](https://www.sans.org/critical-security-controls/controls)
+- [CIS Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list/)
 - [Visualizations common in Risk Management](https://creately.com/blog/diagrams/risk-management-techniques/)
