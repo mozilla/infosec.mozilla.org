@@ -268,7 +268,7 @@ When SSH keys are necessary for automation between systems, it is reasonable to 
 -   The machine keys should be unique per usage. Each new usage (different service, different script called, etc.) should use a new, different key.
 -   Only used when strictly necessary.
 -   Restrict privileges of the account (i.e. no root or “sudoer” machine account).
--   Using a ForceCommand returning only the needed results, or only allowing the machine to perform SSH-related tasks such as tunneling is prefered.
+-   Using a ForceCommand returning only the needed results, or only allowing the machine to perform SSH-related tasks such as tunneling is preferred.
 -   Disable sftp if not needed as it exposes more surface and different logging mechanisms than SSH (and thus scp) itself.
 ```
 # groupadd sftpusers
