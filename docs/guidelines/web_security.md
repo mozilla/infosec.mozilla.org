@@ -716,14 +716,16 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 # robots.txt
 
-`robots.txt` is a text file placed within the root directory of a site that tells robots (such as indexers employed by search engines) how to behave, by instructing them not to index certain paths on the website. This is particularly useful for reducing load on your website, though disabling the indexing of automatically generated content. It can also be helpful for preventing the pollution of search results, for resources that don't benefit from being searchable.
+`robots.txt` is a text file placed within the root directory of a site that tells robots (such as indexers employed by search engines) how to behave, by instructing them not to crawl certain paths on the website. This is particularly useful for reducing load on your website, though disabling the crawling of automatically generated content. It can also be helpful for preventing the pollution of search results, for resources that don't benefit from being searchable.
 
-Sites may optionally use robots.txt, but should only use it for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. Although this does prevent these sites from appearing in search engines, it does not prevent its discovery from attackers, as `robots.txt` is frequently used for reconnaisance.
+Sites may optionally use robots.txt, but should only use it for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. Many search engines, like Google and Bing, will includes webpages in their search results, even if those results are blocked via robots.txt, if they know those pages exist (for example, if they're linked to). Furthermore, `robots.txt` is frequently used by attackers for reconnaisance.
+
+To properly prevent a resource from appearing in search results, encourage it to be crawled by *omitting* it from robots.txt, and by adding [`robots` meta tags and HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes).
 
 ## Examples
 
 ```sh
-# Stop all search engines from archiving this site
+# Stop all search engines from crawling this site
 User-agent: *
 Disallow: /
 ```
@@ -737,6 +739,7 @@ Disallow: /secret/admin-interface
 ## See Also
 
 - [About robots.txt](http://www.robotstxt.org/robotstxt.html)
+- [Robots Meta Tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)
 
 # Subresource Integrity
 
