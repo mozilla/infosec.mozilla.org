@@ -259,11 +259,11 @@ Websites that require backwards compatibility with extremely old browsers and op
 
 ### Compatibility
 
-| Configuration              | Oldest compatible clients                                                                                  |
-|----------------------------|------------------------------------------------------------------------------------------------------------|
-| Modern                     | Firefox 27, Chrome 22, Internet Explorer 11, Opera 14, Safari 7, Android 4.4, Java 8                       |
-| Intermediate               | Firefox 1, Chrome 1, Internet Explorer 7, Opera 5, Safari 1, Internet Explorer 8 (XP), Android 2.3, Java 7 |
-| Backwards Compatible (Old) | Internet Explorer 6 (XP), Java 6                                                                           |
+| Configuration              | Oldest compatible clients                                                                                     |
+|----------------------------|---------------------------------------------------------------------------------------------------------------|
+| Modern                     | Firefox 63, Android 10.0, Chrome 70, Edge 75, Java 11, OpenSSL 1.1.1, Opera 57, and Safari 12.1               |
+| Intermediate               | Firefox 27, Android 4.4.2, Chrome 31, Edge, IE 11 on Windows 7, Java 8u31, OpenSSL 1.0.1, Opera 20, Safari 9  |
+| Backwards Compatible (Old) | Firefox 1, Android 2.3, Chrome 1, Edge 12, IE8 on Windows XP, Java 6, OpenSSL 0.9.8, Opera 5, and Safari 1    |
 
 ### See Also
 
