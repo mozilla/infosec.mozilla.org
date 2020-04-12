@@ -13,7 +13,7 @@ Mozilla's framework is inspired by [ISO 31000](https://www.iso.org/iso/home/stan
 
 It is recommended to read the [FAIR Introduction](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 as an introduction to how risk is generally assessed, and get familiar with the terms. Note that we do not use the FAIR
-methodology, however, the concepts are well exposed in their documentation 
+methodology, however, the concepts are well exposed in their documentation
 
 # What is risk?
 Risk is commonly defined as: `risk = impact * likelihood`
@@ -95,10 +95,10 @@ criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 
 # Reference documents
 
-- [Introduction to modern risk analysis](http://riskmanagementinsight.com/media/documents/FAIR_Introduction.pdf)
-- [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm)
+- [Introduction to modern risk analysis](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
+- [ISO 31000](https://www.iso.org/iso-31000-risk-management.html)
 - [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001)
 - [In
-  French - EBIOS method](http://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
+  French - EBIOS method](https://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
 - [SANS Critical Security Controls](https://www.sans.org/critical-security-controls/controls)
 - [Visualizations common in Risk Management](https://creately.com/blog/diagrams/risk-management-techniques/)

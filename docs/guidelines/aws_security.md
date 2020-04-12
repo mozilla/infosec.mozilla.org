@@ -22,7 +22,7 @@ The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.ht
 
 ## Enable multi factor authentication (MFA) for the root user
 
-* How to : [Instructions](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root)
+* How to : [Instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root)
 * Audited : True
 * Rationale
     - [MFA is an effective means of preventing unauthorized access](https://wiki.mozilla.org/Security/Fundamentals#mfa)
