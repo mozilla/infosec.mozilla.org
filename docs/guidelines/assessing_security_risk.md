@@ -7,13 +7,13 @@ description: An open framework to assess security risk from an operational persp
 ---
 
 *The goal of these documents is to help you understand how Mozilla's Security team risk framework is utilized. It also
-aims to help create your own framework when official standards are too unflexible or convoluted to implement. Most of
+aims to help create your own framework when official standards are too inflexible or convoluted to implement. Most of
 Mozilla's framework is inspired by [ISO 31000](https://www.iso.org/iso/home/standards/iso31000.htm) and [ISO
 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001) and other well-known prior efforts*
 
 It is recommended to read the [FAIR Introduction](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
 as an introduction to how risk is generally assessed, and get familiar with the terms. Note that we do not use the FAIR
-methodology, however, the concepts are well exposed in their documentation 
+methodology, however, the concepts are well exposed in their documentation
 
 # What is risk?
 Risk is commonly defined as: `risk = impact * likelihood`
@@ -40,7 +40,7 @@ Likelihood is defined by the frequency at which the assessed impacts may occur. 
 difficult and frustrating. Given an existing vulnerability, how do you assess if it's going to be exploited? There are
 several methods, many of which qualitative with various degree of accuracy.
 
-Likelihood is volatily and changes quickly over time. New vulnerabilities are discovered daily, and the environment in
+Likelihood is volatile and changes quickly over time. New vulnerabilities are discovered daily, and the environment in
 which services are setup evolves, is reconfigured, changed constantly.
 
 In short, while more difficult, assessing likelihood with some degree of accuracy is key to a assessing risk.
@@ -57,7 +57,7 @@ details, or shortened when not necessary.  The RRA allows us to right-size risk 
 striking the right balance is paramount when hundred of services and vendors are used day to day.
 
 Despite it's name, the RRA mainly focuses on assessing risk impact and only partially covers risk likelihood (such as by
-recording the frequency at which bad impacts occured in the past, if any).
+recording the frequency at which bad impacts occurred in the past, if any).
 
 - [RRA: Rapid Risk Assessment manual](risk/rapid_risk_assessment)
 
@@ -96,9 +96,9 @@ criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 # Reference documents
 
 - [Introduction to modern risk analysis](https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf)
-- [ISO 31000](http://www.iso.org/iso/home/standards/iso31000.htm)
+- [ISO 31000](https://www.iso.org/iso-31000-risk-management.html)
 - [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001)
 - [In
-  French - EBIOS method](http://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
+  French - EBIOS method](https://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
 - [CIS Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list/)
 - [Visualizations common in Risk Management](https://creately.com/blog/diagrams/risk-management-techniques/)

@@ -38,7 +38,7 @@ data. Key points:
   - **Very high-level**. Details are for complete threat models. The RRA can become a complete threat model over time
     though!
   - **Concise, readable**. Short and with clear risk levels.
-  - **Easy to update**. Can be run during any phase of the project development and continously updated.
+  - **Easy to update**. Can be run during any phase of the project development and continuously updated.
   - **Informative**. Collects risk impact and a data dictionary. Also collections information about how the service
     functions.
   - **Let you know what to do**. The RRA includes the list of recommendations from the security team with a priority for
@@ -161,7 +161,7 @@ to look at).
 A good tip is to **reserve 60 minutes** of RRA time in the calendar, and plan to run the RRA for only **30 minutes**.
 This leaves you with some room for error, and handle services that weren't well understood by their owners. Best case
 scenario, everyone will be happy when you cut the meeting short after only 30 minutes. In any case, always watch the
-clock! Having to use more than 60 minutes for the initial RRA is considering a failure and should not happen.
+clock! Having to use more than 60 minutes for the initial RRA is considered a failure and should not happen.
 
 
 
@@ -186,7 +186,7 @@ to our RRA API.
 #### Service Notes (5min)
 
 This is where you put any notes that you feel are relevant to the understanding of the service, security, etc.
-Ask the service owner what the service does and a little bit of how it works. Ensure that you undertand the service
+Ask the service owner what the service does and a little bit of how it works. Ensure that you understand the service
 well.
 You should be able to reformulate what the service does, and the service owner to agree on your formulation.
 Generally, you want to copy a diagram of some sort and have links back to the RRA request bug, and the service's own
@@ -243,7 +243,7 @@ For each, run through these questions and assign an impact level if appropriate:
       - Less than 2 days? (<span class="risk-medium">MEDIUM impact</span>)
       - Less than a week? (<span class="risk-high">HIGH impact</span>)
       - More? (<span class="risk-maximum">MAXIMUM impact</span>)
-    - How about large teams, or the entiere company, or our user-base?
+    - How about large teams, or the entire company, or our user-base?
       - Less than 2h? (<span class="risk-low">LOW impact</span>)
       - Less than 24h? (<span class="risk-medium">MEDIUM impact</span>)
       - Less than 2 days? (<span class="risk-high">HIGH impact</span>)
@@ -251,7 +251,7 @@ For each, run through these questions and assign an impact level if appropriate:
   - Financial issues?
     - Would it cost money? How much?
 
-Enhance these scenarios, eventually to create a complete threat model if the asssessed impacts are HIGH or MAXIMUM and
+Enhance these scenarios, eventually to create a complete threat model if the assessed impacts are HIGH or MAXIMUM and
 if further security work is required, or the RRA is revisited.
 
 ##### Additional tips
@@ -298,7 +298,7 @@ up and this is a great time to have a quick 5 minute chat about these.
 
 - <https://binary.protect.io/workcard.pdf>
 - <https://en.wikipedia.org/wiki/ISO_31000>
-- <http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf>
+- <https://web.archive.org/web/20141118061526/http://www.riskmanagementinsight.com/media/docs/FAIR_introduction.pdf>
 
 ## RRA Links
 

@@ -307,7 +307,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## HTTP Redirections
 
-Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occured, [HSTS](#http-strict-transport-security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
+Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occurred, [HSTS](#http-strict-transport-security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
 
 Redirections should be done with the 301 redirects, unless they redirect to a different path, in which case they may be done with 302 redirections. Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.
 
@@ -332,7 +332,7 @@ server {
 
 ## HTTP Public Key Pinning
 
-[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fradulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
+[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
 
 Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for the majority websites to implement HPKP.
 
@@ -360,7 +360,7 @@ Public-Key-Pins: max-age=1296000; includeSubDomains; pin-sha256="WoiWRyIOVNa9iha
 
 All resources — whether on the same origin or not — should be loaded over secure channels. Secure (HTTPS) websites that attempt to load active resources such as JavaScript insecurely will be blocked by browsers. As a result, users will experience degraded UIs and “mixed content” warnings. Attempts to load passive content (such as images) insecurely, although less risky, will still lead to degraded UIs and can allow active attackers to deface websites or phish users.
 
-Despite the fact that modern browsers make it evident that websites are loading resources insecurely, these errors still occur with significant frequency. To prevent this from occuring, developers should verify that all resources are loaded securely prior to deployment.
+Despite the fact that modern browsers make it evident that websites are loading resources insecurely, these errors still occur with significant frequency. To prevent this from occurring, developers should verify that all resources are loaded securely prior to deployment.
 
 ### Examples
 
@@ -393,15 +393,15 @@ Note that disabling inline JavaScript means that <em>all</em> JavaScript must be
 
 ## Implementation Notes
 
-- Aiming for `default-src: https:` is a great first goal, as it disables inline code and requires https.
-- For existing websites with large codebases that would require too much work to disable inline scripts, `default-src: https: 'unsafe-inline'` is still helpful, as it keeps resources from being accidentally loaded over http. However, it does not provide any XSS protection.
+- Aiming for `default-src https:` is a great first goal, as it disables inline code and requires https.
+- For existing websites with large codebases that would require too much work to disable inline scripts, `default-src https: 'unsafe-inline'` is still helpful, as it keeps resources from being accidentally loaded over http. However, it does not provide any XSS protection.
 - It is recommended to start with a reasonably locked down policy such as `default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'` and then add in sources as revealed during testing.
 - In lieu of the preferred HTTP header, pages can instead include a `<meta http-equiv=`“`Content-Security-Policy`”` content=`“`…`”`>` tag. If they do, it should be the first `<meta>` tag that appears inside `<head>`.
 - Care needs to be taken with `data:` URIs, as these are unsafe inside `script-src` and `object-src` (or inherited from `default-src`).
 - Similarly, the use of `script-src 'self'` can be unsafe for sites with JSONP endpoints. These sites should use a `script-src` that includes the path to their JavaScript source folder(s).
 - Unless sites need the ability to execute plugins such as Flash or Silverlight, they should disable their execution with `object-src 'none'`.
 - Sites should ideally use the `report-uri` directive, which POSTs JSON reports about CSP violations that do occur. This allows CSP violations to be caught and repaired quickly.
-- Prior to implementation, it is recommended to use the `Content-Security-Policy-Report-Only` HTTP header, to see if any violations would have occured with that policy.
+- Prior to implementation, it is recommended to use the `Content-Security-Policy-Report-Only` HTTP header, to see if any violations would have occurred with that policy.
 
 ## Examples
 
@@ -441,7 +441,7 @@ Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; objec
 ```
 
 ```sh
-# Don't implement the above policy yet; instead just report violations that would have occured
+# Don't implement the above policy yet; instead just report violations that would have occurred
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
@@ -452,7 +452,7 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 
 ## See Also
 
-- [An Introduction to Content Security Policy](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
+- [An Introduction to Content Security Policy](https://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 - [Content Security Policy Level 2 Standard](https://www.w3.org/TR/CSP2/)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Using the frame-ancestors directive to prevent framing](#x-frame-options)
@@ -478,7 +478,7 @@ Require subkeys include `name`, `description`, `bugs`, `participate` (particular
     },
     "participate": {
       "home": "https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org",
-      "docs": "http://bedrock.readthedocs.org/",
+      "docs": "https://bedrock.readthedocs.io/en/latest/",
       "mailing-list": "https://www.mozilla.org/about/forums/#dev-mozilla-org",
       "irc": "irc://irc.mozilla.org/#www",
       "irc-contacts": [
@@ -627,7 +627,7 @@ Cross-site request forgeries are a class of attacks where unauthorized commands 
 
 When a user visits a page with that HTML fragment, the browser will attempt to make a GET request to that URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
-While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request. Although [`SameSite`](#Cookies) cookies are the best defense against CSRF attacks, they are not yet fully supported in all browsers and should be used in conjection with other anti-CSRF defenses.
+While there are a variety of mitigation strategies such as Origin/Referrer checking and challenge-response systems (such as [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)), the most common and transparent method of CSRF mitigation is through the use of anti-CSRF tokens. Anti-CSRF tokens prevent CSRF attacks by requiring the existence of a secret, unique, and unpredictable token on all destructive changes. These tokens can be set for an entire user session, rotated on a regular basis, or be created uniquely for each request. Although [`SameSite`](#Cookies) cookies are the best defense against CSRF attacks, they are not yet fully supported in all browsers and should be used in conjunction with other anti-CSRF defenses.
 
 ## Examples
 
@@ -650,7 +650,7 @@ httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Toke
 ## See Also
 
 - [Wikipedia on CRSF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
-- [OWASP CSRF Prevention Cheat Sheet](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
 # Referrer Policy
 
@@ -718,7 +718,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 `robots.txt` is a text file placed within the root directory of a site that tells robots (such as indexers employed by search engines) how to behave, by instructing them not to index certain paths on the website. This is particularly useful for reducing load on your website, though disabling the indexing of automatically generated content. It can also be helpful for preventing the pollution of search results, for resources that don't benefit from being searchable.
 
-Sites may optionally use robots.txt, but should only use it for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. Although this does prevent these sites from appearing in search engines, it does not prevent its discovery from attackers, as `robots.txt` is frequently used for reconnaisance.
+Sites may optionally use robots.txt, but should only use it for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. Although this does prevent these sites from appearing in search engines, it does not prevent its discovery from attackers, as `robots.txt` is frequently used for reconnaissance.
 
 ## Examples
 
@@ -736,7 +736,7 @@ Disallow: /secret/admin-interface
 
 ## See Also
 
-- [About robots.txt](http://www.robotstxt.org/robotstxt.html)
+- [About robots.txt](https://www.robotstxt.org/robotstxt.html)
 
 # Subresource Integrity
 
@@ -802,7 +802,7 @@ X-Content-Type-Options: nosniff
 
 `X-Frame-Options` is an HTTP header that allows sites control over how your site may be framed within an iframe. Clickjacking is a practical attack that allows malicious sites to trick users into clicking links on your site even though they may appear to not be on your site at all. As such, the use of the `X-Frame-Options` header is mandatory for all new websites, and all existing websites are expected to add support for `X-Frame-Options` as soon as possible.
 
-Note that `X-Frame-Options` has been superceded by the Content Security Policy's `frame-ancestors` directive, which allows considerably more granular control over the origins allowed to frame a site. As `frame-ancestors` is not yet supported in IE11 and older, Edge, Safari 9.1 (desktop), and Safari 9.2 (iOS), it is recommended that sites employ `X-Frame-Options` in addition to using CSP.
+Note that `X-Frame-Options` has been superseded by the Content Security Policy's `frame-ancestors` directive, which allows considerably more granular control over the origins allowed to frame a site. As `frame-ancestors` is not yet supported in IE11 and older, Edge, Safari 9.1 (desktop), and Safari 9.2 (iOS), it is recommended that sites employ `X-Frame-Options` in addition to using CSP.
 
 Sites that require the ability to be iframed must use either Content Security Policy and/or employ JavaScript defenses to prevent clickjacking from malicious origins.
 

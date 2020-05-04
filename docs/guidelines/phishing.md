@@ -20,7 +20,7 @@ Your own intuition is probably your best asset for easily detecting phishing att
 
 # Email Headers
 
-Email headers are a great way to deduce the true origin of a given email.  As noted above, emails often contain a format section which is forgable by an attacker to make it seem as though an email came from a different source.  If you're using Gmail, you can follow the following steps to view the full email headers.
+Email headers are a great way to deduce the true origin of a given email.  As noted above, emails often contain a format section which is forgeable by an attacker to make it seem as though an email came from a different source.  If you're using Gmail, you can follow the following steps to view the full email headers.
 
 1. Open the email in Gmail
 2. Open the drop down menu (three vertical dots, next to the reply button)
@@ -40,7 +40,7 @@ Subject: An Example Subject
 
 HTML documents can contain links to email addresses (such as `mailto:hello@example.com`). These links can be misleading, much like a link on any webpage.  It's important to hover over any links provided in emails before clicking them to ensure they take you to the correct domain.  This hover action will present you with a preview of the URL in the bottom of your email client.
 
-A common tactic for detecting malicious URLs in email is simply making sure the link is to the right domain. Phishing attacks will often leverage common looking domains with one character subsituted in the hopes of getting you to trust them.
+A common tactic for detecting malicious URLs in email is simply making sure the link is to the right domain. Phishing attacks will often leverage common looking domains with one character substituted in the hopes of getting you to trust them.
 
 A legitimate link for mozilla.org would look like this when hovered...
 
@@ -56,7 +56,7 @@ If you observe this or some other behavior that suggests you've received a phish
 
 # Attachments
 
-Phishing emails often contain attachments in the hope that you will click and run them and compromise your workstation.  If you need to open an email attachment, make sure that you can confirm that the sender of that email is truely the sender and not a spoofed email made to look as if it was a trusted sender.  This can often be determined by examing the email headers (more details above) and generally whether that email was out of the blue from someone you rarely talk to or is outside the norm.
+Phishing emails often contain attachments in the hope that you will click and run them and compromise your workstation.  If you need to open an email attachment, make sure that you can confirm that the sender of that email is truly the sender and not a spoofed email made to look as if it was a trusted sender.  This can often be determined by examining the email headers (more details above) and generally whether that email was out of the blue from someone you rarely talk to or is outside the norm.
 
 There are a number of malicious attachment types that are more dangerous than others, which include:
 
