@@ -143,7 +143,6 @@ order to retrace actions after a security breach.
 -   Send logs off the account or system (e.g. AWS CloudTrail, system logs, etc.) outside of the account or system
     (different AWS account, MozDef, Papertrail, etc.)
 -   Detect and alert on anomalous changes.
--   Run [MIG](https://github.com/mozilla/mig/).
 
 ## Are you at risk?
 
