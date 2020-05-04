@@ -74,7 +74,7 @@ See [OpenSSH](openssh "wikilink").
 ## PGP/GnuPG
 
 ```
-$ gpg --gen-key
+$ gpg --full-gen-key
 (1) RSA and RSA (default)
 [...]
 Your selection? 1
