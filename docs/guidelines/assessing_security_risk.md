@@ -100,5 +100,5 @@ criticality, risk, urgency, work-effort, etc. in a completely standardized way.
 - [ISO 27001](https://en.wikipedia.org/wiki/ISO/IEC_27001)
 - [In
   French - EBIOS method](https://www.ssi.gouv.fr/guide/ebios-2010-expression-des-besoins-et-identification-des-objectifs-de-securite/)
-- [SANS Critical Security Controls](https://www.sans.org/critical-security-controls/controls)
+- [CIS Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list/)
 - [Visualizations common in Risk Management](https://creately.com/blog/diagrams/risk-management-techniques/)
