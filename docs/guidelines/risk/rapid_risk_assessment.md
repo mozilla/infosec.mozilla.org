@@ -161,7 +161,7 @@ to look at).
 A good tip is to **reserve 60 minutes** of RRA time in the calendar, and plan to run the RRA for only **30 minutes**.
 This leaves you with some room for error, and handle services that weren't well understood by their owners. Best case
 scenario, everyone will be happy when you cut the meeting short after only 30 minutes. In any case, always watch the
-clock! Having to use more than 60 minutes for the initial RRA is considering a failure and should not happen.
+clock! Having to use more than 60 minutes for the initial RRA is considered a failure and should not happen.
 
 
 
