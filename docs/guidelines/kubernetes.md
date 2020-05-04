@@ -19,7 +19,7 @@ Kubernetes is a platform used to deploy containers to cloud environments. Mozill
 Because Kubernetes hosts containers on clusters of machines, all deployed applications inherit the clusters security best practices, alerting, logging and monitoring. These are implemented once and developers only need to develop alerting/monitoring specific to their application.
 
 ## Platform Agnostic
-A Kubernetes cluster can run on AWS, Rackspace, Google Compute or bare metal. This is not what one would describe as turn-key (at the moment) but with Kubernetes this is at least possible and mitigates vendor lock in risk. Additionally you can run Kubernetes on your laptop, something that is not possible with Amazon centric solutions.
+A Kubernetes cluster can run on AWS, Rackspace, Google Compute or bare metal. This is not what one would describe as turn-key (at the moment) but with Kubernetes this is at least possible and mitigates vendor lock in risk. Additionally you can run Kubernetes on your laptop, something that is not possible with Amazon-centric solutions.
 
 ## Mature / Robust
 Kubernetes is a large, mature open-source project under active development. Mozilla does not have to invest resources in feature development, bug fixes, maintaining documentation and training materials or other similar tasks.
@@ -53,6 +53,6 @@ If using Deis, consider enforcing controller whitelists for IP ranges expected t
 
 # Additional references
 
-- <https://kubernetes.io/> (Main site for kubernetes)
+- <https://kubernetes.io/> (Main site for Kubernetes)
 - <https://deis.com/docs/workflow/quickstart/> (Deis Workflow quick start for k8s/helm/app deployment)
 - <http://2016.video.sector.ca/video/189177390> (SecTor 2016 Introductory Presentation on Kubernetes security)
