@@ -452,7 +452,7 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 
 ## See Also
 
-- [An Introduction to Content Security Policy](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
+- [An Introduction to Content Security Policy](https://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 - [Content Security Policy Level 2 Standard](https://www.w3.org/TR/CSP2/)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Using the frame-ancestors directive to prevent framing](#x-frame-options)
@@ -478,7 +478,7 @@ Require subkeys include `name`, `description`, `bugs`, `participate` (particular
     },
     "participate": {
       "home": "https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org",
-      "docs": "http://bedrock.readthedocs.org/",
+      "docs": "https://bedrock.readthedocs.io/en/latest/",
       "mailing-list": "https://www.mozilla.org/about/forums/#dev-mozilla-org",
       "irc": "irc://irc.mozilla.org/#www",
       "irc-contacts": [
@@ -650,7 +650,7 @@ httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Toke
 ## See Also
 
 - [Wikipedia on CRSF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
-- [OWASP CSRF Prevention Cheat Sheet](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
 # Referrer Policy
 
@@ -736,7 +736,7 @@ Disallow: /secret/admin-interface
 
 ## See Also
 
-- [About robots.txt](http://www.robotstxt.org/robotstxt.html)
+- [About robots.txt](https://www.robotstxt.org/robotstxt.html)
 
 # Subresource Integrity
 
