@@ -716,14 +716,14 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 # robots.txt
 
-`robots.txt` is a text file placed within the root directory of a site that tells robots (such as indexers employed by search engines) how to behave, by instructing them not to index certain paths on the website. This is particularly useful for reducing load on your website, though disabling the indexing of automatically generated content. It can also be helpful for preventing the pollution of search results, for resources that don't benefit from being searchable.
+`robots.txt` is a text file placed within the root directory of a site that tells robots (such as indexers employed by search engines) how to behave, by instructing them not to crawl certain paths on the website. This is particularly useful for reducing load on your website, though disabling the crawling of automatically generated content. It can also be helpful for preventing the pollution of search results, for resources that don't benefit from being searchable.
 
 Sites may optionally use robots.txt, but should only use it for these purposes. It should not be used as a way to prevent the disclosure of private information or to hide portions of a website. Although this does prevent these sites from appearing in search engines, it does not prevent its discovery from attackers, as `robots.txt` is frequently used for reconnaissance.
 
 ## Examples
 
 ```sh
-# Stop all search engines from archiving this site
+# Stop all search engines from crawling this site
 User-agent: *
 Disallow: /
 ```
