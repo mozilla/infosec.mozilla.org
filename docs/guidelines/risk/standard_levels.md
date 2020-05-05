@@ -33,7 +33,7 @@ risk.
 ## Standard risk levels definition and nomenclature
 
 *The risk levels also represent a simplified ISO 31000 equivalent (and are non-compliant with ISO 31000).* These levels
-are also used to display important, effort, risk impact, risk probability and any risk related level.
+are also used to display importance, effort, risk impact, risk probability and any risk related level.
 
 <table>
 <thead>
