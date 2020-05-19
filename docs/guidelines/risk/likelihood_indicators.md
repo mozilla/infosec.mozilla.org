@@ -109,4 +109,4 @@ resulting risk matches best.
 # Communicating the likelihood indicator
 
 Likelihood indicators should be sent in the [Service Mapper
-format](https://github.com/mozilla/service-map/blob/master/serviceapi/reference.go#L152)
+format](https://github.com/mozilla/service-map/blob/master/models/v1/indicators/indicator.py#L61-L89)
