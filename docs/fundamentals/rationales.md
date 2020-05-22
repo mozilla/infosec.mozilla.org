@@ -91,7 +91,7 @@ or yubikey), the effect of MFA is not to reduce the field of threat actors to on
 the user, because a secret can be remotely copied off of a compromised mobile phone. Instead, in this case, the
 possession factor merely makes it more difficult for the threat actor since they now need to brute force/guess your
 password <b>and</b> compromise your mobile phone. This is, however, still possible to do entirely from a remote location.
-In particular, storing both first on second factor on the same device (for example: mobile phone) is strongly discouraged.
+In particular, storing both first and second factor on the same device (for example: mobile phone) is strongly discouraged.
 </p>
 </td></tr>
 <tr>
