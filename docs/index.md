@@ -22,8 +22,6 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 
 For security incidents, file a bug in Bugzilla under the product/component [investigation](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Investigation) or [incidents](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Incident).
 
-Our IRC channel is [#infosec](irc://irc.mozilla.org/infosec) or [#security](irc://irc.mozilla.org/security) at irc.mozilla.org.
-
 ## Members
   - Jason Falivene *[@jfalivene]*
     - Gene Wood *[@gene]*
