@@ -430,7 +430,7 @@ Content-Security-Policy: default-src 'self'; img-src 'self' https://i.imgur.com;
 ```sh
 # Disable unsafe inline/eval and plugins, only load scripts and stylesheets from same origin, fonts from google,
 # and images from same origin and imgur. Sites should aim for policies like this.
-Content-Security-Policy: default-src 'none'; font-src 'https://fonts.googleapis.com';
+Content-Security-Policy: default-src 'none'; font-src https://fonts.gstatic.com;
 			 img-src 'self' https://i.imgur.com; object-src 'none'; script-src 'self'; style-src 'self'
 ```
 
