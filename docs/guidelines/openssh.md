@@ -61,7 +61,7 @@ UsePrivilegeSeparation sandbox
 
 File: `/etc/ssh/moduli`
 
-All Diffie-Hellman moduli in use should be at least 3072-bit-long (they are used for `diffie-hellman-group-exchange-sha256`) as per our [Key management Guidelines](key_management) recommendations. See also `man moduli`.
+All Diffie-Hellman moduli in use should be at least 3072-bit-long (they are used for `diffie-hellman-group-exchange-sha256`) as per our [Key management Guidelines](key_management.md) recommendations. See also `man moduli`.
 
 To deactivate short moduli in two commands: `awk '$5 >= 3071' /etc/ssh/moduli > /etc/ssh/moduli.tmp && mv /etc/ssh/moduli.tmp /etc/ssh/moduli`
 
