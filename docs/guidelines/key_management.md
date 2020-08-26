@@ -120,6 +120,6 @@ keyid-format 0xlong
 
 ## Bits of security
 
-Security Bits estimate the computational steps or operations (not machine instructions) required to solve a cryptographic problem (i.e. crack the key/hash). Of course, these do not factor in weaknesses in the algorithms which would reduce the effective amount of security bits and therefore is only used as an indicator of the width of the total (maximum) space to exhaust to ensuring finding the key.
+Security Bits estimate the computational steps or operations (not machine instructions) required to solve a cryptographic problem (i.e. crack the key/hash). Of course, these do not factor in weaknesses in the algorithms which would reduce the effective amount of security bits and therefore is only used as an indicator of the width of the total (maximum) space to exhaust to ensure finding the key.
 
 For a more detailed definition, see  <https://en.wikipedia.org/wiki/Key_size>, <https://en.wikipedia.org/wiki/Secure_Hash_Algorithm> and <https://www.cryptopp.com/wiki/Security_Level#Security_Bits>.
