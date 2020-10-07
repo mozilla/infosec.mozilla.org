@@ -21,14 +21,3 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 [Open a ticket with us](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise+Information+Security&component=General). For confidential information, encrypt using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
 
 For security incidents, file a bug in Bugzilla under the product/component [investigation](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Investigation) or [incidents](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Incident).
-
-## Members
-  - Jason Falivene *[@jfalivene]*
-    - Gene Wood *[@gene]*
-      - April King *[@april]*
-      - Brandon Myers *[@pwnbus]*
-    - Tristan Weir *[@weir]*
-      - Alicia Smith *[@phrozyn]*
-      - Lucius Bono *[@lucius]*
-      - Michal Purzynski *[@michał]*
-      - Arcadia Rose *[@arcadia]*
