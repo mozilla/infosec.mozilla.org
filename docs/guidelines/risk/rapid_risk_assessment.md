@@ -128,7 +128,7 @@ This is a guided example of how to run an initial RRA. You will:
 
   - Ensure no previous RRA exist; if it does, just enhance the current RRA document
   - Create a copy of the
-    [template](https://drive.google.com/open?id=1QMRdBLlQYqbn5lMmrOIBwS55Yh9fIYNp4dO3-HMyiyk).
+    [template](https://public.us-west-2.infosec.mozilla.org/web-tools/redirect-to-new-RRA-doc.html) in the RRA Google Drive directory.
   - Invite 1 or 2 members (product/service owners, lead engineers, etc.) related
     to the service with a bit of technical knowledge.
   - Ensure the invitees attempt to bring a data flow diagram and have an understanding of the data the service stores or
