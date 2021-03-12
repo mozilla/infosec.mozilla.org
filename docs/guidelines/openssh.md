@@ -171,6 +171,26 @@ auth       required     pam_sepermit.so
 account    required     pam_nologin.so
 ```
 
+The PAM stack in this scenario executes the following logic (in our example we
+follow the flow with `pam_duo.so` in use)
+* The `pam_sepermit.so` module is called which checks if the user attempting to
+  log in via SSH is present in the [`/etc/security/sepermit.conf`](https://selinuxproject.org/page/GlobalConfigurationFiles#.2Fetc.2Fsecurity.2Fsepermit.conf_File).
+  If the user is present in the config file, and the config asserts that the user
+  can only log in if SELinux is enforcing, and SELinux is not enforcing, then
+  the PAM control of `required` prevents the user from logging in (though PAM
+  would continue down the stack).
+* The `password-auth` include is commented out and skipped
+* The `/lib64/security/pam_duo.so` module is called and the user is prompted for
+  a duo MFA code. 
+  * If the code provided is correct PAM immediately permits the user access and
+    doesn't continue executing.
+  * If the code provided is incorrect, PAM continues down the stack
+* The `pam_nologin.so` checks if the file `/etc/nologin` exists and if so blocks
+  access to the user.
+* If at the end of the stack, the single `sufficient` control of `pam_duo.so`
+  did not return a success, PAM defaults to deny and denies the login.
+
+
 ## Ciphers and algorithms choice
 
 -   When CHACHA20 (OpenSSH 6.5+) is not available, AES-GCM (OpenSSH 6.1+) and any other algorithm using EtM (Encrypt then MAC) [disclose the packet length](http://blog.djm.net.au/2013/11/chacha20-and-poly1305-in-openssh.html) - giving some information to the attacker. Only recent OpenSSH servers and client support CHACHA20.
