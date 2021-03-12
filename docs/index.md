@@ -2,8 +2,8 @@
 layout: default
 ---
 
-# Enterprise Information Security
-Infosec assists Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently across the organization.
+# Security Assurance and Security Operations
+Security Assurance and Security Operations assist Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently across the organization.
 
 - we help you define the risks around your services and data
 - we help projects design and implement security controls
@@ -18,6 +18,6 @@ Infosec assists Mozillians in defining and operating security controls to ensure
 {% include_relative fundamentals/index.md %}
 
 ## Contact
-[Open a ticket with us](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise+Information+Security&component=General). For confidential information, encrypt using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
+[Open a ticket with Security Assurance](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=General). For confidential information, encrypt using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
 
-For security incidents, file a bug in Bugzilla under the product/component [investigation](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Investigation) or [incidents](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Incident).
+For security incidents, file a [Jira issue](https://jira.mozilla.com/secure/CreateIssueDetails!init.jspa?pid=10300).

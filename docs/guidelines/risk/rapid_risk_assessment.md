@@ -64,7 +64,7 @@ The RRA risk table facilitates discovering the answers to these questions.
 
 # How-to: Request an RRA of your service
 
-To manually request an RRA, please [file a bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Rapid%20Risk%20Analysis) to our component. Please include basic information about the project, a diagram, any relevant links and 0-2 additional people to invite for the assessment.
+To manually request an RRA, please [file a bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Rapid%20Risk%20Analysis) to our component. Please include basic information about the project, a diagram, any relevant links and 0-2 additional people to invite for the assessment.
 
 
 # How-to: Attending and running RRAs
@@ -305,8 +305,8 @@ up and this is a great time to have a quick 5 minute chat about these.
 
 - [Current RRA requests](https://mzl.la/2c4a09F)
 - [New RRA
-  request](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Rapid%20Risk%20Analysis)
+  request](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Rapid%20Risk%20Analysis)
 - [New Vulnerability
-  Assessment](https://bugzilla.mozilla.org/enter_bug.cgi?product=Enterprise%20Information%20Security&component=Vulnerability%20Assessment)
+  Assessment](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Vulnerability%20Assessment)
 - [RRA Support code for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRACodeMaster.js)
 - [RRA Parsing code (convert to spreadsheet/db) for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRA2Spreadsheet.js)

@@ -8,7 +8,7 @@ description: Find out which algorithms are recommended, when to expire keys, etc
 
 *The goal of this document is to help operational teams with the handling and management of cryptographic material.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide for operational teams.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide for operational teams.*
 
 # Data Definitions
 

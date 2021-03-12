@@ -8,7 +8,7 @@ description: How to use SAML securely and make user’s session experience bette
 
 *The goal of this document is to help understand the basics of how to securely implement [Security Assertion Markup Language (SAML)](https://en.wikipedia.org/wiki/SAML) when authenticating and authorizing users.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide.*
 
 **Just looking for code?** Reference configuration and code for implementing SAML as described below [is also available](https://github.com/mozilla-iam/testrp.security.allizom.org).
 Additionally, Mozilla provides SAML single sign on support for Mozilla properties and [access can be requested by following documentation here](https://mana.mozilla.org/wiki/display/SECURITY/SSO+Request+Form)
