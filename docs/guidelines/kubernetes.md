@@ -8,7 +8,7 @@ description: A high level guide of basic security needs for Kubernetes
 
 *The goal of this document is to help you understand the basics of how to securely implement [Kubernetes](https://kubernetes.io/docs/) at Mozilla.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide.*
 
 
 # Why Kubernetes?

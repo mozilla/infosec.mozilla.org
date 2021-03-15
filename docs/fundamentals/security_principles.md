@@ -9,7 +9,7 @@ description: Most important security principles to follow - the baseline
 *This document defines a set of security principles that all operational groups at Mozilla must follow. The principles
 are designed to reduce the exposure of our systems and services from attackers who could gain privileged access and
 compromise sensitive data.  [The Firefox Operations Security](https://wiki.mozilla.org/Security/FirefoxOperations) and
-the [Enterprise Information Security](https://infosec.mozilla.org/) teams maintain the list of principles, and work with
+the [Security](https://infosec.mozilla.org/) teams maintain the list of principles, and work with
 operational teams throughout Mozilla to ensure their implementation.*
 
 

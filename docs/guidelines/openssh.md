@@ -8,7 +8,7 @@ description: How to configure and use OpenSSH server and client securely
 
 *The goal of this document is to help operational teams with the configuration of OpenSSH server and client.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide.*
 
 
 # Only non-default settings are listed in this document
@@ -407,7 +407,7 @@ $ ssh -J ssh.mozilla.com myhost.private.scl3.mozilla.com
 $ ssh -J ssh.mozilla.com,ec2-instance.aws.net 10.0.0.3
 
 # Copy data from a host
-$ scp -oProxyJump=ssh.mozilla.com myhost.private.scl3.mozilla.com:/home/kang/testfile ./
+$ scp -oProxyJump=ssh.mozilla.com myhost.private.scl3.mozilla.com:/home/jdoe/testfile ./
 ```
 
 You can also add these lines to your `~/.ssh/config`

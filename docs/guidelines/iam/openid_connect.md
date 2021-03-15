@@ -8,7 +8,7 @@ description: How to use OpenID Connect securely and make user’s session experi
 
 *The goal of this document is to help you understand the basics of how to securely implement [OpenID Connect (OIDC)](https://en.wikipedia.org/wiki/OpenID_Connect) when authenticating and authorizing users.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide.*
 
 **Just looking for code?** Reference configuration and code for implementing OIDC as described below [is also available](https://github.com/mozilla-iam/testrp.security.allizom.org).
 Additionally, Mozilla provides OIDC single sign on support for Mozilla properties and [access can be requested by following documentation here](https://mana.mozilla.org/wiki/display/SECURITY/SSO+Request+Form)

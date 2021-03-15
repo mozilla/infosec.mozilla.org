@@ -1,16 +1,12 @@
 {
-    "name": "Infosec Guidelines for Mozilla",
-    "description": "Infosec assists Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently.",
+    "name": "Security Guidelines for Mozilla",
+    "description": "Security Assurance and Security Operations assist Mozillians in defining and operating security controls to ensure that data at Mozilla is protected consistently.",
     "repository": {
         "url": "https://github.com/mozilla/infosec.mozilla.org",
         "license": "MPL2"
     },
     "participate": {
         "home": "https://infosec.mozilla.org/",
-        "irc": "irc://irc.mozilla.org/#infosec",
-        "irc-contacts": [
-            "kang"
-        ],
         "docs": "https://github.com/mozilla/infosec.mozilla.org/blob/master/README.md"
     },
     "bugs": {

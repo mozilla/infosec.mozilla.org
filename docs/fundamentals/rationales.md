@@ -8,7 +8,7 @@ description: Explains and justifies the use of specific controls, principles
 
 *The goal of this document is to detail the rationales behind why various technologies and processes are encouraged or discouraged.
 All Mozilla sites and deployment should follow the recommendations below.
-The Enterprise Information Security (Infosec) team maintains this document as a reference guide.*
+The Security Assurance and Security Operations teams maintain this document as a reference guide.*
 
 # Rationales
 
