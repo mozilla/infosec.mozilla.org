@@ -19,5 +19,3 @@ Security Assurance and Security Operations assist Mozillians in defining and ope
 
 ## Contact
 [Open a ticket with Security Assurance](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=General). For confidential information, encrypt using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
-
-For security incidents, file a [Jira issue](https://jira.mozilla.com/secure/CreateIssueDetails!init.jspa?pid=10300).
