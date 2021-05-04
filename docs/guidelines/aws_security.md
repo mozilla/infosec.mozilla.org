@@ -17,7 +17,7 @@ The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.ht
 * How to : Generate a password with a password manager and store that password in a password manager protected by MFA or offline as it is rarely if ever needed. One way to store the MFA offline is to store it in a safe deposit box, or a similar physical safe solution. For example, Mozilla uses the infosec [security backup service](https://mana.mozilla.org/wiki/display/SECURITY/Security+backup+service)
 * Audited : False
 * Rationale
-    - [Non-unique passwords are risky](https://wiki.mozilla.org/Security/Fundamentals#password-reuse)
+    - [Non-unique passwords are risky](https://infosec.mozilla.org/fundamentals/rationales.html#password-reuse)
     - Weak passwords can be guessed or brute forced
 
 ## Enable multi factor authentication (MFA) for the root user
@@ -25,14 +25,14 @@ The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.ht
 * How to : [Instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-root)
 * Audited : True
 * Rationale
-    - [MFA is an effective means of preventing unauthorized access](https://wiki.mozilla.org/Security/Fundamentals#mfa)
+    - [MFA is an effective means of preventing unauthorized access](https://infosec.mozilla.org/fundamentals/rationales.html#mfa)
 
 ## Enable multi factor authentication (MFA) for non federated IAM users
 
 * How to : [Instructions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html#enable-virt-mfa-for-iam-user)
 * Audited : False
 * Rationale
-    - [MFA is an effective means of preventing unauthorized access](https://wiki.mozilla.org/Security/Fundamentals#mfa)
+    - [MFA is an effective means of preventing unauthorized access](https://infosec.mozilla.org/fundamentals/rationales.html#mfa)
 
 ## Avoid creating API keys for the root user
 
@@ -94,7 +94,7 @@ CloudTrail logs enable the security team to perform incident response when an ac
 * How to : When creating security groups, only allow inbound access to ports that are required. Avoid creating overly broad rules which allow more ports than are required for the services hosted on the systems protected by that security group.
 * Audited : False
 * Rationale
-    - Security Principle : [Do not present unnecessary services](https://wiki.mozilla.org/Security/Fundamentals/Security_Principles#Do_not_present_unnecessary_services)
+    - Security Principle : [Do not present unnecessary services](https://infosec.mozilla.org/fundamentals/security_principles.html#do-not-expose-unnecessary-services)
     - Limiting the network access an attacker has to a resource, limits the size of the attack surface and the likelihood that the attacker will be able to exploit the resource.
 
 ## Disallow inbound network access from internal resources
@@ -104,8 +104,8 @@ CloudTrail logs enable the security team to perform incident response when an ac
     - Avoid creating any security group with a rule allowing all inbound ports to either itself or other security groups
 * Audited : False
 * Rationale
-    - Security Principle : [Do not present unnecessary services](https://wiki.mozilla.org/Security/Fundamentals/Security_Principles#Do_not_present_unnecessary_services)
-    - Security Principle [Do not allow lateral movement](https://wiki.mozilla.org/Security/Fundamentals/Security_Principles#Do_not_allow_lateral_movement)
+    - Security Principle : [Do not present unnecessary services](https://infosec.mozilla.org/fundamentals/security_principles.html#do-not-expose-unnecessary-services)
+    - Security Principle [Do not allow lateral movement](https://infosec.mozilla.org/fundamentals/security_principles.html#do-not-allow-lateral-movement)
     - AWS creates this default security group as a convenience so that all resources you create can, by default, communicate with each other. Unfortunately, this convenience results in an attacker that gains access to one system being able to attack any service listening on any other internal system.
 
 ## Disallow outbound internet access except through HTTP proxy on NSM server
