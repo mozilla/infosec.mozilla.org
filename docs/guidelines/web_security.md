@@ -863,3 +863,6 @@ X-XSS-Protection: 1; mode=block
 | October, 2016  | April  | Updates to CSP recommendations                                   |
 | July, 2016     | April  | Updates to CSP for APIs, and CSP's deprecation of XFO, and XXSSP |
 | February, 2016 | April  | Initial document creation                                        |
+
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="/assets/js/sortable.js"></script>

@@ -55,3 +55,18 @@ footer, .page-wrap:after {
     height:80px; /* fixed header height*/
     margin:-80px 0 0; /* negative fixed header height */
 }
+
+::-webkit-input-placeholder {
+    color: #767676;
+    opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #767676;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #767676;
+    opacity: 1;
+}
