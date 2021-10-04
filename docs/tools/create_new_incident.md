@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Tools]
+categories: [Disabled]
 title: Create a New Security Incident
 description: Tool to create an new Google Drive folder and document for a security incident
 ---
