@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Tools]
+categories: [Disabled]
 title: QR Code Generator
 description: Tool to create an image of a QR code from a string 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 resource: true
-categories: [Tools]
+categories: [Disabled]
 title: QR Code Scanner
 description: Tool to parse an image file containing a QR Code
 ---
