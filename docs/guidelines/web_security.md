@@ -670,8 +670,8 @@ In addition to the privacy risks that this entails, the browser may also transmi
 
 - `no-referrer`: never send the `Referer` header
 - `same-origin`: send referrer, but only on requests to the same origin
-- `strict-origin`: send referrer to all origins, but only the URL sans path (e.g. <https://example.com/>)
-- `strict-origin-when-cross-origin`: send full referrer on same origin, URL sans path on foreign origin
+- `strict-origin`: send referrer to all origins, but only the URL without path (e.g. <https://example.com/>)
+- `strict-origin-when-cross-origin`: send full referrer on same origin, URL without path on foreign origin
 
 ## Notes
 
