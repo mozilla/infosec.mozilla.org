@@ -40,6 +40,9 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@op
 # Password based logins are disabled - only public key based logins are allowed.
 AuthenticationMethods publickey
 
+# Delay compression until after login - in order to combat against zero-day zlib attacks
+Compression delayed
+
 # LogLevel VERBOSE logs user's key fingerprint on login. Needed to have a clear audit track of which key was using to log in.
 LogLevel VERBOSE
 
@@ -87,6 +90,10 @@ RequiredAuthentications2 publickey
 # In this is your case, use this instead:
 #PubkeyAuthentication yes
 #PasswordAuthentication no
+
+# Delay compression until after login - in order to combat against zero-day zlib attacks
+# This option is available since OpenSSH 4.2 (https://www.openssh.com/txt/release-4.2)
+Compression delayed
 
 # LogLevel VERBOSE logs user's key fingerprint on login. Needed to have a clear audit track of which key was using to log in.
 LogLevel VERBOSE
