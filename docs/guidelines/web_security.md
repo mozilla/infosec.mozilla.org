@@ -542,7 +542,7 @@ Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
 
 ```sh
 # Session identifier for all mozilla.org sites that expires in 30 days using the __Secure- prefix
-# This cookie is not sent cross-origin, but is sent when navigating to any Mozilla site from from another site
+# This cookie is not sent cross-origin, but is sent when navigating to any Mozilla site from another site
 Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=mozilla.org; Path=/; Secure; HttpOnly; SameSite=Lax
 ```
 
