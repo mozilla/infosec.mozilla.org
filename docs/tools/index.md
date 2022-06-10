@@ -6,4 +6,5 @@
       {% endif %}
     {% endif %}
   {% endfor %}
+  <li><a href="https://ssl-config.mozilla.org/">SSL Configuration Generator</a></li>
 </ul>
