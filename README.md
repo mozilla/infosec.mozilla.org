@@ -29,6 +29,10 @@ Ensure Ruby, Gem and Bundle are installed.
 - Run `bundle install` to ensure all dependencies are installed.
 - Run `bundle exec jekyll serve` to locally serve contents for testing.
 
+## Deployment
+
+This repository is automatically deployed via [GitHub's built in support for Jekyll in GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll) whenever new content is committed to the `/docs` directory in the `master` branch. AWS CloudFront, which sits in front of the GitHub pages site, will then automatically pick up new content when the cache expires (on the order of 10 to 15 minutes) and it will be visible on the live site.
+
 ## Site setup
 
 - The theme is [Frontierline](https://github.com/craigcook/frontierline-theme) and is based on jekyll-theme-slate for the purpose of Jekyll integration.
