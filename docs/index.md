@@ -22,4 +22,4 @@ Security Assurance and Security Operations assist Mozillians in defining and ope
 {% include_relative tools/index.md %}
 
 ## Contact
-[Open a ticket with Security Assurance](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=General). For confidential information, encrypt using [our public PGP key](https://gpg.mozilla.org/pks/lookup?op=get&search=0x85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
+[Open a ticket with Security Assurance](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=General). For confidential information, send us an email to infosec@mozilla.com and encrypt using [our public PGP key](https://keys.openpgp.org/vks/v1/by-fingerprint/85D77543B3D624B63CEA9E6DBC17301B491B3F21). Our full fingerprint is `0x85D77543B3D624B63CEA9E6DBC17301B491B3F21`
