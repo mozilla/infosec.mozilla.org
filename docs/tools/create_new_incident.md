@@ -31,6 +31,7 @@ description: Tool to create an new Google Drive folder and document for a securi
   // Client ID and API key from the Developer Console
   // https://developers.google.com/workspace/guides/create-credentials#client
   // Google Project : security-incident-doc-creator 537143757568
+  // Credentials : https://console.cloud.google.com/apis/credentials?project=security-incident-doc-creator
 
   var CLIENT_ID = '537143757568-avr40v4ssk02qo3ncb87cc6kq8je27ut.apps.googleusercontent.com';
   var API_KEY = 'AIzaSyC4uh5pqr9pms8cQ80_jn0WFMj90YvK1Nc';
