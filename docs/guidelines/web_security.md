@@ -284,7 +284,7 @@ The header consists of one mandatory parameter (`max-age`) and two optional para
 
 `max-age` must be set to a minimum of six months (15768000), but longer periods such as two years (63072000) are recommended. Note that once this value is set, the site must continue to support HTTPS until the expiry time has been reached.
 
-`includeSubDomains` notifies the browser that all subdomains of the current origin should also be upgraded via HSTS. For example, setting `includeSubDomains` on `domain.mozilla.com` will also set it on `host1.domain.mozilla.com` and `host2.domain.mozilla.com`. Extreme care is needed when setting the `includeSubDomains` flag, as it could disable sites on subdomains that don't yet have HTTPS enabled.
+`includeSubDomains` notifies the browser that all subdomains of the current origin should also be upgraded via HSTS. For example, setting `includeSubDomains` on `domain.example.com` will also set it on `host1.domain.example.com` and `host2.domain.example.com`. Extreme care is needed when setting the `includeSubDomains` flag, as it could disable sites on subdomains that don't yet have HTTPS enabled.
 
 `preload` allows the website to be included in the [HSTS preload list](https://hstspreload.org/), upon submission. As a result, web browsers will do HTTPS upgrades to the site without ever having to receive the initial HSTS header. This prevents downgrade attacks upon first use and is recommended for all high risk websites. Note that being included in the HSTS preload list requires that `includeSubDomains` also be set.
 
@@ -323,10 +323,10 @@ server {
 ```
 
 ```apache
-# Redirect for site.mozilla.org from http to https, using Apache
+# Redirect for site.example.org from http to https, using Apache
 <VirtualHost *:80>
-  ServerName site.mozilla.org
-  Redirect permanent / https://site.mozilla.org/
+  ServerName site.example.org
+  Redirect permanent / https://site.example.org/
 </VirtualHost>
 ```
 
@@ -541,9 +541,9 @@ Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
 ```
 
 ```sh
-# Session identifier for all mozilla.org sites that expires in 30 days using the __Secure- prefix
+# Session identifier for all example.org sites that expires in 30 days using the __Secure- prefix
 # This cookie is not sent cross-origin, but is sent when navigating to any Mozilla site from another site
-Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=mozilla.org; Path=/; Secure; HttpOnly; SameSite=Lax
+Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=example.org; Path=/; Secure; HttpOnly; SameSite=Lax
 ```
 
 ```sh
@@ -553,8 +553,8 @@ Set-Cookie: __Host-ACCEPTEDTOS=true; Expires=Fri, 31 Dec 9999 23:59:59 GMT; Path
 ```
 
 ```sh
-# Session identifier used for a secure site, such as bugzilla.mozilla.org. It isn't sent from cross-origin
-# requests, nor is it sent when navigating to bugzilla.mozilla.org from another site. Used in conjunction with
+# Session identifier used for a secure site, such as bugzilla.example.org. It isn't sent from cross-origin
+# requests, nor is it sent when navigating to bugzilla.example.org from another site. Used in conjunction with
 # other anti-CSRF measures, this is a very strong way to defend your site against CSRF attacks.
 Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; HttpOnly; SameSite=Strict
 ```
@@ -579,16 +579,16 @@ Access-Control-Allow-Origin: *
 ```
 
 ```sh
-# Allow https://random-dashboard.mozilla.org to read the returned results of this API
-Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
+# Allow https://random-dashboard.example.org to read the returned results of this API
+Access-Control-Allow-Origin: https://random-dashboard.example.org
 ```
 
 ```xml
-<!-- Allow Flash from https://random-dashboard.mozilla.org to read page contents -->
+<!-- Allow Flash from https://random-dashboard.example.org to read page contents -->
 <cross-domain-policy xsi:noNamespaceSchemaLocation="http://www.adobe.com/xml/schemas/PolicyFile.xsd">
-  <allow-access-from domain="random-dashboard.mozilla.org"/>
+  <allow-access-from domain="random-dashboard.example.org"/>
   <site-control permitted-cross-domain-policies="master-only"/>
-  <allow-http-request-headers-from domain="random-dashboard.mozilla.org" headers="*" secure="true"/>
+  <allow-http-request-headers-from domain="random-dashboard.example.org" headers="*" secure="true"/>
 </cross-domain-policy>
 ```
 
@@ -599,7 +599,7 @@ Access-Control-Allow-Origin: https://random-dashboard.mozilla.org
   <cross-domain-access>
     <policy>
       <allow-from http-request-headers="*">
-        <domain uri="https://random-dashboard.mozilla.org"/>
+        <domain uri="https://random-dashboard.example.org"/>
       </allow-from>
       <grant-to>
         <resource path="/" include-subpaths="true"/>
@@ -622,7 +622,7 @@ Cross-site request forgeries are a class of attacks where unauthorized commands 
 
 ```
 <!-- Attempt to delete a user's account -->
-<img src="https://accounts.mozilla.org/management/delete?confirm=true">
+<img src="https://accounts.example.org/management/delete?confirm=true">
 ```
 
 When a user visits a page with that HTML fragment, the browser will attempt to make a GET request to that URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
@@ -706,7 +706,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 ```html
 <!-- Do the same, but only for a single link -->
-<a href="https://mozilla.org/" referrerpolicy="no-referrer, strict-origin-when-cross-origin">
+<a href="https://example.org/" referrerpolicy="no-referrer, strict-origin-when-cross-origin">
 ```
 
 ## See Also
@@ -742,7 +742,7 @@ Disallow: /secret/admin-interface
 
 Subresource integrity is a recent W3C standard that protects against attackers modifying the contents of JavaScript libraries hosted on content delivery networks (CDNs) in order to create vulnerabilities in all websites that make use of that hosted library.
 
-For example, JavaScript code on jquery.org that is loaded from mozilla.org has access to the entire contents of everything of mozilla.org. If this resource was successfully attacked, it could modify download links, deface the site, steal credentials, cause denial-of-service attacks, and more.
+For example, JavaScript code on jquery.org that is loaded from example.org has access to the entire contents of everything of example.org. If this resource was successfully attacked, it could modify download links, deface the site, steal credentials, cause denial-of-service attacks, and more.
 
 Subresource integrity locks an external JavaScript resource to its known contents at a specific point in time. If the file is modified at any point thereafter, supporting web browsers will refuse to load it. As such, the use of subresource integrity is mandatory for all external JavaScript resources loaded from sources not hosted on Mozilla-controlled systems.
 
@@ -827,9 +827,9 @@ X-Frame-Options: SAMEORIGIN
 ```
 
 ```sh
-# Allow only framer.mozilla.org to frame site
+# Allow only framer.example.org to frame site
 # Note that this blocks framing from browsers that don't support CSP2+
-Content-Security-Policy: frame-ancestors https://framer.mozilla.org
+Content-Security-Policy: frame-ancestors https://framer.example.org
 X-Frame-Options: DENY
 ```
 
