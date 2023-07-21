@@ -7,7 +7,7 @@ description: What headers, setup, etc. should you follow for your web site?
 ---
 
 *The goal of this document is to help operational teams with creating secure web applications. All Mozilla sites and deployments are expected to follow the recommendations below. Use of these recommendations by the public is strongly encouraged.
-The Security Assurance and Security Operations teams maintain this document as a reference guide.*
+The Security Assurance team maintains this document as a reference guide.*
 
 # Table of Contents
 1. [Cheat Sheet](#web-security-cheat-sheet)
@@ -57,7 +57,7 @@ The Security Assurance and Security Operations teams maintain this document as a
 <td data-sort-value="1" > <span class="risk-low">LOW</span></td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
 <td  data-sort-value="99"> --</td>
-<td> Mandatory for maximum risk sites only</td>
+<td> Can be required for maximum risk sites only, on a case-per-case basis</td>
 <td> Not recommended for most sites</td>
 </tr>
 <tr>
@@ -234,8 +234,8 @@ The Security Assurance and Security Operations teams maintain this document as a
 <td data-sort-value="1" > <span class="risk-low">LOW</span></td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
 <td > 13</td>
-<td> Mandatory for all new websites<br>Recommended for existing websites</td>
-<td> Manual testing should be done for existing websites, prior to implementation</td>
+<td> Only for websites that need to support legacy browsers.</td>
+<td> Do not use, unless you need to support legacy browsers with no CSP support.</td>
 </tr>
 </tbody>
 <tfoot></tfoot>
@@ -255,7 +255,7 @@ Websites or API endpoints that only communicate with modern browsers and systems
 
 Websites intended for general public consumption should use the [Mozilla intermediate TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_(default)).
 
-Websites that require backwards compatibility with extremely old browsers and operating systems may use the [Mozilla backwards compatible TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Old_backward_compatibility). This is not recommended, and use of this compatibility level should be noted in your risk assessment.
+Websites that require backwards compatibility with extremely old browsers and operating systems may use the [Mozilla backwards compatible TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Old_backward_compatibility). This is not recommended, and use of this compatibility level should be done only after consulting the security team for a risk assessment.
 
 ### Compatibility
 
@@ -309,7 +309,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occurred, [HSTS](#http-strict-transport-security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
 
-Redirections should be done with the 301 redirects, unless they redirect to a different path, in which case they may be done with 302 redirections. Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.
+Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.
 
 ### Examples
 
@@ -332,7 +332,7 @@ server {
 
 ## HTTP Public Key Pinning
 
-[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites must enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
+[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites might enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
 
 Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for most websites to implement HPKP.
 
@@ -746,7 +746,7 @@ For example, JavaScript code on jquery.org that is loaded from mozilla.org has a
 
 Subresource integrity locks an external JavaScript resource to its known contents at a specific point in time. If the file is modified at any point thereafter, supporting web browsers will refuse to load it. As such, the use of subresource integrity is mandatory for all external JavaScript resources loaded from sources not hosted on Mozilla-controlled systems.
 
-Note that CDNs must support the Cross Origin Resource Sharing (CORS) standard by setting the `Access-Control-Allow-Origin` header. Most CDNs already do this, but if the CDN you are loading does not support CORS, please contact Mozilla Information Security. We are happy to contact the CDN on your behalf.
+Note that CDNs must support the Cross Origin Resource Sharing (CORS) standard by setting the `Access-Control-Allow-Origin` header. Most CDNs already do this, but if the CDN you are loading does not support CORS, please contact the Security Assurance team. We are happy to contact the CDN on your behalf.
 
 ## Directives
 
@@ -782,6 +782,7 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 
 - [SRI Hash Generator](https://www.srihash.org/) - generates `<script>` tags for you, and informs you if the CDN lacks CORS support
 - [Subresource Integrity W3C Standard](https://w3c.github.io/webappsec-subresource-integrity/)
+- [MDN on Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
 # X-Content-Type-Options
 
@@ -841,16 +842,13 @@ X-Frame-Options: DENY
 
 # X-XSS-Protection
 
-`X-XSS-Protection` is a feature of Internet Explorer and Chrome that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong Content Security Policy that disables the use of inline JavaScript (`'unsafe-inline'`), they can still provide protections for users of older web browsers that don't yet support CSP.
+In modern browsers, `X-XSS-Protection` has been deprecated in favor of the Content-Security-Policy to disable the use of inline JavaScript. Its use can introduce XSS vulnerabilities in otherwise safe websites. 
+This should not be used unless you need to support older web browsers that don’t yet support CSP.
+It is thus recommended to set the header as `X-XSS-Protection: 0`.
 
-New websites should use this header, but given the small risk of false positives, it is only recommended for existing sites. This header is unnecessary for APIs, which should instead simply return a restrictive Content Security Policy header.
+## See Also
 
-## Examples
-
-```sh
-# Block pages from loading when they detect reflected XSS attacks
-X-XSS-Protection: 1; mode=block
-```
+- [MDN on X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
 
 # Version History
 
