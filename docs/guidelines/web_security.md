@@ -57,7 +57,7 @@ The Security Assurance team maintains this document as a reference guide.*
 <td data-sort-value="1" > <span class="risk-low">LOW</span></td>
 <td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
 <td  data-sort-value="99"> --</td>
-<td> Can be required for maximum risk sites only, on a case-per-case basis</td>
+<td> May be required for maximum risk sites only, on a case-per-case basis</td>
 <td> Not recommended for most sites</td>
 </tr>
 <tr>
@@ -309,7 +309,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 Websites may continue to listen on port 80 (HTTP) so that users do not get connection errors when typing a URL into their address bar, as browsers currently connect via HTTP for their initial request. Sites that listen on port 80 should only redirect to the same resource on HTTPS. Once the redirection has occurred, [HSTS](#http-strict-transport-security) should ensure that all future attempts go to the site via HTTP are instead sent directly to the secure site. APIs or websites not intended for public consumption should disable the use of HTTP entirely.
 
-Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.
+Sites should avoid redirections from HTTP to HTTPS on a different host, as this prevents HSTS from being set.  Instead, for example, first redirect from http://example.com/ to https://example.com/ and then in a second redirect, redirect from https://example.com/ to https://example.org/
 
 ### Examples
 
@@ -332,7 +332,7 @@ server {
 
 ## HTTP Public Key Pinning
 
-[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites might enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
+[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites may enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
 
 Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for most websites to implement HPKP.
 
