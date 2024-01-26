@@ -854,6 +854,7 @@ It is thus recommended to set the header as `X-XSS-Protection: 0`.
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| August, 2023   | arroway | Update HPKP, XXSSP, TLS and redirects sections                  |
 | July, 2018     | April  | Link to CORS for Developers                                      |
 | April, 2018    | April  | Added SameSite cookies and syntax highlighting                   |
 | June, 2017     | April  | Moved cookie prefixes to no longer be experimental               |
