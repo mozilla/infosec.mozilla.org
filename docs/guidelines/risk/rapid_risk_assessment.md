@@ -128,7 +128,7 @@ This is a guided example of how to run an initial RRA. You will:
 
   - Ensure no previous RRA exist; if it does, just enhance the current RRA document
   - Create a copy of the RRA template in the RRA Google Drive directory.
-    - Mozilla employees can make a copy of the template with this [redirect](https://public.us-west-2.infosec.mozilla.org/web-tools/redirect-to-new-RRA-doc.html)
+    - Mozilla employees can make a copy of the template following [these directions](https://docs.google.com/document/d/1-j9n-TSw1mcGERG6zjSS-hu_Eax7Hb740I4SRtdYyjU/view), to ensure the document is located in the proper directory for further processing.
     - Everyone can view a copy of the [RRA template](https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/edit)
   - Invite 1 or 2 members (product/service owners, lead engineers, etc.) related
     to the service with a bit of technical knowledge.
