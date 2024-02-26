@@ -402,6 +402,7 @@ Note that disabling inline JavaScript means that <em>all</em> JavaScript must be
 - Unless sites need the ability to execute plugins such as Flash or Silverlight, they should disable their execution with `object-src 'none'`.
 - Sites should ideally use the `report-uri` directive, which POSTs JSON reports about CSP violations that do occur. This allows CSP violations to be caught and repaired quickly.
 - Prior to implementation, it is recommended to use the `Content-Security-Policy-Report-Only` HTTP header, to see if any violations would have occurred with that policy.
+- Set `form-action` directive to `none` or `self` or to specific sources which are allowed to be used in forms. This directive does not fall back to default-src, therefore, not explicitly setting the directive would allow forms to be submitted to any source.
 
 ## Examples
 
