@@ -62,10 +62,6 @@ Firefox accounts store user data:
 
 The RRA risk table facilitates discovering the answers to these questions.
 
-# How-to: Request an RRA of your service
-
-To manually request an RRA, please [file a bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Rapid%20Risk%20Analysis) to our component. Please include basic information about the project, a diagram, any relevant links and 0-2 additional people to invite for the assessment.
-
 
 # How-to: Attending and running RRAs
 
@@ -128,7 +124,7 @@ This is a guided example of how to run an initial RRA. You will:
 
   - Ensure no previous RRA exist; if it does, just enhance the current RRA document
   - Create a copy of the RRA template in the RRA Google Drive directory.
-    - Mozilla employees can make a copy of the template following [these directions](https://docs.google.com/document/d/1-j9n-TSw1mcGERG6zjSS-hu_Eax7Hb740I4SRtdYyjU/view), to ensure the document is located in the proper directory for further processing.
+    - [Mozilla Internal Only] Employees can make a copy of the template following [these directions](https://docs.google.com/document/d/1-j9n-TSw1mcGERG6zjSS-hu_Eax7Hb740I4SRtdYyjU/view), to ensure the document is located in the proper directory for further processing.
     - Everyone can view a copy of the [RRA template](https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/edit)
   - Invite 1 or 2 members (product/service owners, lead engineers, etc.) related
     to the service with a bit of technical knowledge.
@@ -174,7 +170,7 @@ successful RRA that will help the teams and keep the service safe.
 
 **RRA Utilities**: There is a menu at the top of the document called the "RRA Utilities" menu. Use it to set risk
 impact, levels, data classification and marking the RRA as reviewed. Do use it as our scripts rely on this to copy RRAs
-to our RRA API.
+to our RRA API. Note that these utilities are only available in the internal Mozilla tools.
 
 #### Metadata (1min)
 
@@ -191,8 +187,10 @@ Ask the service owner what the service does and a little bit of how it works. En
 well.
 You should be able to reformulate what the service does, and the service owner to agree on your formulation.
 Generally, you want to copy a diagram of some sort and have links back to the RRA request bug, and the service's own
-website (which may be a vendor). This is also a good time to mention [the vendor questionnaire](https://docs.google.com/document/d/1idP1gGuEgeinoL6m_hsZ8lQ8wz64BeI-S53n_9kwMkU/edit?usp=sharing)
- if this is a vendor and it hasn't been filled in.
+website (which may be a vendor). This is also a good time to check whether the team requested a vendor assessment using a questionnaire for example.
+
+[Mozilla Internal Only] Teams can use [this vendor questionnaire](https://docs.google.com/document/d/1idP1gGuEgeinoL6m_hsZ8lQ8wz64BeI-S53n_9kwMkU/edit?usp=sharing)
+ when performing a vendor assessment.
 
 Feel free to go back to this section at any time to add any further notes.
 
@@ -303,10 +301,6 @@ up and this is a great time to have a quick 5 minute chat about these.
 
 ## RRA Links
 
-- [Current RRA requests](https://mzl.la/2c4a09F)
-- [New RRA
-  request](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Rapid%20Risk%20Analysis)
-- [New Vulnerability
-  Assessment](https://bugzilla.mozilla.org/enter_bug.cgi?product=Security+Assurance&component=Vulnerability%20Assessment)
+- [RRA Template](https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/edit)
 - [RRA Support code for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRACodeMaster.js)
 - [RRA Parsing code (convert to spreadsheet/db) for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRA2Spreadsheet.js)
