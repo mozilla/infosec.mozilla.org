@@ -657,7 +657,7 @@ httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Toke
 
 When a user navigates to a site via a hyperlink or a website loads an external resource, browsers inform the destination site of the origin of the requests through the use of the HTTP `Referer` (sic) header. Although this can be useful for a variety of purposes, it can also place the privacy of users at risk. HTTP Referrer Policy allows sites to have fine-grained control over how and when browsers transmit the HTTP `Referer` header.
 
-In normal operation, if a page at <https://example.com/page.html> contains `<img src="https://not.example.com/image.jpg">`, then the browser will send a request like this:
+In legacy browsers, if a page at <https://example.com/page.html> contains `<img src="https://not.example.com/image.jpg">`, then the browser will send a request like this:
 
 ```http
 GET /image.jpg HTTP/1.1
@@ -678,9 +678,9 @@ In addition to the privacy risks that this entails, the browser may also transmi
 
 Although there are other options for referrer policies, they do not protect user privacy and limit exposure in the same way as the options above.
 
-`no-referrer-when-downgrade` is the default behavior for all current browsers, and can be used when sites are concerned about breaking existing systems that rely on the full Referrer header for their operation.
+`strict-origin-when-cross-origin` is the default behavior for all current browsers.
 
-Referrer Policy has good support across modern browsers. The exception is Microsoft Edge, which still supports an older version of the specification.
+Referrer Policy has good support across modern browsers. In recent versions of Firefox and Safari, "unsafe" directives (`no-referrer-when-downgrade`, `origin-when-cross-origin`, and `unsafe-url`) will behave like the default of `strict-origin-when-cross-origin`.
 
 ## Examples
 
@@ -706,8 +706,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 ```
 
 ```html
-<!-- Do the same, but only for a single link -->
-<a href="https://example.org/" referrerpolicy="no-referrer, strict-origin-when-cross-origin">
+<!-- referrerpolicy doesn't support multiple values, so only set no-referrer -->
+<a href="https://example.org/" referrerpolicy="no-referrer">
 ```
 
 ## See Also
@@ -855,6 +855,7 @@ It is thus recommended to set the header as `X-XSS-Protection: 0`.
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| February, 2024 | LeoMcA | Update Referrer Policy section                                   |
 | August, 2023   | arroway | Update HPKP, XXSSP, TLS and redirects sections                  |
 | July, 2018     | April  | Link to CORS for Developers                                      |
 | April, 2018    | April  | Added SameSite cookies and syntax highlighting                   |
