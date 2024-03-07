@@ -193,10 +193,6 @@ You should be able to reformulate what the service does, and the service owner t
 Generally, you want to copy a diagram of some sort and have links back to the RRA request bug, and the service's own
 website (which may be a vendor). This is also a good time to check whether the team requested a vendor assessment using a questionnaire for example.
 
-[Mozilla Internal Only] Teams can use [this vendor
-questionnaire](https://docs.google.com/document/d/1YDbYWB-LNYYoB3cnbxo-rvSmvy-jSHG8Mu4KT_hBXYc/copy)
- when performing a vendor assessment.
-
 Feel free to go back to this section at any time to add any further notes.
 
 #### Data Dictionary (5-10 minutes)
