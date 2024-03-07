@@ -122,10 +122,14 @@ This is a guided example of how to run an initial RRA. You will:
 
 ## Before the initial RRA meeting
 
+- Mozilla staff should follow [these
+  instructions](https://mozilla-hub.atlassian.net/wiki/spaces/SECENGOPS/pages/610074988/How+to+request+start+a+Rapid+Risk+Assessment+RRA) (restricted)
+  to request an RRA.
+
+- For other interested folks, here's a summary of the steps:
   - Ensure no previous RRA exist; if it does, just enhance the current RRA document
   - Create a copy of the RRA template in the RRA Google Drive directory.
-    - [Mozilla Internal Only] Employees can make a copy of the template following [these directions](https://docs.google.com/document/d/1-j9n-TSw1mcGERG6zjSS-hu_Eax7Hb740I4SRtdYyjU/view), to ensure the document is located in the proper directory for further processing.
-    - Everyone can view a copy of the [RRA template](https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/edit)
+    - Everyone can preview a copy of the [RRA Template][RRA Template Preview] (or [copy][RRA Template] if you have a Google account).
   - Invite 1 or 2 members (product/service owners, lead engineers, etc.) related
     to the service with a bit of technical knowledge.
   - Ensure the invitees attempt to bring a data flow diagram and have an understanding of the data the service stores or
@@ -189,7 +193,8 @@ You should be able to reformulate what the service does, and the service owner t
 Generally, you want to copy a diagram of some sort and have links back to the RRA request bug, and the service's own
 website (which may be a vendor). This is also a good time to check whether the team requested a vendor assessment using a questionnaire for example.
 
-[Mozilla Internal Only] Teams can use [this vendor questionnaire](https://docs.google.com/document/d/1idP1gGuEgeinoL6m_hsZ8lQ8wz64BeI-S53n_9kwMkU/edit?usp=sharing)
+[Mozilla Internal Only] Teams can use [this vendor
+questionnaire](https://docs.google.com/document/d/1YDbYWB-LNYYoB3cnbxo-rvSmvy-jSHG8Mu4KT_hBXYc/copy)
  when performing a vendor assessment.
 
 Feel free to go back to this section at any time to add any further notes.
@@ -301,6 +306,9 @@ up and this is a great time to have a quick 5 minute chat about these.
 
 ## RRA Links
 
-- [RRA Template](https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/edit)
+- [RRA Template][RRA Template]
 - [RRA Support code for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRACodeMaster.js)
 - [RRA Parsing code (convert to spreadsheet/db) for the Google Docs template](https://github.com/mozilla/infosec.mozilla.org/blob/master/misc/RRA2Spreadsheet.js)
+
+[RRA Template]: https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/copy
+[RRA Template Preview]: https://docs.google.com/document/d/1uD-wofmkXBz5BVq49JQQqC3DnE77vwOPDSbHdWIve9s/preview
