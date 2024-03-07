@@ -26,8 +26,7 @@ The Security Assurance team maintains this document as a reference guide.*
 10. [Subresource Integrity](#subresource-integrity)
 11. [X-Content-Type-Options](#x-content-type-options)
 12. [X-Frame-Options](#x-frame-options)
-13. [X-XSS-Protection](#x-xss-protection)
-14. [Version History](#version-history)
+13. [Version History](#version-history)
 
 # Web Security Cheat Sheet
 
@@ -219,15 +218,7 @@ The Security Assurance team maintains this document as a reference guide.*
 <td> Mandatory for all websites
 </td>
 <td> Websites that don't use DENY or SAMEORIGIN must employ clickjacking defenses
-</td></tr><tr>
-<td data-sort-value="16"> <a href="#x-xss-protection"><span >X-XSS-Protection</span></a>
-</td>
-<td data-sort-value="1" > <span class="risk-low">LOW</span></td>
-<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
-<td > 13</td>
-<td> Only for websites that need to support legacy browsers.</td>
-<td> Do not use, unless you need to support legacy browsers with no CSP support.</td>
-</tr>
+</td></tr>
 </tbody>
 <tfoot></tfoot>
 </table>
@@ -806,15 +797,6 @@ X-Frame-Options: DENY
 - [CSP standard on 'frame-ancestors'](https://www.w3.org/TR/CSP2/#directive-frame-ancestors)
 - [OWASP Clickjacking Defense Cheat Sheet](https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet)
 
-# X-XSS-Protection
-
-In modern browsers, `X-XSS-Protection` has been deprecated in favor of the Content-Security-Policy to disable the use of inline JavaScript. Its use can introduce XSS vulnerabilities in otherwise safe websites. 
-This should not be used unless you need to support older web browsers that don’t yet support CSP.
-It is thus recommended to set the header as `X-XSS-Protection: 0`.
-
-## See Also
-
-- [MDN on X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
 
 # Version History
 
