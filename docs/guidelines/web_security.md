@@ -15,8 +15,7 @@ The Security Assurance team maintains this document as a reference guide.*
     1. [HTTPS](#https)
     2. [HTTP Strict Transport Security](#http-strict-transport-security)
     3. [HTTP Redirections](#http-redirections)
-    4. [HTTP Public Key Pinning](#http-public-key-pinning)
-    5. [Resource Loading](#resource-loading)
+    4. [Resource Loading](#resource-loading)
 3. [Content Security Policy](#content-security-policy)
 4. [contribute.json](#contributejson)
 5. [Cookies](#cookies)
@@ -27,8 +26,7 @@ The Security Assurance team maintains this document as a reference guide.*
 10. [Subresource Integrity](#subresource-integrity)
 11. [X-Content-Type-Options](#x-content-type-options)
 12. [X-Frame-Options](#x-frame-options)
-13. [X-XSS-Protection](#x-xss-protection)
-14. [Version History](#version-history)
+13. [Version History](#version-history)
 
 # Web Security Cheat Sheet
 
@@ -51,14 +49,6 @@ The Security Assurance team maintains this document as a reference guide.*
 <td  data-sort-value="0"></td>
 <td> Mandatory</td>
 <td> Sites should use HTTPS (or other secure protocols) for all communications</td>
-</tr>
-<tr>
-<td data-sort-value="2" > <a href="#http-public-key-pinning"><span >Public Key Pinning</span></a></td>
-<td data-sort-value="1" > <span class="risk-low">LOW</span></td>
-<td data-sort-value="4" > <span class="risk-maximum">MAXIMUM</span></td>
-<td  data-sort-value="99"> --</td>
-<td> May be required for maximum risk sites only, on a case-per-case basis</td>
-<td> Not recommended for most sites</td>
 </tr>
 <tr>
 <td data-sort-value="3" > <a href="#http-redirections"><span >Redirections from HTTP</span></a>
@@ -228,15 +218,7 @@ The Security Assurance team maintains this document as a reference guide.*
 <td> Mandatory for all websites
 </td>
 <td> Websites that don't use DENY or SAMEORIGIN must employ clickjacking defenses
-</td></tr><tr>
-<td data-sort-value="16"> <a href="#x-xss-protection"><span >X-XSS-Protection</span></a>
-</td>
-<td data-sort-value="1" > <span class="risk-low">LOW</span></td>
-<td data-sort-value="2" > <span class="risk-medium">MEDIUM</span></td>
-<td > 13</td>
-<td> Only for websites that need to support legacy browsers.</td>
-<td> Do not use, unless you need to support legacy browsers with no CSP support.</td>
-</tr>
+</td></tr>
 </tbody>
 <tfoot></tfoot>
 </table>
@@ -329,32 +311,6 @@ server {
   Redirect permanent / https://site.example.org/
 </VirtualHost>
 ```
-
-## HTTP Public Key Pinning
-
-[Maximum risk](/guidelines/risk/standard_levels#standard-risk-levels-definition-and-nomenclature) sites may enable the use of HTTP Public Key Pinning (HPKP). HPKP instructs a user agent to bind a site to specific root certificate authority, intermediate certificate authority, or end-entity public key. This prevents certificate authorities from issuing unauthorized certificates for a given domain that would nevertheless be trusted by the browsers. These fraudulent certificates would allow an active attacker to MitM and impersonate a website, intercepting credentials and other sensitive data.
-
-Due to the risk of knocking yourself off the internet, HPKP must be implemented with extreme care. This includes having backup key pins, testing on a non-production domain, testing with `Public-Key-Pins-Report-Only` and then finally doing initial testing with a very short-lived `max-age` directive. Because of the risk of creating a self-denial-of-service and the very low risk of a fraudulent certificate being issued, it is <em>not recommended</em> for most websites to implement HPKP.
-
-### Directives
-
-- `max-age:` number of seconds the user agent will enforce the key pins and require a site to use a cert that satisfies them
-- `includeSubDomains:` whether user agents should pin all subdomains to the same pins
-
-Unlike with HSTS, what to set `max-age` is highly individualized to a given site. A longer value is more secure, but screwing up your key pins will result in your site being unavailable for a longer period of time. Recommended values fall between 15 and 120 days.
-
-### Examples
-
-```sh
-# Pin to DigiCert, Let's Encrypt, and the local public-key, including subdomains, for 15 days
-Public-Key-Pins: max-age=1296000; includeSubDomains; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
- pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; pin-sha256="P0NdsLTMT6LSwXLuSEHNlvg4WxtWb5rIJhfZMyeXUE0="
-```
-
-### See Also
-
-- [About Public Key Pinning](https://noncombatant.org/2015/05/01/about-http-public-key-pinning/)
-- [The HPKP Toolset](https://scotthelme.co.uk/hpkp-toolset/) - helpful tools for generating key pins
 
 ## Resource Loading
 
@@ -841,15 +797,6 @@ X-Frame-Options: DENY
 - [CSP standard on 'frame-ancestors'](https://www.w3.org/TR/CSP2/#directive-frame-ancestors)
 - [OWASP Clickjacking Defense Cheat Sheet](https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet)
 
-# X-XSS-Protection
-
-In modern browsers, `X-XSS-Protection` has been deprecated in favor of the Content-Security-Policy to disable the use of inline JavaScript. Its use can introduce XSS vulnerabilities in otherwise safe websites. 
-This should not be used unless you need to support older web browsers that don’t yet support CSP.
-It is thus recommended to set the header as `X-XSS-Protection: 0`.
-
-## See Also
-
-- [MDN on X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
 
 # Version History
 
