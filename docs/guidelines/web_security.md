@@ -235,7 +235,7 @@ Transport Layer Security provides assurances about the confidentiality, authenti
 
 Websites or API endpoints that only communicate with modern browsers and systems should use the [Mozilla modern TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Modern_compatibility).
 
-Websites intended for general public consumption should use the [Mozilla intermediate TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_(default)).
+Websites intended for general public consumption should use the [Mozilla intermediate TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28recommended.29).
 
 Websites that require backwards compatibility with extremely old browsers and operating systems may use the [Mozilla backwards compatible TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS#Old_backward_compatibility). This is not recommended, and use of this compatibility level should be done only after consulting the security team for a risk assessment.
 
