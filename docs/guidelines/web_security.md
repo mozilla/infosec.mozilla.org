@@ -802,8 +802,13 @@ X-Frame-Options: DENY
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| March, 2024    | arroway| Remove HPKP and XXSSP obsolete guidelines                        |
+| March, 2024    | Frida  | Updates to CSP recommendations                                   |
 | February, 2024 | LeoMcA | Update Referrer Policy section                                   |
 | August, 2023   | arroway | Update HPKP, XXSSP, TLS and redirects sections                  |
+| April, 2020    | Mads J. | Update TLS configurations client support                        |
+| September, 2019| rmccue  | Fix CSP examples                                                |
+| September, 2018| Chris M.| Update Referrer Policy support                                  |
 | July, 2018     | April  | Link to CORS for Developers                                      |
 | April, 2018    | April  | Added SameSite cookies and syntax highlighting                   |
 | June, 2017     | April  | Moved cookie prefixes to no longer be experimental               |
