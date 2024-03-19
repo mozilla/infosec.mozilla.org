@@ -17,16 +17,15 @@ The Security Assurance team maintains this document as a reference guide.*
     3. [HTTP Redirections](#http-redirections)
     4. [Resource Loading](#resource-loading)
 3. [Content Security Policy](#content-security-policy)
-4. [contribute.json](#contributejson)
-5. [Cookies](#cookies)
-6. [Cross-origin Resource Sharing](#cross-origin-resource-sharing)
-7. [CSRF Prevention](#csrf-prevention)
-8. [Referrer Policy](#referrer-policy)
-9. [robots.txt](#robotstxt)
-10. [Subresource Integrity](#subresource-integrity)
-11. [X-Content-Type-Options](#x-content-type-options)
-12. [X-Frame-Options](#x-frame-options)
-13. [Version History](#version-history)
+4. [Cookies](#cookies)
+5. [Cross-origin Resource Sharing](#cross-origin-resource-sharing)
+6. [CSRF Prevention](#csrf-prevention)
+7. [Referrer Policy](#referrer-policy)
+8. [robots.txt](#robotstxt)
+9. [Subresource Integrity](#subresource-integrity)
+10. [X-Content-Type-Options](#x-content-type-options)
+11. [X-Frame-Options](#x-frame-options)
+12. [Version History](#version-history)
 
 # Web Security Cheat Sheet
 
@@ -97,7 +96,7 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td> Mandatory
 </td>
-<td> Use the most secure Mozilla TLS configuration for your user base, typically <a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29" title="Security/Server Side TLS">Intermediate</a>
+<td> Use the most secure Mozilla TLS configuration for your user base, typically <a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28recommended.29" title="Security/Server Side TLS">Intermediate</a>
 </td></tr><tr>
 <td data-sort-value="7"> <a href="#content-security-policy"><span >Content Security Policy</span></a>
 </td>
@@ -105,7 +104,7 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
-<td > 10
+<td > 9
 </td>
 <td> Mandatory for new websites<br>Recommended for existing websites
 </td>
@@ -123,25 +122,13 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td> All cookies must be set with the Secure flag, and set as restrictively as possible
 </td></tr><tr>
-<td data-sort-value="9"> <a href="#contributejson"><span >contribute.json</span></a>
-</td>
-<td data-sort-value="1" > <span class="risk-low">LOW</span>
-</td>
-<td data-sort-value="1" > <span class="risk-low">LOW</span>
-</td>
-<td > 9
-</td>
-<td> Mandatory for all new Mozilla websites<br>Recommended for existing Mozilla sites
-</td>
-<td> Mozilla sites should serve contribute.json and keep contact information up-to-date
-</td></tr><tr>
 <td data-sort-value="10"> <a href="#cross-origin-resource-sharing"><span >Cross-origin Resource Sharing</span></a>
 </td>
 <td data-sort-value="3" > <span class="risk-high">HIGH</span>
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td > 11
+<td > 10
 </td>
 <td> Mandatory
 </td>
@@ -165,7 +152,7 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td > 12
+<td > 11
 </td>
 <td> Recommended for all websites
 </td>
@@ -177,7 +164,7 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td data-sort-value="1" > <span class="risk-low">LOW</span>
 </td>
-<td > 14
+<td > 12
 </td>
 <td> Optional
 </td>
@@ -189,7 +176,7 @@ The Security Assurance team maintains this document as a reference guide.*
 </td>
 <td data-sort-value="2" > <span class="risk-medium">MEDIUM</span>
 </td>
-<td > 15
+<td > 13
 </td>
 <td> Recommended<sup >‡</sup>
 </td>
@@ -413,62 +400,6 @@ Content-Security-Policy: default-src 'none'; frame-ancestors 'none'
 - [Content Security Policy Level 2 Standard](https://www.w3.org/TR/CSP2/)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [Using the frame-ancestors directive to prevent framing](#x-frame-options)
-
-# contribute.json
-
-`contribute.json` is a text file placed within the root directory of a website that describes what it is, where its source exists, what technologies it uses, and how to reach support and contribute. `contribute.json` is a Mozilla standard used to describe all active Mozilla websites and projects.
-
-Its existence can greatly speed up the process of bug triage, particularly for smaller websites with just a handful of maintainers. It further assists security researchers to find testable websites and instructs them on where to file their bugs against. As such, `contribute.json` is mandatory for all Mozilla websites, and must be maintained as contributors join and depart projects.
-
-Require subkeys include `name`, `description`, `bugs`, `participate` (particularly `irc` and `irc-contacts`), and `urls`.
-
-## Examples
-
-```json
-{
-  "name": "Bedrock",
-    "description": "The app powering www.mozilla.org.",
-    "repository": {
-      "url": "https://github.com/mozilla/bedrock",
-      "license": "MPL2",
-      "tests": "https://travis-ci.org/mozilla/bedrock/"
-    },
-    "participate": {
-      "home": "https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org",
-      "docs": "https://bedrock.readthedocs.io/en/latest/",
-      "mailing-list": "https://www.mozilla.org/about/forums/#dev-mozilla-org",
-      "irc": "irc://irc.mozilla.org/#www",
-      "irc-contacts": [
-        "someperson1",
-        "someperson2",
-        "someperson3"
-      ]
-    },
-    "bugs": {
-      "list": "https://bugzilla.mozilla.org/describecomponents.cgi?product=www.mozilla.org",
-      "report": "https://bugzilla.mozilla.org/enter_bug.cgi?product=www.mozilla.org",
-      "mentored": "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty
-                   &query_format=advanced&bug_status=NEW&product=www.mozilla.org&list_id=10866041"
-    },
-    "urls": {
-      "prod": "https://www.mozilla.org",
-      "stage": "https://www.allizom.org",
-      "dev": "https://www-dev.allizom.org",
-      "demo1": "https://www-demo1.allizom.org"
-    },
-    "keywords": [
-      "python",
-      "less-css",
-      "django",
-      "html5",
-      "jquery"
-    ]
-}
-```
-
-## See Also
-
-- [The contribute.json Standard](https://www.contributejson.org/)
 
 # Cookies
 
@@ -802,6 +733,7 @@ X-Frame-Options: DENY
 
 | Date           | Editor | Changes                                                          |
 |----------------|--------|------------------------------------------------------------------|
+| March, 2024    | Jan B. | Remove outdated contribute.json instructions                     |
 | March, 2024    | arroway| Remove HPKP and XXSSP obsolete guidelines                        |
 | March, 2024    | Frida  | Updates to CSP recommendations                                   |
 | February, 2024 | LeoMcA | Update Referrer Policy section                                   |
