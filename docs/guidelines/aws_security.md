@@ -8,6 +8,22 @@ description: Best practices for securely operating in Amazon Web Services
 
 The goal of this document is to help teams operate safely within Amazon Web Services. All Mozilla AWS accounts should follow the recommendations below.
 
+# Organizations
+
+An [AWS Organization](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html) is a method to centralize multiple AWS accounts into a logical group. By doing so, the organization reduces complexity, unifies  and increases visibility of child account activity.
+
+## Use an AWS Organization
+
+* How to : Follow the [AWS guided setup](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_create.html) to onboard your AWS accounts into an organization. You can select to do consolidated billing features only or to [allow all features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) (default). There are some [things to know before proceeding](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html#before-enabling-all) with the enable all features option. By enabling this feature and onboarding child accounts, you can easily deploy features to all accounts uniformally instead of individual accounts and potentially missing coverage.
+
+[Using GuardDuty for Organizations](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)
+[Using Cloudtrail for Organizations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-in-the-console.html)
+[Using Security Hub for Organizations](https://docs.aws.amazon.com/securityhub/latest/userguide/central-configuration-intro.html)
+
+* Audited: False
+* Rationale
+    - Account management is difficult and easy to lose track of what accounts have which features and/or security enhancements enabled
+
 # Root User
 
 The [root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) of an AWS account is the single identity that has complete access to all AWS services and resources in the account. The root user has no username, is not a part of the AWS IAM product and instead uses their Amazon email address to log in. If an attacker gains control of the root user in an AWS account, there is no higher authority role that a security incident responder can use to eradicate the attackers access. With root user access, the attacker can exploit the resources in the AWS account and infosec will have little ability to respond.
