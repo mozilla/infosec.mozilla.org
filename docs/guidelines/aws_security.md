@@ -16,9 +16,9 @@ An [AWS Organization](https://docs.aws.amazon.com/organizations/latest/userguide
 
 * How to : Follow the [AWS guided setup](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_create.html) to onboard your AWS accounts into an organization. You can select to do consolidated billing features only or to [allow all features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) (default). There are some [things to know before proceeding](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html#before-enabling-all) with the enable all features option. By enabling this feature and onboarding child accounts, you can easily deploy features to all accounts uniformally instead of individual accounts and potentially missing coverage.
 
-[Using GuardDuty for Organizations](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)
-[Using Cloudtrail for Organizations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-in-the-console.html)
-[Using Security Hub for Organizations](https://docs.aws.amazon.com/securityhub/latest/userguide/central-configuration-intro.html)
+[Using GuardDuty for Organizations](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)<br>
+[Using Cloudtrail for Organizations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-in-the-console.html)<br>
+[Using Security Hub for Organizations](https://docs.aws.amazon.com/securityhub/latest/userguide/central-configuration-intro.html)<br>
 
 * Audited: False
 * Rationale
