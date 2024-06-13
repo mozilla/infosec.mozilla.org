@@ -486,7 +486,7 @@ All cookies should be created such that their access is as limited as possible. 
   - `Max-Age:` Sets a relative expiration date for a given cookie (not supported by IE <8)
 - `Domain:` Cookies should only be set with this if they need to be accessible on other domains, and should be set to the most restrictive domain possible
 - `Path:` Cookies should be set to the most restrictive path possible, but for most applications this will be set to the root directory
-- `SameSite`: Forbid sending the cookie via cross-origin requests (such as from `<img>` tags, etc.), as a strong [anti-CSRF measure](#csrf-prevention)
+- `SameSite`: Forbid sending the cookie via cross-site requests (such as from `<img>` tags, etc.), as a strong [anti-CSRF measure](#csrf-prevention)
   - `SameSite=Strict`: Only send the cookie when site is directly navigated to
   - `SameSite=Lax`: Send the cookie when navigating to your site from another site
 
@@ -499,7 +499,7 @@ Set-Cookie: MOZSESSIONID=980e5da39d4b472b9f504cac9; Path=/; Secure; HttpOnly
 
 ```sh
 # Session identifier for all example.org sites that expires in 30 days using the __Secure- prefix
-# This cookie is not sent cross-origin, but is sent when navigating to any Mozilla site from another site
+# This cookie is not sent cross-site, but is sent when navigating to any Mozilla site from another site
 Set-Cookie: __Secure-MOZSESSIONID=7307d70a86bd4ab5a00499762; Max-Age=2592000; Domain=example.org; Path=/; Secure; HttpOnly; SameSite=Lax
 ```
 
@@ -510,7 +510,7 @@ Set-Cookie: __Host-ACCEPTEDTOS=true; Expires=Fri, 31 Dec 9999 23:59:59 GMT; Path
 ```
 
 ```sh
-# Session identifier used for a secure site, such as bugzilla.example.org. It isn't sent from cross-origin
+# Session identifier used for a secure site, such as bugzilla.example.org. It isn't sent from cross-site
 # requests, nor is it sent when navigating to bugzilla.example.org from another site. Used in conjunction with
 # other anti-CSRF measures, this is a very strong way to defend your site against CSRF attacks.
 Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; HttpOnly; SameSite=Strict
