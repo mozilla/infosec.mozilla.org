@@ -128,7 +128,7 @@ here](https://docs.google.com/document/d/1g6srH_oOvDH9u207VW_sIlgxkJwjPufqCCczWV
 -   Terminate TLS (e.g. with a reverse proxy or load balancer) outside a system and then transmit the data in clear-text
     across the rest of the network.
 -   Use STARTTLS without also disabling clear-text connections.
--   Rely on outdated or weak encryption protocols (e.g., DES, RC4). Always opt for strong encryption protocols like AES-256.
+-   Rely on outdated or weak encryption protocols (e.g. DES, RC4).
 
 # Know Thy System
 
