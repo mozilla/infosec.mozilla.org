@@ -22,9 +22,16 @@ See `man sshd_config`, `man ssh_config` for more information on specific setting
 Different versions of OpenSSH support different options which are not always compatible. This guide shows settings for the most commonly deployed OpenSSH versions at Mozilla - however, using the latest version of OpenSSH is recommended.
 
 ### **Modern** (OpenSSH 6.7+)
-
+* Spetially for and more recommended for OpenSSH 7.5+  
 File: `/etc/ssh/sshd_config`
-
+```
+# For other settings not menthioned, refer below
+KexAlgorithms -diffie-hellman-group1*,*-sha1
+MACs -hmac-md5*,hmac-sha1*,umac-64*
+Ciphers -*cbc
+```
+* For OpenSSH 6.7+  
+File: `/etc/ssh/sshd_config`
 ```
 # Supported HostKey algorithms by order of preference.
 HostKey /etc/ssh/ssh_host_ed25519_key
@@ -54,6 +61,7 @@ Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO
 # Using regular users in combination with /bin/su or /usr/bin/sudo ensure a clear audit track.
 PermitRootLogin No
 ```
+
 
 File: `/etc/ssh/moduli`
 
@@ -214,9 +222,16 @@ The following configurations expect a recent OpenSSH client, as updating OpenSSH
 ### **Modern**
 
 This configuration is less compatible and you may not be able to connect to some servers which use insecure, deprecated algorithms. Nevertheless, modern servers will work just fine.
-
+* Spetially for and more recommended for OpenSSH 7.5+  
 File: `~/.ssh/config`
-
+```
+# For other settings not menthioned, refer below
+KexAlgorithms -diffie-hellman-group1*,*-sha1
+MACs -hmac-md5*,hmac-sha1*,umac-64*
+Ciphers -*cbc
+```
+* For OpenSSH 6.7+  
+File: `~/.ssh/config`
 ```
 # Ensure KnownHosts are unreadable if leaked - it is otherwise easier to know which hosts your keys have access to.
 HashKnownHosts yes
