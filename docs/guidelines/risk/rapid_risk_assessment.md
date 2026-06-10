@@ -173,8 +173,17 @@ to have attended multiple RRAs before starting your own. Your experience and und
 successful RRA that will help the teams and keep the service safe.
 
 **RRA Utilities**: There is a menu at the top of the document called the "RRA Utilities" menu. Use it to set risk
-impact, levels, data classification and marking the RRA as reviewed. Do use it as our scripts rely on this to copy RRAs
-to our RRA API. Note that these utilities are only available in the internal Mozilla tools.
+impact levels and data classifications within the RRA document and to mark the RRA as reviewed. Do use it as our scripts
+rely on this to copy RRAs to our RRA API. When you first use the "RRA Utilities" on a given RRA document, you'll be 
+prompted to approve the use of the Google Apps Script. This will need to be done on each RRA document you create because
+each document gets a copy of the "RRA Utilities" Apps Script. Also, 
+[after January 31, 2026](https://developers.google.com/apps-script/guides/v8-runtime/migration), the old Google Apps 
+Script Rhino runtime is deprecated. As a result, if you go to an RRA document created before 2026, the "RRA Utilities"
+will now be missing. To fix this for that older RRA, go to the "Extensions" menu and click "Apps Script". Next go to
+the "Project Settings" section in the left pane with the gear icon and under "General Settings" check the box next to
+"Enable Chrome V8 runtime". Close the Google Apps Script page, reload the RRA page that was missing the "RRA Utilities"
+and you'll find the "RRA Utilities" menu is available again. Note that these utilities are only available in the
+internal Mozilla tools.
 
 #### Metadata (1min)
 
