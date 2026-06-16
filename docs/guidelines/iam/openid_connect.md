@@ -110,7 +110,7 @@ Avoid using or storing refresh tokens. This is especially important for relying 
 -   <https://tools.ietf.org/html/rfc7636> (Proof Key for Code Exchange by OAuth Public Clients)
 -   <https://tools.ietf.org/html/rfc6749> (Oauth2 Authorization framework)
 -   <https://tools.ietf.org/html/rfc7519> (JSON Web Tokens)
--   [JSON Identity Suite](https://ldapwiki.com/wiki/JSON%20Identity%20Suite)
+-   [JSON Identity Suite](https://ldapwiki.com/wiki/Wiki.jsp?page=JSON%20Identity%20Suite)
 -   <https://jwt.io/> (JWT token decoder)
 -   [SCIM: System for Cross domain Identity management](http://www.simplecloud.info/)
 -   <https://openid.net/> (Official documentation)
