@@ -608,6 +608,7 @@ httpRequest.setRequestHeader('X-CSRF-Token', token); // add it as an X-CSRF-Toke
 
 - [Wikipedia on CRSF Attacks and Prevention](https://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention)
 - [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [CSRF: attack, tokens and bypass, with SameSite, double-submit cookie and Fetch Metadata defenses](https://en.hackita.it/articoli/csrf/)
 
 # Referrer Policy
 
